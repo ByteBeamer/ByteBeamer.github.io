@@ -39,6 +39,9 @@
             top: 100%;
             left: 50%;
             margin-left: -60px;
+            
+            opacity: 0;
+            transition: opacity 1s;
          }
          .button .tooltiptext::after {
             content: " ";
@@ -52,15 +55,9 @@
           }
          .button:hover .tooltiptext {
             visibility: visible;
-         }
-         .button .tooltiptext {
-            opacity: 0;
-            transition: opacity 1s;
-         }
-
-         .button:hover .tooltiptext {
             opacity: 1;
          }
+         
       </style>
       <title>Downloads Page</title>
    </head>
