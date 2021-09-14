@@ -25,11 +25,25 @@
          .button:hover {
             background-color:grey;
          }
+         .button .tooltiptext{
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+         }
+         .button:hover .tooltiptext {
+            visibility: hidden;
+         }
       </style>
       <title>Downloads Page</title>
    </head>
    <body style="background-color:#1c87c9;">
-      <a href="https://bytebeamer.github.io" class="button">Home</a>
+      <a href="https://bytebeamer.github.io" class="button">Home<span class="tooltiptext">Go Home</span></a>
       <h1>"</h1>
       <h2 style="text-align:center">Downloads</h2>
       <p style="text-align:center">This page will have downloads soon!</p>
