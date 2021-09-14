@@ -40,6 +40,16 @@
             left: 50%;
             margin-left: -60px;
          }
+         .button .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            bottom: 100%;  /* At the top of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black transparent;
+          }
          .button:hover .tooltiptext {
             visibility: visible;
          }
