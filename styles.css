@@ -52,9 +52,11 @@
 .bg1::after {
   background-image: url("././images/gameplay.png");
   object-fit: none;
+  object-position: -20% 0;
 }
 
 .bg2::after {
   background-image: url("././images/computers.jpeg");
   object-fit: none;
+  object-position: -20% 0;
 }
