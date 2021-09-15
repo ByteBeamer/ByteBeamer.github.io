@@ -51,8 +51,14 @@
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
   background-image: url("././images/gameplay.png");
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  width: 100%;
 }
 
 .bg2::after {
   background-image: url("././images/computers.jpeg");
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  width: 100%;
 }
