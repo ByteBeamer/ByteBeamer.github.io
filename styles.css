@@ -51,10 +51,10 @@
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
   background-image: url("././images/gameplay.png");
-  width: 300px; height: 337px;
+  width: 1920px; height: 951px;
 }
 
 .bg2::after {
   background-image: url("././images/computers.jpeg");
-  width: 300px; height: 337px;
+  width: 1472px; height: 828px;
 }
