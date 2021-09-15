@@ -47,7 +47,7 @@
 .static {
   background: darkgreen;
 }
-
+ 
 .bg1::after {
   background-image: url("././images/gameplay.png");
 }
