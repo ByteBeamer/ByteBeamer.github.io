@@ -52,13 +52,11 @@
 .bg1::after {
   background-image: url("././images/gameplay.png");
   object-fit: none;
-  width: 1920px; height: 951px;
-  object-position: 100% 0;
+  width: 100vw; height: 100vh;
 }
 
 .bg2::after {
   background-image: url("././images/computers.jpeg");
   object-fit: none;
-  width: 1472px; height: 828px;
-  object-position: 100% 0;
+  width: 1oovw; height: 100vh;
 }
