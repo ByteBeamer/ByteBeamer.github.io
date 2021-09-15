@@ -38,7 +38,7 @@
    * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
   transform: translateZ(-1px) scale(1.5);
   /* Force the background image to fill the whole element. */
-  background-size: 100vw 100vh;
+  background-size: 100%;
   /* Keep the image from overlapping sibling elements. */
   z-index: -1;
 }
@@ -51,8 +51,10 @@
 /* Sets the actual background images to adorable kitties. This part is crucial. */
 .bg1::after {
   background-image: url("././images/gameplay.png");
+  overflow: hidden;
 }
 
 .bg2::after {
   background-image: url("././images/computers.jpeg");
+  overflow: hidden;
 }
