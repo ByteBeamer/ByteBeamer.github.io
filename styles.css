@@ -52,13 +52,13 @@
 .bg1::after {
   background-image: url("././images/gameplay.png");
   background-position: center;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-size: cover;
 }
 
 .bg2::after {
   background-image: url("././images/computers.jpeg");
   background-position: center;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-size: cover;
 }
