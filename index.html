@@ -62,27 +62,7 @@
         text-decoration: none;
         color: inherit;
       }
-      /*goto top*/
       
-      #myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-#myBtn:hover {
-  background-color: #555;
-}
 </style>
 </head>
 <body>
@@ -96,9 +76,6 @@
       </section>
       <section class="section parallax bg2">
         <h1>To play on your own!</h1>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      <div style="background-color:lightgrey;padding:30px 30px 2500px">This example demonstrates how to create a "scroll to top" button that becomes visible 
-      <strong>when the user starts to scroll the page</strong>.</div>
       </section>
     </main>
   <ul>
@@ -107,26 +84,5 @@
       <li><a href="https://github.com/ByteBeamer/ByteBeamer.github.io/issues">Issues</a></li>
       <li><a href="https://bytebeamer.github.io/about.html">About</a></li>
     </ul>
-  <script>
-  //Get the button
-   var mybutton = document.getElementById("myBtn");
-
-  // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-   function scrollFunction() {
-     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-       mybutton.style.display = "block";
-     } else {
-       mybutton.style.display = "none";
-      }
-    }
-
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-     document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-    </script>
   </body>
 </html>
