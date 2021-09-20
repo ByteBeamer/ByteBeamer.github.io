@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ByteBeamer's website! * Downloads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>ByteBeamer's website! | Downloads</title>
 <style>
 body {margin:0;}
 
@@ -35,6 +37,20 @@ li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
+  
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}  
 </style>
 </head>
 <body>
@@ -49,4 +65,4 @@ li a:hover:not(.active) {
 <div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
   <h1>Downloads</h1>
 
-  <p>This page will have downloads soon!</p>
+  <button class="btn" style="width:100%" href="images/test.png" download="WindowsDownload"><i class="fa fa-download"></i>Download for Windows</button>
