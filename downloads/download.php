@@ -5,8 +5,7 @@
    $file_path = 'https://github.com/ByteBeamer/ByteBeamer.github.io/releases/download/release/'.$file_id.'.zip';
 
    // Save data to database
-   mysql_query('INSERT INTO download_log
-      SET file_id = '.$file_id.',
+   mysql_query('downloads.txt = '.$file_id.',
           date_downloaded = '.date('Y-m-d H:i:s').',
           user_id = '.$_SESSION['user_id']);
 
