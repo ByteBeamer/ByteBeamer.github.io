@@ -95,7 +95,12 @@ li a:hover:not(.active) {
 
     <script> 
     var myVideo = document.getElementById("video1"); 
-
+      
+    function percentCalculation(a, b){
+      var c = (parseFloat(a)*parseFloat(b))/100;
+      return parseFloat(c);
+    }  
+      
     function playPause() { 
       if (myVideo.paused) 
         myVideo.play(); 
@@ -105,17 +110,17 @@ li a:hover:not(.active) {
     
     function makeBig() { 
         var w = window.innerWidth;
-        myVideo.width = w - 20; 
+        myVideo.width = percentCalculation(w, 90); 
     } 
 
     function makeSmall() { 
         var w = window.innerWidth;
-        myVideo.width = w - 800; 
+        myVideo.width = percentCalculation(w, 30); 
     } 
 
     function makeNormal() { 
         var w = window.innerWidth;
-        myVideo.width = w - 400; 
+        myVideo.width = percentCalculation(w, 60); 
     } 
     </script> 
   </body>
