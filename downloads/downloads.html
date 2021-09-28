@@ -48,7 +48,7 @@ li a:hover:not(.active) {
 }
 
 .vidbtn {
-  background-color: DarkRed;
+  background-color: Red;
   border: none;
   color: white;
   padding: 12px 30px;
@@ -56,6 +56,10 @@ li a:hover:not(.active) {
   font-size: 14px;
 }
 
+.vidbtn:hover {
+  background-color: DarkRed;
+}
+  
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: RoyalBlue;
@@ -83,7 +87,7 @@ li a:hover:not(.active) {
     <button onclick="makeSmall()" class="vidbtn">Small</button>
     <button onclick="makeNormal()" class="vidbtn">Normal</button>
    <br><br>
-   <video id="video1" width="420">
+   <video id="video1" width="420" controls>
       <source src="mov_bbb.mp4" type="video/mp4">
      <source src="mov_bbb.ogg" type="video/ogg">
      Your browser does not support HTML video.
