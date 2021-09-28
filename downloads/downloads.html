@@ -47,6 +47,15 @@ li a:hover:not(.active) {
   font-size: 20px;
 }
 
+.vidbtn {
+  background-color: DarkRed;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: RoyalBlue;
@@ -69,10 +78,10 @@ li a:hover:not(.active) {
   <img src="https://img.shields.io/github/downloads/bytebeamer/ByteBeamer.github.io/total?style=for-the-badge" alt="downloads">
   <p>Gameplay video coming soon</p>
     <div style="text-align:center"> 
-    <button onclick="playPause()" class="btn">Play/Pause</button> 
-    <button onclick="makeBig()" class="btn">Big</button>
-    <button onclick="makeSmall()" class="btn">Small</button>
-    <button onclick="makeNormal()" class="btn">Normal</button>
+    <button onclick="playPause()" class="vidbtn">Play/Pause</button> 
+    <button onclick="makeBig()" class="vidbtn">Big</button>
+    <button onclick="makeSmall()" class="vidbtn">Small</button>
+    <button onclick="makeNormal()" class="vidbtn">Normal</button>
    <br><br>
    <video id="video1" width="420">
       <source src="mov_bbb.mp4" type="video/mp4">
