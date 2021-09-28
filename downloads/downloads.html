@@ -104,15 +104,18 @@ li a:hover:not(.active) {
     } 
     
     function makeBig() { 
-        myVideo.width = 560; 
+        var w = window.innerWidth;
+        myVideo.width = w - 20; 
     } 
 
     function makeSmall() { 
-        myVideo.width = 320; 
+        var w = window.innerWidth;
+        myVideo.width = w - 80; 
     } 
 
     function makeNormal() { 
-        myVideo.width = 420; 
+        var w = window.innerWidth;
+        myVideo.width = w - 40; 
     } 
     </script> 
   </body>
