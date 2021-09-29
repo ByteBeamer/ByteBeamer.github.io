@@ -92,7 +92,7 @@ li a:hover:not(.active) {
 
 <button class="btn" style="width:15%" href="images/test.png" type="button" onclick="myFunction()">Download beta</button>
 
-    <p id="demo"></p>
+    <p>If you can find the passcode then you can pla the beta if any are available</p>
 
     <script>
     function myFunction() {
@@ -111,6 +111,9 @@ li a:hover:not(.active) {
       }
       if (x != 2354) {
         text = "Password Incorrect"
+      }
+      if (x != null) {
+        text = "Password Not Entered"
       }
       document.getElementById("demo").innerHTML = text;
     }
