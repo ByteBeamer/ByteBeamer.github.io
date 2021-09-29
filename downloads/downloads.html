@@ -83,21 +83,21 @@ li a:hover:not(.active) {
   <br><br>
   <input id="numb">
 
-<button type="button" onclick="myFunction()">Submit</button>
+<button style="width:100%" href="images/test.png" type="button" onclick="myFunction()">Download Dusk of Death</button>
 
     <p id="demo"></p>
 
     <script>
     function myFunction() {
       // Get the value of the input field with id="numb"
-      let x = document.getElementById("numb").value;
+      //let x = document.getElementById("numb").value;
       // If x is Not a Number or less than one or greater than 10
-      let text;
-      if (isNaN(x) || x < 1 || x > 10) {
-        text = "Input not valid";
-      } else {
-        text = "Input OK";
-      }
+      //let text;
+      //if (isNaN(x) || x < 1 || x > 10) {
+      //  text = "Input not valid";
+      //} else {
+      //  text = "Input OK";
+      //}
       if (x == 2354) {
         text = "Password Accepted"
         downloadURI("https://github.com/ByteBeamer/ByteBeamer.github.io/releases/latest/download/DuskOfDeath.zip", "Dusk of Death");
