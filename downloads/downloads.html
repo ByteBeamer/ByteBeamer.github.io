@@ -90,7 +90,7 @@ li a:hover:not(.active) {
   <br><br>
   <input style="width:80%" id="numb">
 
-<button class="btn" style="width:15%" href="images/test.png" type="button" onclick="myFunction()">Download Dusk of Death</button>
+<button class="btn" style="width:15%" href="images/test.png" type="button" onclick="myFunction()">Download beta</button>
 
     <p id="demo"></p>
 
@@ -108,6 +108,9 @@ li a:hover:not(.active) {
       if (x == 2354) {
         text = "Password Accepted"
         downloadURI("https://github.com/ByteBeamer/ByteBeamer.github.io/releases/latest/download/DuskOfDeath.zip", "Dusk of Death");
+      }
+      if (x != 2354) {
+        text = "Password Incorrect"
       }
       document.getElementById("demo").innerHTML = text;
     }
