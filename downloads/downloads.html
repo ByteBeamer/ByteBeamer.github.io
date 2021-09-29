@@ -81,13 +81,24 @@ li a:hover:not(.active) {
   <a style="text-decoration:none" href="https://github.com/ByteBeamer/ByteBeamer.github.io/releases/latest/download/DuskOfDeath.zip"><button class="btn" style="width:100%" href="images/test.png"><i class="fa fa-download"></i>Download Dusk of Death for Windows</button></a>
   <img src="https://img.shields.io/github/downloads/bytebeamer/ByteBeamer.github.io/total?style=for-the-badge" alt="downloads">
   <br><br>
-  <button onclick="myFunction()">Try it</button>
+  <input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="demo"></p>
+
     <script>
     function myFunction() {
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("value", "Hello World!");
-      document.body.appendChild(x);
+      // Get the value of the input field with id="numb"
+      let x = document.getElementById("numb").value;
+      // If x is Not a Number or less than one or greater than 10
+      let text;
+      if (isNaN(x) || x < 1 || x > 10) {
+        text = "Input not valid";
+      } else {
+        text = "Input OK";
+      }
+      document.getElementById("demo").innerHTML = text;
     }
     </script>
   <p>Gameplay video coming soon</p>
