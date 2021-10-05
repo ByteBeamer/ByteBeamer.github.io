@@ -144,24 +144,24 @@ li a:hover:not(.active) {
     }
     </script>
   <p>Patch Notes</p>
-    <input type="file" name="inputfile"
-            id="inputfile">
-    <br>
-   
-    <pre id="output"></pre>
-      
     <script type="text/javascript">
-        document.getElementById('inputfile')
-            .addEventListener('change', function() {
-              
-            var fr=new FileReader();
-            fr.onload=function(){
-                document.getElementById('output')
-                        .textContent=fr.result;
-            }
-              
-            fr.readAsText(this.files[0]);
-        })
+        function readTextFile(file)
+          {
+              var rawFile = new XMLHttpRequest();
+              rawFile.open("GET", file, false);
+              rawFile.onreadystatechange = function ()
+              {
+                  if(rawFile.readyState === 4)
+                  {
+                      if(rawFile.status === 200 || rawFile.status == 0)
+                      {
+                          var allText = rawFile.responseText;
+                          alert(allText);
+                      }
+                  }
+              }
+              rawFile.send(null);
+          }
     </script>
   <p>Gameplay video coming soon</p>
     <div style="text-align:center"> 
