@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>ByteBeamer's website! | Downloads</title>
+  <title>ByteBeamer's website! | Patchnotes</title>
 <style>
 body {margin:0;}
 
@@ -97,31 +97,7 @@ li a:hover:not(.active) {
 
 <div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
   <br><br>
-  <input style="width:80%" id="numb">
     <script>
-    function myFunction() {
-      // Get the value of the input field with id="numb"
-      let x = document.getElementById("numb").value;
-      // If x is Not a Number or less than one or greater than 10
-      //let text;
-      //if (isNaN(x) || x < 1 || x > 10) {
-      //  text = "Input not valid";
-      //} else {
-      //  text = "Input OK";
-      //}
-      if (x == 2354) {
-        text = "Password Accepted"
-        downloadURI("https://github.com/ByteBeamer/ByteBeamer.github.io/releases/latest/download/DuskOfDeath.zip", "Dusk of Death");
-      }
-      if (x != 2354) {
-        text = "Password Incorrect"
-      }
-      if (x == "") {
-        text = "Password Not Entered"
-      }
-      document.getElementById("demo").innerHTML = text;
-    }
-    
     function downloadURI(uri, name) 
     {
         var link = document.createElement("a");
