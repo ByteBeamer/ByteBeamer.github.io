@@ -144,7 +144,11 @@ li a:hover:not(.active) {
     }
     </script>
   <p>Patch Notes</p>
+    <pre id="getPatchNotes()"></pre>
     <script type="text/javascript">
+        function getPatchNotes() {
+          return readTextFile("https://raw.githubusercontent.com/ByteBeamer/ByteBeamer.github.io/main/patchnotes/beta-0.0.2.txt");
+        }
         function readTextFile(file)
           {
               var rawFile = new XMLHttpRequest();
