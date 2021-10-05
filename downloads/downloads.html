@@ -146,25 +146,23 @@ li a:hover:not(.active) {
   <h>Patch Notes</h>
     <p id="patchnotes"></p>
     <script type="text/javascript">
-        document.getElementById("patchNotes").innerHTML = readTextFile("https://raw.githubusercontent.com/ByteBeamer/ByteBeamer.github.io/main/patchnotes/beta-0.0.2.txt");
-        function readTextFile(file)
-          {
-              var rawFile = new XMLHttpRequest();
-              rawFile.open("GET", file, false);
-              rawFile.onreadystatechange = function ()
-              {
-                  if(rawFile.readyState === 4)
-                  {
-                      if(rawFile.status === 200 || rawFile.status == 0)
-                      {
-                          var allText = rawFile.responseText;
-                          alert(allText);
-                          return allText;
-                      }
-                  }
-              }
-          }
-    </script>
+var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+
+function loadFile() {
+    reader.open('get', 'https://raw.githubusercontent.com/ByteBeamer/ByteBeamer.github.io/main/patchnotes/beta-0.0.2.txt', true); 
+    reader.onreadystatechange = displayContents;
+    reader.send(null);
+}
+
+function displayContents() {
+    if(reader.readyState==4) {
+        var el = document.getElementById('main');
+        el.innerHTML = reader.responseText;
+    }
+}
+      document.getElementById("patchnotes").innerHTML = displayContents();
+
+</script>
   <p>Gameplay video coming soon</p>
     <div style="text-align:center"> 
     <button onclick="makeBig()" class="vidbtn">Big</button>
