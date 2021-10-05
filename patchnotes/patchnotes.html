@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>ByteBeamer's website! | Downloads</title>
+<style>
+body {margin:0;}
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+  
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 10px;
+}
+  
+.btnsecret {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 2px 5px;
+  cursor: pointer;
+  font-size: 10px;
+}
+  
+.textentry {
+  background-color: LightBlue;
+  color: black;
+  padding: 5px 2px;
+  font-size: 20px;
+}
+
+.vidbtn {
+  background-color: Red;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.vidbtn:hover {
+  background-color: DarkRed;
+}
+  
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+  
+.btnsecret:hover {
+  background-color: RoyalBlue;
+}
+</style>
+</head>
+<body>
+
+<ul>
+    <li><a class="active" href="https://bytebeamer.github.io" title="Home">Home</a></li>
+    <li><a href="https://www.patreon.com/ByteBeamStudios" title="Donate">Donate</a></li>
+    <li><a href="https://github.com/ByteBeamer/ByteBeamer.github.io/issues" title="Issues">Issues</a></li>
+    <li><a href="https://bytebeamer.github.io/about" title="About">About</a></li>
+</ul>
+
+<div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
+  <br><br>
+  <input style="width:80%" id="numb">
+    <script>
+    function myFunction() {
+      // Get the value of the input field with id="numb"
+      let x = document.getElementById("numb").value;
+      // If x is Not a Number or less than one or greater than 10
+      //let text;
+      //if (isNaN(x) || x < 1 || x > 10) {
+      //  text = "Input not valid";
+      //} else {
+      //  text = "Input OK";
+      //}
+      if (x == 2354) {
+        text = "Password Accepted"
+        downloadURI("https://github.com/ByteBeamer/ByteBeamer.github.io/releases/latest/download/DuskOfDeath.zip", "Dusk of Death");
+      }
+      if (x != 2354) {
+        text = "Password Incorrect"
+      }
+      if (x == "") {
+        text = "Password Not Entered"
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    
+    function downloadURI(uri, name) 
+    {
+        var link = document.createElement("a");
+        // If you don't know the name or want to use
+        // the webserver default set name = ''
+        link.setAttribute('download', name);
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    }
+    </script> 
+  </body>
+  </html>
