@@ -108,13 +108,13 @@ li a:hover:not(.active) {
   <input style="width:80%" id="numb">
 
 <button class="btnsecret" style="width:15%" href="images/test.png" type="button" onclick="myFunction()">Download beta</button>
-
+    <p id="btnoutput"></p>
     <p>If you can find the passcode then you can play the beta if any are available</p>
 
     <script>
     function myFunction() {
       // Get the value of the input field with id="numb"
-      let x = document.getElementById("numb").value;
+      let x = document.getElementById("btnoutput").value;
       // If x is Not a Number or less than one or greater than 10
       //let text;
       //if (isNaN(x) || x < 1 || x > 10) {
