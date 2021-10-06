@@ -1,1 +1,1 @@
-let text = "beta-0.0.0.2";
+let text = "beta-0.0.2";
