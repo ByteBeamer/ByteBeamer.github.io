@@ -1,4 +1,3 @@
-<link href="txtstyle.css" rel="stylesheet" type="text/css" />
 New Features:
   Gun can fire
   Zombie opens doors
