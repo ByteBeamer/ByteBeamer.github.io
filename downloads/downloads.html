@@ -109,7 +109,9 @@ li a:hover:not(.active) {
   <br><br>
   <input style="width:80%" id="numb">
 
-<button class="btnsecret" style="width:15%" href="images/test.png" type="button" onclick="myFunction()">Download beta</button>
+<button class="btnsecret" style="width:15%" href="images/test.png" type="button" onclick="myFunction()">Download beta</button><br>
+<button class="btnsecret" style="width:20%" href="images/test.png" type="button" onclick="checkCoookie()">Check for Update</button>
+
     <p id="btnoutput"></p>
     <p>If you can find the passcode then you can play the beta if any are available</p>
 
@@ -138,17 +140,16 @@ li a:hover:not(.active) {
     }
     
     function checkCookie() {
-      var version = 0.0.2;
+      var version = 0.0.1;
       let user = getCookie("version");
       if (user != version + "") {
         alert("A new version has been released!");
         setCookie("verison", version + "", 20);
-      } else {
+      }
+      else {
         setCookie("verison", version + "", 20);
-        
       }
     }
-    checkCookie();
     
     function myFunction() {
       // Get the value of the input field with id="numb"
