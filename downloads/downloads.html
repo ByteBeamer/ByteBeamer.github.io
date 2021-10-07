@@ -115,13 +115,17 @@ li a:hover:not(.active) {
 
     <script>
     
-    document.cookie = "version=0.0.1; expires=Thu, 18 Dec 2022 12:00:00 UTC";
-      
+    function setCookie(cname, cvalue, exdays) {
+     const d = new Date();
+     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+     let expires = "expires="+d.toUTCString();
+     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
     function getCookie(cname) {
       let name = cname + "=";
-      let decodedCookie = decodeURIComponent(document.cookie);
-      let ca = decodedCookie.split(';');
-      for(let i = 0; i <ca.length; i++) {
+      let ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
         let c = ca[i];
         while (c.charAt(0) == ' ') {
           c = c.substring(1);
@@ -132,19 +136,19 @@ li a:hover:not(.active) {
       }
       return "";
     }
-      
+    
     function checkCookie() {
-      let username = getCookie("version");
-      if (username != "0.0.2") {
-        alert("A new update has been released");
-        document.cookie = "version=0.0.2; expires=Thu, 18 Dec 2022 12:00:00 UTC";
-      }
-      if (username == "") {
-        document.cookie = "version=0.0.2; expires=Thu, 18 Dec 2022 12:00:00 UTC";
-      }
-      else {
+      var version = 0.0.2;
+      let user = getCookie("version");
+      if (user != version + "") {
+        alert("A new version has been released!");
+        setCookie("verison", version + "", 20);
+      } else {
+        setCookie("verison", version + "", 20);
+        
       }
     }
+    checkCookie();
     
     function myFunction() {
       // Get the value of the input field with id="numb"
