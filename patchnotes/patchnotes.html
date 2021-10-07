@@ -16,7 +16,8 @@
 <body>
 <div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:250px;">
   <br><br>
-  <object id="content" data="https://bytebeamer.github.io/patchnotes/beta-0.0.2.txt" width="250" height="300"></object>
+  <p id="content">Not Available</p>
+  <object data="https://bytebeamer.github.io/patchnotes/beta-0.0.2.txt" width="250" height="300"></object>
     <script>
     function downloadURI(uri, name) 
     {
@@ -39,7 +40,7 @@
          }
       }
 
-    loadFileAndPrintToConsole('https://bytebeamer.github.io/patchnotes/beta-0.0.2.txt');
+    document.getElementById("content").innerHTML = loadFileAndPrintToConsole('https://bytebeamer.github.io/patchnotes/beta-0.0.2.txt');
     </script> 
   </body>
   </html>
