@@ -92,7 +92,7 @@ li a:hover:not(.active) {
 }
 </style>
 </head>
-<body onload="checkCookie()">
+<body>
 
 <ul>
     <li><a class="active" href="https://bytebeamer.github.io" title="Home">Home</a></li>
@@ -143,6 +143,9 @@ li a:hover:not(.active) {
       if (user != "0.0.2") {
         alert("A new version has released");
         setCookie("version", "0.0.2", 30);
+      } 
+      if (user == "0.0.2") { 
+        
       } else {
         setCookie("version", "0.0.2", 30);
       }
