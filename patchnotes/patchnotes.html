@@ -29,6 +29,17 @@
         link.click();
         link.remove();
     }
+      async function loadFileAndPrintToConsole(url) {
+         try {
+           const response = await fetch(url);
+           const data = await response.text();
+           return data;
+         } catch (err) {
+           console.error(err);
+         }
+      }
+
+    loadFileAndPrintToConsole('https://bytebeamer.github.io/patchnotes/beta-0.0.2.txt');
     </script> 
   </body>
   </html>
