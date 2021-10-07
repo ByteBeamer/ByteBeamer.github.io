@@ -140,14 +140,14 @@ li a:hover:not(.active) {
     }
     
     function checkCookie() {
-      var version = 0.0.2;
+      var version = "0.0.2";
       let user = getCookie("version");
       if (user != version + "") {
         alert("A new version has been released!");
-        setCookie("verison", version + "", 20);
-      }
-      else {
-        setCookie("verison", version + "", 20);
+        setCookie("verison", version, 20);
+      } else {
+        alert("There are no new updates");
+        setCookie("verison", version, 20);
       }
     }
     
