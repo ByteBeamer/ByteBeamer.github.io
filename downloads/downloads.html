@@ -139,13 +139,14 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-  let user = getCookie("version");
-  let latest = "0.0.2";
-  if (user != latest) {
-    alert("A new verison has released");
-    setCookie("version", latest, 30);
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
   } else {
-    setCookie("version", latest, 30);
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
   }
 }
     
