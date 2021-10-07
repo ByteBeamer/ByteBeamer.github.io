@@ -140,8 +140,8 @@ function getCookie(cname) {
 
 function checkCookie() {
   let user = getCookie("version");
-  let latest = "0.0.1";
-  if (user != "0.0.1") {
+  let latest = "0.0.2";
+  if (user != latest) {
     alert("A new verison has released");
     setCookie("version", latest, 30);
   } else {
