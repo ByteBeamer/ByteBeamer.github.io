@@ -55,6 +55,27 @@
       .active {
         background-color: #04AA6D;
       }
+      .square {
+        width: 200px;
+        height: 200px;
+        background: orange;
+        // etc...
+      }
+      @keyframes wipe-enter {
+	    0% {
+		    transform: scale(0, .025);
+      	}
+      	50% {
+	      	transform: scale(1, .025);
+      	}
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .square {
+          animation-name: wipe-enter;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
+      }
 
 </style>
 </head>
@@ -64,8 +85,11 @@
         <h1>Games</h1>
       </section>
       <section class="section static">
-        <h1>Available for download now!</h1>
-        <a style="text-decoration:none" href="https://bytebeamer.github.io/downloads/downloads"><button class="btn" style="width:60vw" href="images/test.png"><i class="fa fa-download"></i>Downloads</button></a>
+        <h1>Available for download now!</h1><br>
+        <a style="text-decoration:none" href="https://bytebeamer.github.io/downloads/downloads"><button class="btn" style="width:60vw" href="images/test.png"><i class="fa fa-download"></i>Downloads</button></a><br>
+        <div class="square-wrapper">
+           <div class="square"></div>
+        </div>
       </section>
       <section class="section parallax bg2">
         <h1>To play on your own!</h1>
@@ -77,5 +101,23 @@
     <li><a href="https://github.com/ByteBeamer/ByteBeamer.github.io/issues" title="Issues">Issues</a></li>
     <li><a href="https://bytebeamer.github.io/about" title="About">About</a></li>
   </ul>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        const square = entry.target.querySelector('.square');
+
+        if (entry.isIntersecting) {
+          square.classList.add('square-animation');
+    	    return; // if we added the class, exit the function
+        }
+
+    // We're not intersecting, so remove the class!
+          square.classList.remove('square-animation');
+      });
+    });
+
+    observer.observe(document.querySelector('.square'));
+  </script>
   </body>
 </html>
