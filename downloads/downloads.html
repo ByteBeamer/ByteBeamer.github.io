@@ -192,7 +192,43 @@ li a:hover:not(.active) {
     <object data="https://bytebeamer.github.io/patchnotes/patchnotes.html" width="400" height="200">
       Not supported
   </object><br><br>
-    <iframe src="https://github.com/ByteBeamer/ByteBeamer.github.io/issues" style="border-style: none;width: 100%; height: 200px;"></iframe><br>
+    <div id="github-issues"></div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    var urlToGetAllOpenBugs = "https://api.github.com/repos/ByteBeamer/ByteBeamer.github.io/issues?state=open";
+
+
+    $(document).ready(function () {
+        $.getJSON(urlToGetAllOpenBugs, function (allIssues) {
+            $("div#github-issues").append("There are " + allIssues.length + " outstanding issues:</br>");
+            $.each(allIssues, function (i, issue) {
+
+
+                // Get assignee (if applicable)
+                var assigneeName = "Unassigned";
+                if (issue.assignee) {
+                    assigneeName = issue.assignee.login;
+                }
+
+
+                // Calculate number of days ago created
+                var today = new Date();
+                var timeDifference = today - Date.parse(issue.created_at);
+                var daysAgo = (timeDifference / (1000 * 3600 * 24)).toFixed();
+
+
+                $("div#github-issues")
+                    .append("<div style=\"margin-bottom:20px;\">")
+                    .append("<strong><a href=\"" + issue.html_url + "\">" + issue.title + "</a></strong></br>")
+                    .append("#" + issue.number + " opened " + daysAgo + " days ago by " + issue.user.login + "</br>")
+                    .append("Assigned to: " + assigneeName)
+                    .append("</div>");
+            });
+        });
+    });
+</script>
   <p>Gameplay video coming soon</p>
     <div style="text-align:center"> 
     <button onclick="makeBig()" class="vidbtn">Big</button>
