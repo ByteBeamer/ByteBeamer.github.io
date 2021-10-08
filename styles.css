@@ -62,3 +62,10 @@
   /*background-attachment: fixed;*/
   background-size: cover;
 }
+
+.bg3::after {
+  background-image: url("././images/computers.jpeg");
+  background-position-x: center;
+  /*background-attachment: fixed;*/
+  background-size: cover;
+}
