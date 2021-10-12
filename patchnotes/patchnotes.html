@@ -28,7 +28,7 @@
         link.click();
         link.remove();
     }
-      async function loadFileAndPrintToConsole(url) {
+    function loadFile(url) {
          try {
            const response = await fetch(url);
            const data = await response.text();
@@ -38,7 +38,7 @@
          }
       }
 
-    document.getElementById("content").innerHTML = loadFileAndPrintToConsole('https://bytebeamer.github.io/patchnotes/beta-0.0.2.txt');
+    document.getElementById("content").innerHTML = loadFile('https://bytebeamer.github.io/patchnotes/beta-0.0.2.txt');
     </script> 
   </body>
   </html>
