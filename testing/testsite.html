@@ -2,7 +2,7 @@
 <html>
 <style>
 #container {
-  width: 400px;
+  width: 4000px;
   height: 400px;
   position: relative;
   background: yellow;
@@ -34,7 +34,7 @@ function myMove() {
       clearInterval(id);
     } else {
       pos++; 
-      elem.style.top = pos + "px"; 
+      elem.style.top = (pos / 0.5) + "px"; 
       elem.style.left = pos + "px"; 
     }
   }
