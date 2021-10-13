@@ -65,6 +65,9 @@ function component(width, height, color, x, y, type) {
         this.x += this.speedX;
         this.y += this.speedY + this.gravitySpeed;
         this.hitBottom();
+        if (this.y >= 400) {
+            return;   
+        }
     }
     this.hitBottom = function() {
         var rockbottom = myGameArea.canvas.height - this.height;
