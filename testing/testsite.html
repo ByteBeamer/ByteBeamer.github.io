@@ -15,6 +15,16 @@ canvas {
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+    
+function restartgame() {
+    myGameArea.stop();
+    myGameArea.clear();
+    myGameArea = {};
+    myGamePiece = {};
+    myObstacles = [];
+    myscore = {};
+    startGame()   
+}
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
@@ -65,9 +75,6 @@ function component(width, height, color, x, y, type) {
         this.x += this.speedX;
         this.y += this.speedY + this.gravitySpeed;
         this.hitBottom();
-        if (this.y >= 400) {
-            return;   
-        }
     }
     this.hitBottom = function() {
         var rockbottom = myGameArea.canvas.height - this.height;
@@ -134,6 +141,7 @@ function accelerate(n) {
 </script>
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+<div id="myrestartbutton" style="position:absolute;padding-top:75px;padding-left:120px;display:none;"><button onclick="restartGame()">Restart</button></div>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
 </body>
