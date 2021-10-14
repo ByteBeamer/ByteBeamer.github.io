@@ -17,16 +17,6 @@ canvas {
 var myGamePiece;
 var myObstacles = [];
 var myScore;
-    
-function restartgame() {
-    myGameArea.stop();
-    myGameArea.clear();
-    myGameArea = {};
-    myGamePiece = {};
-    myObstacles = [];
-    myscore = {};
-    startGame()   
-}
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
@@ -170,11 +160,20 @@ window.addEventListener("keydown", function (event) {
   // Cancel the default action to avoid it being handled twice
   event.preventDefault();
 }, true);
+function restartgame() {
+    myGameArea.stop();
+    myGameArea.clear();
+    myGameArea = {};
+    myGamePiece = {};
+    myObstacles = [];
+    myscore = {};
+    startGame()   
+}
 </script>
 <br>
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE UP</button>
 <button onmousedown="accelerate(+0.2)">ACCELERATE DOWN</button>
-<div id="myrestartbutton"><button onclick="javascript:history.go(0)">Restart</button></div>
+<div id="myrestartbutton"><button onclick="restartgame()">Restart</button></div>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
 </body>
