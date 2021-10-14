@@ -70,9 +70,14 @@ function component(width, height, color, x, y, type) {
     }
     this.hitBottom = function() {
         var rockbottom = myGameArea.canvas.height - this.height;
+        var height = myGameArea.canvas.height;
         if (this.y > rockbottom) {
             this.y = rockbottom;
             this.gravitySpeed = 0;
+        }
+        if (this.y <= height) [
+            this.y = height;
+            this.gravitySpeed = 0; 
         }
     }
     this.crashWith = function(otherobj) {
