@@ -160,20 +160,23 @@ window.addEventListener("keydown", function (event) {
   // Cancel the default action to avoid it being handled twice
   event.preventDefault();
 }, true);
-function restartgame() {
+function restartGame() {
+    document.getElementById("myfilter").style.display = "none";
+    document.getElementById("myrestartbutton").style.display = "none";
     myGameArea.stop();
     myGameArea.clear();
     myGameArea = {};
     myGamePiece = {};
     myObstacles = [];
     myscore = {};
-    startGame()   
+    document.getElementById("canvascontainer").innerHTML = "";
+    startGame()
 }
 </script>
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE UP</button>
-<button onmousedown="accelerate(+0.2)">ACCELERATE DOWN</button>
-<div id="myrestartbutton"><button onclick="restartgame()">Restart</button></div>
+<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE UP</button><br>
+<button onmousedown="accelerate(+0.2)">ACCELERATE DOWN</button><br>
+<div id="myrestartbutton"><button onclick="javascript:history.go(0)">Restart</button></div>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
 </body>
