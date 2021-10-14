@@ -75,7 +75,7 @@ function component(width, height, color, x, y, type) {
             this.y = rockbottom;
             this.gravitySpeed = 0;
         }
-        if (this.y > top) {
+        if (this.y < top) {
             this.gravitySpeed = 0;
         }
     }
