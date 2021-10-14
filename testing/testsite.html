@@ -75,10 +75,6 @@ function component(width, height, color, x, y, type) {
             this.y = rockbottom;
             this.gravitySpeed = 0;
         }
-        if (this.y <= height) [
-            this.y = height;
-            this.gravitySpeed = 0; 
-        }
     }
     this.crashWith = function(otherobj) {
         var myleft = this.x;
