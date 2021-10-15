@@ -68,6 +68,9 @@ PlayState._handleInput = function () {
     else if (this.keys.right.isDown) { // move hero right
         this.hero.move(1);
     }
+    else { // stop
+        this.hero.move(0);
+    }
 };
 
 window.onload = function () {
