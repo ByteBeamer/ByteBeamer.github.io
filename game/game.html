@@ -41,8 +41,9 @@
     
             const scene = new BABYLON.Scene(engine);  
 
-            BABYLON.MeshBuilder.CreateBox("box", {})
-	    BABYLON.MeshBuilder.CreateGround("ground", {width:10, height:10});
+            const box = BABYLON.MeshBuilder.CreateBox("box", {});
+	    box.position.y = 0.5;  //box created with default size so height is 1
+	    const ground = BABYLON.MeshBuilder.CreateGround("ground", {width:10, height:10});
 
             const camera = new BABYLON.ArcRotateCamera("camera", -Math.PI / 2, Math.PI / 2.5, 15, new BABYLON.Vector3(0, 0, 0));
             camera.attachControl(canvas, true);
