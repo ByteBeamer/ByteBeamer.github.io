@@ -4,7 +4,8 @@ PlayState.init = function () {
     this.game.renderer.renderSession.roundPixels = true;
     this.keys = this.game.input.keyboard.addKeys({
         left: Phaser.KeyCode.LEFT,
-        right: Phaser.KeyCode.RIGHT
+        right: Phaser.KeyCode.RIGHT,
+        up: Phaser.KeyCode.UP
     });
 };
 
@@ -23,6 +24,11 @@ Hero.prototype.constructor = Hero;
 Hero.prototype.move = function (direction) {
     const SPEED = 200;
     this.body.velocity.x = direction * SPEED;
+};
+
+Hero.prototype.jump = function () {
+    const JUMP_SPEED = 600;
+    this.body.velocity.y = -JUMP_SPEED;
 };
 
 PlayState.preload = function () {
@@ -82,6 +88,9 @@ PlayState._handleInput = function () {
     }
     else if (this.keys.right.isDown) { // move hero right
         this.hero.move(1);
+    }
+    else if (this.keys.up.isDown) {
+        this.hero.jump();
     }
     else { // stop
         this.hero.move(0);
