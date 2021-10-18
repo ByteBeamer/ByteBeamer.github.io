@@ -357,12 +357,9 @@ PlayState._onHeroVsKey = function (hero, key) {
 PlayState._onHeroVsDoor = function (hero, door) {
     this.sfx.door.play();
     
-    if (this.level => LEVEL_COUNT) {
-        this.level = 0;
-        this.game.state.restart(true, false, { level: this.level });
-    } else {
-        this.game.state.restart(true, false, { level: this.level + 1 });
-    }
+    
+    this.game.state.restart(true, false, { level: this.level + 1 });
+    
 };
 
 PlayState._createHud = function () {
