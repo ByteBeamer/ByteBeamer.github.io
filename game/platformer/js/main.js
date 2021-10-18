@@ -144,6 +144,7 @@ PlayState.init = function () {
     }, this);
 
     this.coinPickupCount = 0;
+    this.hasKey = false;
 };
 
 PlayState.preload = function () {
@@ -161,14 +162,18 @@ PlayState.preload = function () {
     
     this.game.load.image('invisible-wall', 'images/invisible_wall.png');
     this.game.load.image('icon:coin', 'images/coin_icon.png');
+    this.game.load.image('key', 'images/key.png');
 
     this.game.load.spritesheet('coin', 'images/coin_animated.png', 22, 22);
     this.game.load.spritesheet('spider', 'images/spider.png', 42, 32);
     this.game.load.spritesheet('hero', 'images/hero.png', 36, 42);
+    this.game.load.spritesheet('door', 'images/door.png', 42, 66);
 
     this.game.load.audio('sfx:jump', 'audio/jump.wav');
     this.game.load.audio('sfx:coin', 'audio/coin.wav');
     this.game.load.audio('sfx:stomp', 'audio/stomp.wav');
+    this.game.load.audio('sfx:key', 'audio/key.wav');
+    this.game.load.audio('sfx:door', 'audio/door.wav');
 };
 
 PlayState.create = function () {
@@ -176,7 +181,9 @@ PlayState.create = function () {
     this.sfx = {
         jump: this.game.add.audio('sfx:jump'),
         coin: this.game.add.audio('sfx:coin'),
-        stomp: this.game.add.audio('sfx:stomp')
+        stomp: this.game.add.audio('sfx:stomp'),
+        key: this.game.add.audio('sfx:key'),
+        door: this.game.add.audio('sfx:door')
     };
 
     // create level
@@ -203,6 +210,13 @@ PlayState._handleCollisions = function () {
         null, this);
     this.game.physics.arcade.overlap(this.hero, this.spiders,
         this._onHeroVsEnemy, null, this);
+    this.game.physics.arcade.overlap(this.hero, this.key, this._onHeroVsKey,
+        null, this);
+    this.game.physics.arcade.overlap(this.hero, this.door, this._onHeroVsDoor,
+        // ignore if there is no key or the player is on air
+        function (hero, door) {
+            return this.hasKey && hero.body.touching.down;
+        }, this);
 };
 
 PlayState._handleInput = function () {
@@ -219,6 +233,7 @@ PlayState._handleInput = function () {
 
 PlayState._loadLevel = function (data) {
     // create all the groups/layers that we need
+    this.bgDecoration = this.game.add.group();
     this.platforms = this.game.add.group();
     this.coins = this.game.add.group();
     this.spiders = this.game.add.group();
@@ -231,10 +246,33 @@ PlayState._loadLevel = function (data) {
     this._spawnCharacters({hero: data.hero, spiders: data.spiders});
     // spawn important objects
     data.coins.forEach(this._spawnCoin, this);
+    
+    this._spawnDoor(data.door.x, data.door.y);
+    this._spawnKey(data.key.x, data.key.y);
 
     // enable gravity
     const GRAVITY = 1200;
     this.game.physics.arcade.gravity.y = GRAVITY;
+};
+
+PlayState._spawnKey = function (x, y) {
+    this.key = this.bgDecoration.create(x, y, 'key');
+    this.key.anchor.set(0.5, 0.5);
+    this.game.physics.enable(this.key);
+    this.key.body.allowGravity = false;
+    this.key.y -= 3;
+    this.game.add.tween(this.key)
+        .to({y: this.key.y + 6}, 800, Phaser.Easing.Sinusoidal.InOut)
+        .yoyo(true)
+        .loop()
+        .start();
+};
+
+PlayState._spawnDoor = function (x, y) {
+    this.door = this.bgDecoration.create(x, y, 'door');
+    this.door.anchor.setTo(0.5, 1);
+    this.game.physics.enable(this.door);
+    this.door.body.allowGravity = false;
 };
 
 PlayState._spawnPlatform = function (platform) {
@@ -298,6 +336,18 @@ PlayState._onHeroVsEnemy = function (hero, enemy) {
         this.sfx.stomp.play();
         this.game.state.restart();
     }
+};
+
+PlayState._onHeroVsKey = function (hero, key) {
+    this.sfx.key.play();
+    key.kill();
+    this.hasKey = true;
+};
+
+PlayState._onHeroVsDoor = function (hero, door) {
+    this.sfx.door.play();
+    this.game.state.restart();
+    // TODO: go to the next level instead
 };
 
 PlayState._createHud = function () {
