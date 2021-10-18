@@ -128,7 +128,7 @@ Spider.prototype.die = function () {
 
 PlayState = {};
 
-const LEVEL_COUNT = 3;
+const LEVEL_COUNT = 4;
 
 PlayState.init = function (data) {
     this.game.renderer.renderSession.roundPixels = true;
@@ -155,6 +155,7 @@ PlayState.preload = function () {
     this.game.load.json('level:0', 'data/level00.json');
     this.game.load.json('level:1', 'data/level01.json');
     this.game.load.json('level:2', 'data/level02.json');
+    this.game.load.json('level:3', 'data/level03.json');
 
     this.game.load.image('font:numbers', 'images/numbers.png');
 
@@ -356,7 +357,7 @@ PlayState._onHeroVsKey = function (hero, key) {
 PlayState._onHeroVsDoor = function (hero, door) {
     this.sfx.door.play();
     
-    if (this.level == LEVEL_COUNT) {
+    if (this.level => LEVEL_COUNT) {
         this.level = 0;
         this.game.state.restart(true, false, { level: this.level });
     } else {
