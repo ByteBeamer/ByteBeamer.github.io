@@ -75,6 +75,8 @@ Hero.prototype.update = function () {
     if (this.animations.name !== animationName) {
         this.animations.play(animationName);
     }
+    this.keyIcon.frame = this.hasKey ? 1 : 0;
+
 };
 
 //
@@ -163,11 +165,13 @@ PlayState.preload = function () {
     this.game.load.image('invisible-wall', 'images/invisible_wall.png');
     this.game.load.image('icon:coin', 'images/coin_icon.png');
     this.game.load.image('key', 'images/key.png');
+    
 
     this.game.load.spritesheet('coin', 'images/coin_animated.png', 22, 22);
     this.game.load.spritesheet('spider', 'images/spider.png', 42, 32);
     this.game.load.spritesheet('hero', 'images/hero.png', 36, 42);
     this.game.load.spritesheet('door', 'images/door.png', 42, 66);
+    this.game.load.spritesheet('icon:key', 'images/key_icon.png', 34, 30);
 
     this.game.load.audio('sfx:jump', 'audio/jump.wav');
     this.game.load.audio('sfx:coin', 'audio/coin.wav');
@@ -351,19 +355,21 @@ PlayState._onHeroVsDoor = function (hero, door) {
 };
 
 PlayState._createHud = function () {
+    this.keyIcon = this.game.make.image(0, 19, 'icon:key');
+    this.keyIcon.anchor.set(0, 0.5);
     const NUMBERS_STR = '0123456789X ';
     this.coinFont = this.game.add.retroFont('font:numbers', 20, 26,
         NUMBERS_STR);
-
-    let coinIcon = this.game.make.image(0, 0, 'icon:coin');
     let coinScoreImg = this.game.make.image(coinIcon.x + coinIcon.width,
         coinIcon.height / 2, this.coinFont);
     coinScoreImg.anchor.set(0, 0.5);
+    let coinIcon = this.game.make.image(this.keyIcon.width + 7, 0, 'icon:coin');
 
     this.hud = this.game.add.group();
     this.hud.add(coinIcon);
     this.hud.add(coinScoreImg);
     this.hud.position.set(10, 10);
+    this.hud.add(this.keyIcon);
 };
 
 // =============================================================================
