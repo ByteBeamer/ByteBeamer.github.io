@@ -199,6 +199,36 @@ PlayState.create = function () {
 
     // crete hud with scoreboards)
     this._createHud();
+    
+    GameController.init({
+        left: {
+            type: 'joystick',
+            joystick: {
+                touchStart: function() {
+                    // Don't need this, but the event is here if you want it.
+                },
+                touchMove: function(joystick_details) {
+                    game.input.joystickLeft = joystick_details;
+                },
+                touchEnd: function() {
+                    game.input.joystickLeft = null;
+                }
+            }
+        },
+        right: {
+            // We're not using anything on the right for this demo, but you can add buttons, etc.
+            // See https://github.com/austinhallock/html5-virtual-game-controller/ for examples.
+            type: 'none'
+        }
+    });
+
+    // This is an ugly hack to get this to show up over the Phaser Canvas
+    // (which has a manually set z-index in the example code) and position it in the right place,
+    // because it's positioned relatively...
+    // You probably don't need to do this in your game unless your game's canvas is positioned in a manner
+    // similar to this example page, where the canvas isn't the whole screen.
+    $('canvas').last().css('z-index', 20);
+    $('canvas').last().offset( $('canvas').first().offset() );
 };
 
 PlayState.update = function () {
@@ -236,6 +266,15 @@ PlayState._handleInput = function () {
     }
     else { // stop
         this.hero.move(0);
+    }
+    
+    if (game.input.joystickLeft) {
+        // Move the ufo using the joystick's normalizedX and Y values,
+        // which range from -1 to 1.
+        this.hero.velocity.setTo(game.input.joystickLeft.normalizedX * 200, game.input.joystickLeft.normalizedY * ufoSpeed * -1);
+    }
+    else {
+        this.hero.velocity.setTo(0, 0);
     }
 };
 
