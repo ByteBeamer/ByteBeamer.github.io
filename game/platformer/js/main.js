@@ -362,6 +362,13 @@ PlayState._onHeroVsDoor = function (hero, door) {
     
 };
 
+PlayState._onHeroVsSpeedPowerup = function (hero, powerup) {
+    this.GRAVITY -= 200;
+    this.time.events.add(Phaser.Timer.SECONDS * 22, function () {
+       this.GRAVITY += 200;
+    });
+};
+
 PlayState._createHud = function () {
     const NUMBERS_STR = '0123456789X ';
     this.coinFont = this.game.add.retroFont('font:numbers', 20, 26,
