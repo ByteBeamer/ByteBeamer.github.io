@@ -23,10 +23,8 @@ function Hero(game, x, y) {
 Hero.prototype = Object.create(Phaser.Sprite.prototype);
 Hero.prototype.constructor = Hero;
 
-var SPEED = 200;
-
 Hero.prototype.move = function (direction) {
-    
+    const SPEED = 200;
     this.body.velocity.x = direction * SPEED;
 
     // update image flipping & animations
@@ -186,9 +184,6 @@ PlayState.preload = function () {
     this.game.load.audio('sfx:door', 'audio/door.wav');
 };
 
-var timer;
-var total = 16;
-
 PlayState.create = function () {
     // create sound entities
     this.sfx = {
@@ -205,36 +200,12 @@ PlayState.create = function () {
 
     // crete hud with scoreboards)
     this._createHud();
-    
-    timer = game.time.create(false);
-
-    //  Set a TimerEvent to occur after 2 seconds
-    timer.loop(2000, updateCounter, this);
-
-    //  Start the timer running - this is important!
-    //  It won't start automatically, allowing you to hook it to button events and the like.
-    timer.start();
-    
 };
-
-function updateCounter() {
-
-    total--;
-
-}
 
 PlayState.update = function () {
     this._handleCollisions();
     this._handleInput();
-    if (this.coinPickupCount >= 10) {
-      timer.start();
-      if (total > 0) {
-          this.SPEED = 400;
-      }
-      else {
-          this.SPEED = 200;
-      }
-    }
+
     this.coinFont.text = `x${this.coinPickupCount}`;
     this.keyIcon.frame = this.hasKey ? 1 : 0;
 };
