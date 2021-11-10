@@ -184,6 +184,9 @@ PlayState.preload = function () {
     this.game.load.audio('sfx:door', 'audio/door.wav');
 };
 
+var timer;
+var total = 0;
+
 PlayState.create = function () {
     // create sound entities
     this.sfx = {
@@ -200,7 +203,23 @@ PlayState.create = function () {
 
     // crete hud with scoreboards)
     this._createHud();
+    
+    timer = game.time.create(false);
+
+    //  Set a TimerEvent to occur after 2 seconds
+    timer.loop(2000, updateCounter, this);
+
+    //  Start the timer running - this is important!
+    //  It won't start automatically, allowing you to hook it to button events and the like.
+    timer.start();
+    
 };
+
+function updateCounter() {
+
+    total++;
+
+}
 
 PlayState.update = function () {
     this._handleCollisions();
