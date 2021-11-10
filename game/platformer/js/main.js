@@ -23,7 +23,7 @@ function Hero(game, x, y) {
 Hero.prototype = Object.create(Phaser.Sprite.prototype);
 Hero.prototype.constructor = Hero;
 
-const SPEED = 200;
+var SPEED = 200;
 
 Hero.prototype.move = function (direction) {
     
