@@ -213,7 +213,6 @@ PlayState.create = function () {
 
     //  Start the timer running - this is important!
     //  It won't start automatically, allowing you to hook it to button events and the like.
-    timer.start();
     
 };
 
