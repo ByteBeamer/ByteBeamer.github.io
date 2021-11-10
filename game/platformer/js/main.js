@@ -229,10 +229,10 @@ PlayState.update = function () {
     if (this.coinPickupCount >= 10) {
       timer.start();
       if (total > 0) {
-          Spider.SPEED = 100;
+          player.body.bounce.set(1);.
       }
       else {
-          Spider.SPEED = 50;
+          player.body.bounce.set(0);.
       }
     }
     this.coinFont.text = `x${this.coinPickupCount}`;
