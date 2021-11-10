@@ -23,8 +23,10 @@ function Hero(game, x, y) {
 Hero.prototype = Object.create(Phaser.Sprite.prototype);
 Hero.prototype.constructor = Hero;
 
+const SPEED = 200;
+
 Hero.prototype.move = function (direction) {
-    const SPEED = 200;
+    
     this.body.velocity.x = direction * SPEED;
 
     // update image flipping & animations
@@ -185,7 +187,7 @@ PlayState.preload = function () {
 };
 
 var timer;
-var total = 0;
+var total = 16;
 
 PlayState.create = function () {
     // create sound entities
@@ -217,7 +219,7 @@ PlayState.create = function () {
 
 function updateCounter() {
 
-    total++;
+    total--;
 
 }
 
@@ -225,7 +227,13 @@ PlayState.update = function () {
     this._handleCollisions();
     this._handleInput();
     if (this.coinPickupCount >= 10) {
-      
+      timer.start();
+      if (total > 0) {
+          this.SPEED = 400;
+      }
+      else {
+          this.SPEED = 200;
+      }
     }
     this.coinFont.text = `x${this.coinPickupCount}`;
     this.keyIcon.frame = this.hasKey ? 1 : 0;
