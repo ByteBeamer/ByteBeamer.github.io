@@ -5,7 +5,7 @@
         {"image": "grass:2x1", "x": 520, "y": 380},
         {"image": "grass:1x1", "x": 588, "y": 504},
         {"image": "grass:8x1", "x": 672, "y": 307},
-        {"image": "grass:4x1", "x": 250, "y": 252},
+        {"image": "grass:4x1", "x": 250, "y": 210},
         {"image": "grass:6x1", "x": 862, "y": 168},
         {"image": "grass:2x1", "x": 700, "y": 84}
     ],
