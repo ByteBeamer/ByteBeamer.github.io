@@ -79,11 +79,10 @@ Hero.prototype._getAnimationName = function () {
 };
 
 //
-//Spider (enemy)
+// Spider (enemy)
 //
-//spider
 function Spider(game, x, y) {
-    Phaser.Spider.call(this, game, x, y, 'spider');
+    Phaser.Sprite.call(this, game, x, y, 'spider');
 
     // anchor
     this.anchor.set(0.5);
@@ -97,8 +96,6 @@ function Spider(game, x, y) {
     this.body.collideWorldBounds = true;
     this.body.velocity.x = Spider.SPEED;
 }
-
-//SPIDERS
 
 Spider.SPEED = 100;
 
