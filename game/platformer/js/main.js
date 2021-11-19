@@ -79,7 +79,7 @@ Hero.prototype._getAnimationName = function () {
 };
 
 //
-// boss Spider (enemy)
+//Spider (enemy)
 //
 //spider
 function Spider(game, x, y) {
@@ -131,7 +131,7 @@ Spider.prototype.die = function () {
 
 PlayState = {};
 
-const LEVEL_COUNT = 8;
+const LEVEL_COUNT = 7;
 
 PlayState.init = function (data) {
     this.game.renderer.renderSession.roundPixels = true;
@@ -162,7 +162,6 @@ PlayState.preload = function () {
     this.game.load.json('level:4', 'data/level04.json');
     this.game.load.json('level:5', 'data/level05.json');
     this.game.load.json('level:6', 'data/level06.json');
-    this.game.load.json('level:7', 'data/level07.json');
 
     this.game.load.image('font:numbers', 'images/numbers.png');
 
