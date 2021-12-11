@@ -14,6 +14,7 @@ body {
     align-items: center;
     background-color: #333;
     color: white;
+    gradient(top left,#fd00da,#19d7f8);
 }
 
 .brand-title {
