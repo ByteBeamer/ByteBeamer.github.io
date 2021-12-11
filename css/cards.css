@@ -35,5 +35,7 @@
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  
+  background: #eeeee;
+  font-size: 0.8em;
+  border-bottom: 2px solid #ccccc;
 }
