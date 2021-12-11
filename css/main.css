@@ -16,3 +16,15 @@ html {
     position: absolute;
     color: #fff;
 }
+
+.app-text {
+    width: 50%;
+    float: left;
+}
+
+.app-text h1 {
+    font-size: 43px;
+    width: 640px;
+    position: relative;
+    margin-left: 40px
+}
