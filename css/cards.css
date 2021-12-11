@@ -23,3 +23,11 @@
   padding: 15px;
   background: #fafafa;
 }
+
+.card_content > p:first-of-type{
+  margin-top: 0;
+}
+
+.card_content > p:last-of-type{
+  margin-top: 0;
+}
