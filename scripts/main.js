@@ -2,10 +2,10 @@ window.onscroll = function() {fade1()};
 
 function fade1() {
   if (document.body.scrollTop > 1000 | document.documentElement.scrollTop > 1000) {
-    document.getElementById("banner").diplay = "blank";
-    document.getElementById("cards").display = "grid";
+    document.getElementById("banner").hidden = true;
+    document.getElementById("cards").hidden = false;
   } else {
-    document.getElementById("banner").diplay = "block";
-    document.getElementById("cards").display = "blank";
+    document.getElementById("banner").hidden = false;
+    document.getElementById("cards").hidden = true;
   }
 }
