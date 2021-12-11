@@ -7,3 +7,12 @@
 html {
     background-color: #DFDFDF;
 }
+
+.banner {
+    width: 80%;
+    height: 70%;
+    top: 25%;
+    left: 130px;
+    position: absolute;
+    color: #fff;
+}
