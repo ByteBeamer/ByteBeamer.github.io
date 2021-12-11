@@ -1,7 +1,6 @@
 .cards {
   margin: 0 auto;
   max-width: 1000px;
-  width: 50%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   gap: 20px;
@@ -11,6 +10,7 @@
 
 .card {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  width: 50%;
 }
 
 .card_image {
