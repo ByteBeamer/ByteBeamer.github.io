@@ -5,12 +5,11 @@
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   gap: 20px;
   font-family: sans-serif;
-  margin-top: 800px;
+  margin-top: 75vh;
 }
 
 .card {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-  width: 50vw;
 }
 
 .card_image {
