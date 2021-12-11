@@ -1,132 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-<body>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-    <link rel="stylesheet" href="parallax.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="fun, bytebeamer" />
-    <meta name="description" content="Play online and download games for windows!" />
-    <title>ByteBeamer's website!</title>
-  </head>
-  <body>
-    <style>
-      body {overflow:hidden; margin:0;}
-      .btn {
-        background-color: DodgerBlue;
-        border: none;
-        color: white;
-        padding: 12px 30px;
-        cursor: pointer;
-        font-size: 20px;
-      }
-
-/* Darker background on mouse-over */
-      .btn:hover {
-        background-color: RoyalBlue;
-      }
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
-
-      li {
-        float: left;
-      } 
-
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      li a:hover:not(.active) {
-        background-color: #111;
-      }
-
-      .active {
-        background-color: #04AA6D;
-      }
-      .square {
-        width: 200px;
-        height: 200px;
-        background: orange;
-        // etc...
-      }
-      @keyframes wipe-enter {
-	    0% {
-		    transform: scale(0, .025);
-      	}
-      	50% {
-	      	transform: scale(1, .025);
-      	}
-      }
-      @media (prefers-reduced-motion: no-preference) {
-        .square {
-          animation-name: wipe-enter;
-          animation-duration: 1s;
-          animation-iteration-count: infinite;
-        }
-      }
-      .fade {
-        margin: 50px;
-        padding: 50px;
-        background-color: lightgreen;
-        opacity: 1;
-      }
-
-</style>
-</head>
-<body>
-    <main class="wrapper">
-      <section class="section parallax bg1">
-        <h1>Games</h1>
-      </section>
-      <section class="section static">
-        <h1>Available for download now!<br></h1>
-        <a style="text-decoration:none" href="https://bytebeamer.github.io/downloads/downloads"><button class="btn" style="width:60vw" href="images/test.png"><i class="fa fa-download"></i>Downloads</button></a><br>
-      </section>
-      <section class="section parallax bg2">
-        <h1>To play on your own!</h1>
-      </section>
-      <section class="section static">
-        <h1>Found an issue?<br></h1>
-        <a style="text-decoration:none" href="https://github.com/ByteBeamer/ByteBeamer.github.io/issues"><button class="btn" style="width:60vw" href="././images/bug-3-32.png">Issues</button></a><br>
-      </section>
-    </main>
-  <ul>
-    <li><a class="active" href="https://bytebeamer.github.io" title="Home">Home</a></li>
-    <li><a href="https://www.patreon.com/ByteBeamStudios" title="Donate">Donate</a></li>
-    <li><a href="https://github.com/ByteBeamer/ByteBeamer.github.io/issues" title="Issues">Issues</a></li>
-    <li><a href="https://bytebeamer.github.io/about" title="About">About</a></li>
-  </ul>
-  <script>
-    $(window).on("load",function() {
-    $(window).scroll(function() {
-    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".fade").each(function() {
-      /* Check the location of each desired element */
-      var objectBottom = $(this).offset().top + $(this).outerHeight();
-      
-      /* If the element is completely within bounds of the window, fade it in */
-      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-        if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
-      } else { //object goes out of view (scrolling up)
-        if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
-      }
-    });
-  }).scroll(); //invoke scroll-handler on page-load
-});
-  </scipt>
-  </body>
+<html>
+    <head>
+      <link rel="stylesheet" href="background_styles.css">
+      <link rel="stylesheet" href="styles.css">
+      <script src="script.js" defer></script>
+      <title>Responsive Navbar</title>
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="brand-title">Brand Name</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </body>
 </html>
