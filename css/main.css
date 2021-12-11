@@ -49,3 +49,8 @@ html {
     padding-left: 100px;
 }
 
+.cards {
+    top: 75%;
+    left: 130px;
+    position: absolute;
+}
