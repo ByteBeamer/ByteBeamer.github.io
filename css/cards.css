@@ -31,3 +31,9 @@
 .card_content > p:last-of-type{
   margin-top: 0;
 }
+.card_info {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  
+}
