@@ -37,3 +37,15 @@ html {
     color: #919191;
     
 }
+
+.app-picture {
+    width: 50%;
+    float: right;
+}
+
+.app-picture img {
+    width: 100%;
+    margin-top: -20px;
+    padding-left: 50px;
+}
+
