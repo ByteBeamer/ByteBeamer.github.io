@@ -45,7 +45,7 @@ body {
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    text-decoration: underline;
 }
 
 .toggle-button {
