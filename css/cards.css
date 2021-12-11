@@ -10,6 +10,8 @@
 
 .card {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  width: 30vw;
 }
 
 .card_image {
