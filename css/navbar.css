@@ -9,7 +9,7 @@ body {
 
 .navbar {
     display: flex;
-    position: fixed;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
