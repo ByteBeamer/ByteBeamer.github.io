@@ -1,4 +1,4 @@
-var header = document.getElementById('banner');
+var header = document.getElementById('header');
 
 function fadeOutOnScroll(element) {
   if (!element) {
