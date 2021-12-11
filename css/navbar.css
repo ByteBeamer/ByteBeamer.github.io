@@ -44,6 +44,15 @@ body {
     padding: 1rem;
 }
 
+.navbar-links li a:hover {
+    text-decoration: underline;
+    -o-transition:.4s;
+    -ms-transition:.4s;
+    -moz-transition:.4s;
+    -webkit-transition:.4s;
+    transition:.4s;
+}
+
 .navbar-links li:hover {
     text-decoration: underline;
 }
