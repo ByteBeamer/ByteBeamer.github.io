@@ -44,17 +44,6 @@ body {
     padding: 1rem;
 }
 
-.navbar-links li a:hover {
-    display: block;
-    color: white;
-    padding: 1rem;
-    text-decoration: underline;
-}
-
-.navbar-links li:hover {
-    
-}
-
 .toggle-button {
     position: absolute;
     top: .75rem;
