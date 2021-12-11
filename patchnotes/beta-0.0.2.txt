@@ -1,8 +1,0 @@
-New Features:
-  Gun can fire
-  Zombie opens doors
-  "Door magic" shader added
-  Torch falls off wall when within a certain radius
-  Torch can be picked up to burn magic
-Bugs Fixed:
-  Zombie no longer walks through objects
