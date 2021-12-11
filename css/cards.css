@@ -40,3 +40,12 @@
   font-size: 0.8em;
   border-bottom: 2px solid #ccccc;
 }
+.card_link {
+  color: #64968c;
+  text-decoration: none;
+}
+
+.card_link:hover {
+  text-decoration: underline;
+}
+
