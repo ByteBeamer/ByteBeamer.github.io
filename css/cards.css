@@ -5,6 +5,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   font-family: sans-serif;
+  top: 500px;
 }
 
 .card {
