@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .card {
