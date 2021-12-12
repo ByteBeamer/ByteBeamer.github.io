@@ -4,7 +4,7 @@
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   gap: 20px;
   font-family: sans-serif;
-  margin-top: 95vh;
+  margin-top: 80%;
   display: flex;
   justify-content: center;
   flex-direction: row;
