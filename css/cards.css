@@ -5,7 +5,7 @@
   gap: 20px;
   font-family: sans-serif;
   margin-top: 80%;
-  display: grid;
+  display: flex;
   justify-content: center;
   flex-direction: row;
   padding-left: 30px;
