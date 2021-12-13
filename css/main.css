@@ -48,3 +48,8 @@ html {
     margin-top: 15vh;
     padding-left: 100px;
 }
+
+.separator1, .separator2 {
+    position: relative;
+}
+
