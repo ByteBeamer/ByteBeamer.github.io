@@ -51,17 +51,16 @@ html {
 }
 
 section {
-    position: relative;
     height: 100vh;
-    width: 100vw;
     /*new */
     scroll-snap-align: start;
+    position: relative;
     
 }
 
 .container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
     height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
