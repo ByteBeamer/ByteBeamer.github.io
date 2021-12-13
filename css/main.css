@@ -26,7 +26,7 @@ html {
     font-size: 4vw;
     width: 640px;
     position: relative;
-    margin-left: 40px
+    margin-left: 40px;
 }
 
 .app-text p {
@@ -51,7 +51,7 @@ html {
 
 section {
     height: 100vh;
-    /*new */
+    /* new */
     scroll-snap-align: start;
     
 }
