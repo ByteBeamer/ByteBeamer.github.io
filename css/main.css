@@ -4,8 +4,9 @@
     font-family: Raleway;
 }
 
-html {
+html, body {
     background-color: #42455a;
+    overflow: hidden;
 }
 
 .banner {
