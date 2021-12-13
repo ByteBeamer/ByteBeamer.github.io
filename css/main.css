@@ -61,7 +61,6 @@ section {
 
 .container {
     scroll-snap-type: y mandatory;
-    scroll-snap-points: repeat(100vh);
     overflow-y: scroll;
     height: 100vh;
 }
