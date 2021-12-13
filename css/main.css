@@ -51,5 +51,7 @@ html {
 
 .separator1, .separator2 {
     position: relative;
+    height: 50%;
+    width: 100%;
 }
 
