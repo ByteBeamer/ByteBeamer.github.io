@@ -65,7 +65,18 @@
           </div>
           <div class="card_info">
             <div>
-                <a href="javascript:void%20function(){javascript:var%20a=prompt(%22New%20Title%22,%22title%22);document.title!=a%26%26(document.title=a),$(%22meta[name=\%22description\%22]%22).attr(%22content%22,newDescription)}();">Drag This</a>
+                <a href='javascript:void%20function(){javascript:var%20a=prompt(%22New%20Title%22,%22title%22);document.title!=a%26%26(document.title=a),$(%22meta[name=\%22description\%22]%22).attr(%22content%22,newDescription)}();'>Drag This</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://logos-download.com/wp-content/uploads/2019/01/JavaScript_Logo.png" alt="" class="card_image">
+          <div class="card_content">
+            <p>Auto Clicker</p>
+          </div>
+          <div class="card_info">
+            <div>
+                <a href='javascript:var DELAY = 0.01;var autoClickerStyleElement = document.createElement("style");autoClickerStyleElement.innerHTML="*{cursor: crosshair !important;}";document.body.appendChild(autoClickerStyleElement);function addClicker(e) {if(!e.isTrusted) {return;}if(e.target.classList.contains("auto-clicker-target")) {e.target.classList.remove("auto-clicker-target");} else {e.target.classList.add("auto-clicker-target");}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener("click", addClicker);e.preventDefault();autoClick(e.target);}function autoClick(element) {if(element.classList.contains("auto-clicker-target")) {element.click();setTimeout(function(){ autoClick(element); }, DELAY);}}document.body.addEventListener("click", addClicker, 0);'>Drag This</a>
             </div>
           </div>
         </div>
