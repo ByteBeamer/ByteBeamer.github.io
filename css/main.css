@@ -44,8 +44,7 @@ html {
 }
 
 .app-picture img {
-    width: 40vw;
-    height: 30vw;
+    width: 100%;
     padding-top: 15vh;
     padding-left: 100px;
 }
