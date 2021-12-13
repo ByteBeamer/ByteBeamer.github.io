@@ -53,5 +53,15 @@ html {
     position: relative;
     height: 100vh;
     width: 100vw;
+    /*new */
+    display: flex;
+    scroll-snap-align: start;
+    
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
 }
 
