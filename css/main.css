@@ -11,7 +11,8 @@ html {
 .banner {
     width: 80%;
     height: 70%;
-    left: 15vw;
+    padding-top: 25%;
+    padding-left: 15vw;
     position: relative;
     color: #fff;
 }
