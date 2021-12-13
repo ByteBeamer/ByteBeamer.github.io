@@ -49,7 +49,7 @@ html {
     padding-left: 100px;
 }
 
-.separator1, .separator2 {
+section {
     position: relative;
     height: 100vh;
     width: 100vw;
