@@ -1,27 +1,3 @@
-var header = document.getElementById('banner');
-
-function fadeOutOnScroll(element) {
-  if (!element) {
-    return;
-  }
-  
-  var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
-  var elementHeight = element.offsetHeight;
-  var scrollTop = document.documentElement.scrollTop;
-  
-  var opacity = 1;
-  
-  if (scrollTop > distanceToTop) {
-    opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
-  }
-  
-  if (opacity >= 0) {
-    element.style.opacity = opacity;
-  }
-}
-
-function scrollHandler() {
-  fadeOutOnScroll(header);
-}
-
-window.addEventListener('scroll', scrollHandler);
+var section = document.getElementsByClassName('section')[1];
+var height  = document.getElementsByClassName('cards')[0].offsetHeight;
+section.style.offsetHeight = height;
