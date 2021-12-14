@@ -4,4 +4,4 @@ function resize () {
   section.setAttribute("style","height:" + height);
 }
 window.onload = resize;
-window.addEventListener('resize', reportWindowSize);
+window.addEventListener('resize', resize);
