@@ -56,4 +56,13 @@ section {
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
 }
+@media only screen and (max-width: 774px) {
+  section {
+	height: 100vh;
+	scroll-snap-align: start;
+	&:nth-of-type(2) {
+		height: 150vh;
+	}
+   }
+}
 
