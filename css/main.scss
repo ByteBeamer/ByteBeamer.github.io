@@ -4,67 +4,56 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 * {
-    font-family: Raleway;
+	font-family: Raleway;
 }
-
 html {
-    background-color: #42455a;
+	background-color: #42455a;
 }
-
 .banner {
-    width: 80%;
-    height: 70%;
-    padding-top: 25vh;
-    padding-left: 15vw;
-    position: relative;
-    color: #fff;
+	width: 80%;
+	height: 70%;
+	padding-top: 25vh;
+	padding-left: 15vw;
+	position: relative;
+	color: #fff;
 }
-
 .app-text {
-    width: 50%;
-    float: left;
+	width: 50%;
+	float: left;
+	h1 {
+		font-size: 4vw;
+		width: 640px;
+		position: relative;
+		margin-left: 40px;
+		overflow-wrap: break-word;
+		overflow-x: hidden;
+	}
+	p {
+		width: 650px;
+		font-size: 2vw;
+		margin: 30px 0 30px 40px;
+		line-height: 25px;
+		color: #919191;
+		overflow-wrap: break-word;
+		overflow-x: hidden;
+	}
 }
-
-.app-text h1 {
-    font-size: 4vw;
-    width: 640px;
-    position: relative;
-    margin-left: 40px;
-    overflow-wrap: break-word;
-    overflow-x: hidden;
-}
-
-.app-text p {
-    width: 650px;
-    font-size: 2vw;
-    margin: 30px 0 30px 40px;
-    line-height: 25px;
-    color: #919191;
-    overflow-wrap: break-word;
-    overflow-x: hidden;
-}
-
 .app-picture {
-    width: 50%;
-    float: right;
+	width: 50%;
+	float: right;
+	img {
+		width: 75%;
+		padding-top: 15vh;
+		padding-left: 100px;
+	}
 }
-
-.app-picture img {
-    width: 75%;
-    padding-top: 15vh;
-    padding-left: 100px;
-}
-
 section {
-    height: 100vh;
-    /* new */
-    scroll-snap-align: start;
-    
+	height: 100vh;
+	scroll-snap-align: start;
 }
-
 .container {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
 }
 
