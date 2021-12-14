@@ -3,6 +3,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+$win-width: 100vw;
+$win-height: 100vh;
+
 * {
 	font-family: Raleway;
 }
@@ -18,7 +21,7 @@ html {
 	color: #fff;
 }
 .app-text {
-	width: 90%;
+	width: $win-width;
 	float: left;
 	overflow-x: hidden;
 	h1 {
