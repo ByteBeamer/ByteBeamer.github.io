@@ -4,57 +4,52 @@
 @import "main";
 
 .cards {
-  margin: 0 auto;
-  max-width: 1000px;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-  gap: 20px;
-  font-family: sans-serif;
-  display: grid;
-  justify-content: center;
-  flex-direction: row;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 100px;
+	margin: 0 auto;
+	max-width: 1000px;
+	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+	gap: 20px;
+	font-family: sans-serif;
+	display: grid;
+	justify-content: center;
+	flex-direction: row;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 100px;
 }
-
 .card {
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
-
 .card_image {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
-
 .card_content {
-  line-height: 1.5;
-  font-size: 0.9em;
-  padding: 15px;
-  background: #fafafa;
-}
-
-.card_content > p:first-of-type{
-  margin-top: 0;
-}
-
-.card_content > p:last-of-type{
-  margin-top: 0;
+	line-height: 1.5;
+	font-size: 0.9em;
+	padding: 15px;
+	background: #fafafa;
+	>p {
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&:last-of-type {
+			margin-top: 0;
+		}
+	}
 }
 .card_info {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #eeeee;
-  font-size: 0.8em;
-  border-bottom: 2px solid #ccccc;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #eeeee;
+	font-size: 0.8em;
+	border-bottom: 2px solid #ccccc;
 }
 .card_link {
-  color: #64968c;
-  text-decoration: none;
+	color: #64968c;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
 }
-
-.card_link:hover {
-  text-decoration: underline;
-}
-
