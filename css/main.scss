@@ -51,6 +51,7 @@ section {
 	scroll-snap-align: start;
 	&:nth-of-type(2) { 
 		display: flex;
+		justify-content: center;
 	}
 	
 }
