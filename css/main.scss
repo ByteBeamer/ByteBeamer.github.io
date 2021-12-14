@@ -48,7 +48,9 @@ html {
 }
 section {
 	height: 100vh;
-	scroll-snap-align: start;
+	scroll-snap-align: start; 
+	display: flex;
+	
 }
 .container {
 	width: 100vw;
