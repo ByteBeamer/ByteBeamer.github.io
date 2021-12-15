@@ -30,6 +30,7 @@
 	font-size: 0.9em;
 	padding: 15px;
 	background: #fafafa;
+	display: flex;
 	>p {
 		&:first-of-type {
 			margin-top: 0;
@@ -41,7 +42,6 @@
 }
 .card_info {
 	padding: 15px;
-	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: #eeeee;
