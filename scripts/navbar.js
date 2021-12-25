@@ -6,7 +6,7 @@ toggleButton.addEventListener('click', () => {
 })
 
 
-const buttons = document.querySelectorAll("navbar");
+const buttons = document.getElementsByClassName("navbar");
 buttons.forEach(btn => {
   btn.addEventListener("click", function(e) {
     let x = e.clientX - e.target.offsetLeft;
