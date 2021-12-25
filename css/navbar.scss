@@ -94,10 +94,8 @@ span {
 	transform: translate(-50%, -50%);
 	pointer-events: none;
 	border-radius: 50%;
-	animation: ripple 1s linear infinite;
-}
-@keyframe ripple {
-	0% {
+	@include keyframes(ripple){
+		0% {
 		height: 0px;
 		width: 0px;
 	}
@@ -105,4 +103,6 @@ span {
 		width: 50px;
 		height: 50px;
 	}
+    }
+  @include animate(ripple, 1s, linear, infinite);
 }
