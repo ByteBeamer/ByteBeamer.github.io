@@ -87,3 +87,22 @@ body {
 		display: flex;
 	}
 }
+
+span {
+	position: absolute;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	border-radius: 50%;
+	animation: ripple 1s linear infinite;
+}
+@keyframe ripple {
+	0% {
+		height: 0px;
+		width: 0px;
+	}
+	100% {
+		width: 50px;
+		height: 50px;
+	}
+}
