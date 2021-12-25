@@ -10,6 +10,12 @@ $win-height: 100vh;
     animation: $animation $duration $method $times;
 }
 
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}
+
 * {
 	font-family: Raleway;
 }
