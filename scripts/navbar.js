@@ -18,6 +18,6 @@ buttons.forEach(btn => {
     this.appendChild(ripples);
     setTimeout(() => {
       ripples.remove()
-    },1000)
+    },1000);
   })
 })
