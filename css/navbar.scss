@@ -120,5 +120,5 @@ span {
 		opacity: 0;
 	}
     }
-  @include animate(ripple, 1s, linear, infinite);
+  @include animate(ripple, 1.5s, linear, infinite);
 }
