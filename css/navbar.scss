@@ -43,8 +43,8 @@ body {
 	}
 	li {
 		list-style: none;
+		overflow: hidden;
 		a {
-			overflow: hidden;
 			display: block;
 			text-decoration: none;
 			color: white;
