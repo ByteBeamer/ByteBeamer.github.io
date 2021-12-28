@@ -35,21 +35,17 @@ body {
 	margin: .5rem;
 }
 .navbar-links {
-	pointer-events: none;
 	height: 100%;
 	ul {
 		display: flex;
 		margin: 0;
 		padding: 0;
-		pointer-events: none;
 	}
 	li {
 		position: relative;
 		list-style: none;
 		overflow: hidden;
-		pointer-events: none;
 		a {
-			pointer-events: none;
 			display: block;
 			text-decoration: none;
 			color: white;
