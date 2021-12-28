@@ -24,8 +24,8 @@ buttons.forEach(btn => {
     }
     
     let ripples = document.createElement("span");
-    ripples.style.left = '${x}px'
-    ripples.style.top = '${y}px';
+    ripples.style.left = x + 'px'
+    ripples.style.top = y + 'px';
     this.appendChild(ripples);
     setTimeout(() => {
       ripples.remove()
