@@ -9,8 +9,11 @@ toggleButton.addEventListener('click', () => {
 const buttons = document.querySelectorAll("a");
 buttons.forEach(btn => {
   btn.addEventListener("click", function(e) {
-    let x = e.clientX - e.target.offsetLeft;
-    let y = e.clientY - e.target.offsetTop;
+    /*let x = e.clientX - e.target.offsetLeft;
+    let y = e.clientY - e.target.offsetTop;*/
+    
+    let x = e.clientX;
+    let y = e.clientY;
     
     let ripples = document.createElement("span");
     ripples.style.left = '${x}px'
