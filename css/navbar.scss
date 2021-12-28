@@ -46,6 +46,7 @@ body {
 		position: relative;
 		list-style: none;
 		overflow: hidden;
+		pointer-events: none;
 		a {
 			display: block;
 			text-decoration: none;
@@ -61,7 +62,6 @@ body {
 	}
 }
 .toggle-button {
-	pointer-events: none;
 	position: absolute;
 	top: .75rem;
 	right: 1rem;
