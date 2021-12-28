@@ -35,6 +35,7 @@ body {
 	margin: .5rem;
 }
 .navbar-links {
+	pointer-events: none;
 	height: 100%;
 	ul {
 		display: flex;
@@ -60,6 +61,7 @@ body {
 	}
 }
 .toggle-button {
+	pointer-events: none;
 	position: absolute;
 	top: .75rem;
 	right: 1rem;
