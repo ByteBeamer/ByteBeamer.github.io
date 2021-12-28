@@ -12,7 +12,7 @@ buttons.forEach(btn => {
     /*let x = e.clientX - e.target.offsetLeft;
     let y = e.clientY - e.target.offsetTop;*/
     
-    let x, y;
+    var x, y;
     
     if(e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel'){
         var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
