@@ -9,7 +9,7 @@ window.addEventListener('resize', resize);
 
 
 
-const link = document.getElementsByClassName("li");
+const link = document.querySelector(".link");
 const transition = document.querySelector(".transition");
 link.addEventListener("click", (e) => {
   e.preventDefault();
