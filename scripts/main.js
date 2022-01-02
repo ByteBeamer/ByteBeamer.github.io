@@ -8,13 +8,14 @@ window.addEventListener('resize', resize);
 
 
 
-
-const link = document.querySelector(".link");
+const links = userList.querySelectorAll(".link");
 const transition = document.querySelector(".transition");
-link.addEventListener("click", (e) => {
-  e.preventDefault();
-  transition.classList.add("slide");
-  setTimeout(() => {
-    window.location = link.href;
-  }, 900);
+links.forEach(function(a) {
+  a.addEventListener("click", (e) => {
+    e.preventDefault();
+    transition.classList.add("slide");
+    setTimeout(() => {
+      window.location = link.href;
+    }, 900);
+  });
 });
