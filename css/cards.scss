@@ -3,8 +3,7 @@
 
 .cards {
 	margin: 0 auto;
-	max-width: 1500px;
-	max-height: 800px;
+	max-width: 1000px;
 	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 	gap: 20px;
 	font-family: sans-serif;
