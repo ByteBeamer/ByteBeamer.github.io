@@ -15,7 +15,7 @@ links.forEach(function(a) {
     e.preventDefault();
     transition.classList.add("slide");
     setTimeout(() => {
-      window.location = link.href;
+      window.location = a.href;
     }, 900);
   });
 });
