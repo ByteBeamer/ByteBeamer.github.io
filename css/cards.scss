@@ -3,7 +3,7 @@
 
 .cards {
 	margin: 0 auto;
-	max-width: 1500px;
+	max-width: 1000px;
 	grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
 	gap: 20px;
 	font-family: sans-serif;
@@ -15,9 +15,6 @@
 	padding-top: 100px;
 }
 .card {
-	display: flex;
-        align-items: center;
-        justify-content: center;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 	transition: 0.3s;
 	&:hover {
