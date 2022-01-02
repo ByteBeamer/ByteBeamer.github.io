@@ -66,6 +66,32 @@ section {
 	overflow-y: scroll;
 	scroll-snap-type: y mandatory;
 }
+.cover {
+	position:fixed;
+	height:100vh;
+	width:100vw;
+	top:0;
+	left: -100vw;
+	z-index: 1000;
+}
+
+.transition.slide .cover1 {
+	background-color: black;
+	animation: slide 0.3s ease-in-out forwards;
+}
+
+.transition.slide .cover2 {
+	background-color: purple;
+	animation: slide 0.3s ease-in-out forwards;
+	animation-delay: 0.3s;
+}
+
+.transition.slide .cover3 {
+	background-color: blue;
+	animation: slide 0.3s ease-in-out forwards;
+	animation-delay: 0.6s;
+}
+
 @media only screen and (max-width: 774px) {
   section {
 	height: 100vh;
