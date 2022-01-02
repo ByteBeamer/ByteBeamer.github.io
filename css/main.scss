@@ -89,7 +89,7 @@ section {
 }
 
 .transition.slide .cover2 {
-	background-color: purple;
+	background-color: blue;
 	@include keyframes(slide){
 		0% {
 		left: -100vw;
@@ -103,7 +103,7 @@ section {
 }
 
 .transition.slide .cover3 {
-	background-color: blue;
+	background-color: purple;
 	@include keyframes(slide){
 		0% {
 		left: -100vw;
