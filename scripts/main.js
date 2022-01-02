@@ -8,7 +8,7 @@ window.addEventListener('resize', resize);
 
 
 
-const links = userList.querySelectorAll(".link");
+const links = document.querySelectorAll(".link");
 const transition = document.querySelector(".transition");
 links.forEach(function(a) {
   a.addEventListener("click", (e) => {
