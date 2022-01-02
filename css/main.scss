@@ -85,7 +85,7 @@ section {
 		left: 0;
 	}
     }
-  @include animate(slide, 0.3s, linear, ease-in-out, forwards);
+  @include animate(slide, 0.3s, ease-in-out, forwards);
 }
 
 .transition.slide .cover2 {
@@ -98,7 +98,7 @@ section {
 		left: 0;
 	}
     }
-  @include animate(slide, 0.3s, linear, ease-in-out, forwards);
+  @include animate(slide, 0.3s, ease-in-out, forwards);
 	animation-delay: 0.3s;
 }
 
@@ -112,7 +112,7 @@ section {
 		left: 0;
 	}
     }
-  @include animate(slide, 0.3s, linear, ease-in-out, forwards);
+  @include animate(slide, 0.3s, ease-in-out, forwards);
 	animation-delay: 0.6s;
 }
 
