@@ -29,12 +29,14 @@ body {
 	color: white;
 	background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgba(255,0,193,1) 100%);
-	img {
-		height: 100%; 
-		width: 100%; 
-		object-fit: contain;
-	}
 }
+
+.logo-img {
+	height: 100%; 
+	width: 100%; 
+	object-fit: contain;
+}
+
 .brand-title {
 	font-size: 1.5rem;
 	margin: .5rem;
