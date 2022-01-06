@@ -31,6 +31,7 @@
 	font-size: 0.9em;
 	padding: 15px;
 	background: #fafafa;
+	display: flex;
 	>p {
 		&:first-of-type {
 			margin-top: 0;
@@ -46,7 +47,7 @@
 	justify-content: space-between;
 	background: #eeeee;
 	font-size: 0.8em;
-	display: flex;
+	/*display: flex;*/
 	border-bottom: 2px solid #ccccc;
 }
 .card_link {
