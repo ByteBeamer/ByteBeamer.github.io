@@ -147,6 +147,17 @@
             </div>
           </div>
         </div>
+        <div class="card">
+          <img src="https://logos-download.com/wp-content/uploads/2019/01/JavaScript_Logo.png" alt="" class="card_image">
+          <div class="card_content">
+            <p>Edit websites directly</p>
+          </div>
+          <div class="card_info">
+            <div>
+                <a class="card_link" href='javascript:var video=document.getElementsByClassName("html5-main-video")[0],play=document.getElementsByClassName("ytp-play-button")[0],videoDur=video.duration,win=window.open("","popUpWindow","height=400,width=400,left=3,top=222");win.document.write(`<head><title>Not Playing</title></head><body><style>.myslider {-webkit-appearance: none;background: #FCF3CF;width: 98%;height: 20px;opacity: 2;} button {background-color: #f44336; /* Green */border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;} .center {display: flex;justify-content: center;align-items: center;height: 70px;}</style><h1 class="center" id="nowPlaying"></h1><input type="range" min="0" max=${video.duration} value=${video.currentTime} class="myslider" id="sliderRange"><br><div class="center"><button id="play">Play/Pause</button><br></div><div class="center"><button id="forward">Forward</button><button id="rewind">Rewind</button><br></div><div class="center"><button id="restart">Restart</button><button id="end">End</button></div></body>%60);var slider=win.document.getElementById("sliderRange");slider.onchange=function(){video.currentTime=slider.value};var play_btn=win.document.getElementById("play"),restart_btn=win.document.getElementById("restart"),end_btn=win.document.getElementById("end"),sync_btn=win.document.getElementById("sync"),rewind=win.document.getElementById("rewind"),forward=win.document.getElementById("forward");play_btn.onclick=function(){play.click()},restart_btn.onclick=function(){video.currentTime=.5},end_btn.onclick=function(){video.currentTime=video.duration},forward.onclick=function(){video.currentTime+=15},rewind.onclick=function(){video.currentTime-=15};const clear=(()=>{const a=a=>null!==a&&a!==void 0,b=setInterval(()=>{const b=[...document.querySelectorAll(".ad-showing")][0];if(a(b)){const b=document.querySelector("video");a(b)&&(b.currentTime=b.duration)}},500);return function(){clearTimeout(b)}})();var intervalID=window.setInterval(repeat,500);function repeat(){if(slider.value=video.currentTime,slider.max=video.duration,clear(),""!==document.getElementsByClassName("video-ads")[0].innerHTML){for(var c=!1,d=0;d<document.getElementsByClassName("ytp-ad-overlay-close-button").length;d++)document.getElementsByClassName("ytp-ad-overlay-close-button")[d].click(),c=!0;!1===c%26%26(document.getElementsByClassName("html5-main-video")[0].currentTime=document.getElementsByClassName("html5-main-video")[0].duration,document.getElementsByClassName("ytp-ad-skip-button")[0].click())}var e="textContent"in document.body?"textContent":"innerText";win.document.title="Now Playing - "+document.getElementsByTagName("h1")[1][e],win.document.getElementById("nowPlaying").innerHTML="Now Playing - "+document.getElementsByTagName("h1")[1][e]}'>Drag This</a>
+            </div>
+          </div>
+        </div>
       </div>
     </body>
 </html>
