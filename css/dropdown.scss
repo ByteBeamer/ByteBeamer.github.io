@@ -2,7 +2,9 @@
 ---
 
 .selectWrapper{
-  border-radius:24px;
+  position: absolute;
+  border-top-right-radius: 24px;
+  border-top-left-radius: 24px;
   display:inline-block;
   overflow:hidden;
   background: rgb(2,0,36);
