@@ -3,8 +3,7 @@
 
 .selectWrapper{
   position: relative;
-  border-top-right-radius: 24px;
-  border-top-left-radius: 24px;
+  border-radius: 24px;
   display:inline-block;
   overflow:hidden;
   background: rgb(2,0,36);
@@ -12,6 +11,7 @@
   color: white;
   z-index: 100;
   left: 50%;
+  margin: auto;
   
 }
 .selectBox{
