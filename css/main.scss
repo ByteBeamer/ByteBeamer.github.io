@@ -116,6 +116,11 @@ section {
 	animation-delay: 0.6s;
 }
 
+.center {
+	display: flex;
+	justify-content: center;
+}
+
 @media only screen and (max-width: 774px) {
   section {
 	height: 100vh;
