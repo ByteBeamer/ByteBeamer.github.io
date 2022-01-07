@@ -13,6 +13,11 @@
   --select-arrow: var(--select-border);
 }
 
+.dropdown-container {
+  display: flex;
+  justify-content: center;
+}
+
 select {
   // A reset of styles, including removing the default dropdown arrow
   appearance: none;
