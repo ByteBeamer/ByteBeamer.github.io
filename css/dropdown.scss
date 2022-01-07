@@ -5,8 +5,10 @@
   border-radius:24px;
   display:inline-block;
   overflow:hidden;
-  background:#cccccc;
+  background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgba(255,0,193,1) 100%);
   border:1px solid #cccccc;
+  z-index: 100;
 }
 .selectBox{
   width:140px;
