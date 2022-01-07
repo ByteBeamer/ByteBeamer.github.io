@@ -13,8 +13,11 @@
   
 }
 .selectBox{
+  overflow: hidden;
   width:140px;
   height:40px;
   border:0px;
   outline:none;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%, rgba(255,0,193,1) 100%);
 }
