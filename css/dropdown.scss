@@ -71,7 +71,7 @@ select {
   // Optional styles
   // remove for transparency
   background-color: #585c73;
-  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  background-image: #585c73;
 
   // Custom arrow
   &:not(.select--multiple)::after {
