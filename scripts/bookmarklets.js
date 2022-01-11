@@ -10,10 +10,10 @@ function update() {
     if (value == 0) {
       cards[i].style.visibility = "shown";
     } else if (value == 1) {
-      if (cards.classList.contains('favorite')) {
+      if (cards[i].classList.contains('favorite')) {
          cards[i].style.visibility = "shown";
       }
-      else if (!cards.classList.contains('favorite')) {
+      else if (!cards[i].classList.contains('favorite')) {
          cards[i].style.visibility = "hidden";
       }
     }
