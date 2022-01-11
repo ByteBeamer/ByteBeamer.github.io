@@ -1,6 +1,6 @@
 var cards = document.getElementByClassName("cards")[0].getElementsByClassName("card");
 
-var select = document.getElementsByClassName("select")[0].getElementById('card_filter');
+var select = document.getElementsByClassName("select")[0].getElementByClassName("dropdown-container")[0].getElementById('card_filter');
 var value = select.options[select.selectedIndex].value;
 
 select.onchange = function () {
