@@ -6,15 +6,15 @@ var value = select.options[select.selectedIndex].value;
 select.onchange=update();
 
 function update() {
-  
   Array.prototype.forEach.call(cards, function(card) {
-    if (value == "All") {
+    if (value == "1") {
       card.style.visibility = "visible";
-    } else if (value == "Favorites") {
+    } 
+    if (value == "2") {
       if (card.classList.contains('favorite')) {
          card.style.visibility = "visible";
       }
-      else if (!card.classList.contains('favorite')) {
+      if (!card.classList.contains('favorite')) {
          card.style.visibility = "hidden";
       }
     }
