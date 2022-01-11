@@ -23,11 +23,13 @@
 	}
 }
 .card_image {
+	visiblity: inherit;
 	width: 100%;
 	display: block;
 	background: black;
 }
 .card_content {
+	visiblity: inherit;
 	line-height: 1.5;
 	font-size: 0.9em;
 	padding: 15px;
@@ -42,6 +44,7 @@
 	}
 }
 .card_info {
+	visiblity: inherit;
 	padding: 15px;
 	align-items: center;
 	justify-content: space-between;
@@ -51,6 +54,7 @@
 	border-bottom: 2px solid #ccccc;
 }
 .card_link {
+	visiblity: inherit;
 	color: #64968c;
 	text-decoration: none;
 	&:hover {
