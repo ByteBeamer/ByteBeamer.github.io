@@ -8,10 +8,10 @@ select.onchange=update();
 function update() {
   for (var i=0; i <= cards.length; i++) {
     if (value == "All") {
-      cards[i].style.visibility = "shown";
+      cards[i].style.visibility = "visible";
     } else if (value == "Favorites") {
       if (cards[i].classList.contains('favorite')) {
-         cards[i].style.visibility = "shown";
+         cards[i].style.visibility = "visible";
       }
       else if (!cards[i].classList.contains('favorite')) {
          cards[i].style.visibility = "hidden";
