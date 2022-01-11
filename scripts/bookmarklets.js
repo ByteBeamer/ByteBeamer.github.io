@@ -7,9 +7,9 @@ select.onchange=update();
 
 function update() {
   for (var i=0; i <= cards.length; i++) {
-    if (value == 0) {
+    if (value == "All") {
       cards[i].style.visibility = "shown";
-    } else if (value == 1) {
+    } else if (value == "Favorites") {
       if (cards[i].classList.contains('favorite')) {
          cards[i].style.visibility = "shown";
       }
