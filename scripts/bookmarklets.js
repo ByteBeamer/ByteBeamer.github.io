@@ -2,7 +2,7 @@ var favorites = document.getElementsByClassName("favorite");
 var cards = document.getElementsByClassName("card");
 
 var select = document.getElementById('card_filter');
-var value = select.options[select.selectedIndex].value;
+var value = select.options[select.selectedIndex].text;
 
 select.onchange=changeCards();
 
