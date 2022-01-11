@@ -1,10 +1,24 @@
-var favorites = document.getElementsByClassName("favorite");
 var cards = document.getElementsByClassName("card");
 
 var select = document.getElementById('card_filter');
-var value = select.options[select.selectedIndex].text;
+var value = select.options[select.selectedIndex].value;
 
-select.onchange=changeCards();
+select.onchange=update();
+
+function update() {
+  for (var i=0; i <= cards.length; i++) {
+    if (value == 0) {
+      cards[i].style.visibility = "shown";
+    } else if (value == 1) {
+      if (cards.classList.contains('favorite')) {
+         cards[i].style.visibility = "shown";
+      }
+      else if (!cards.classList.contains('favorite')) {
+         cards[i].style.visibility = "hidden";
+      }
+    }
+  }
+}
 
 function changeCards() {
   if (value == "All") {
