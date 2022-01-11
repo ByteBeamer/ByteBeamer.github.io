@@ -8,12 +8,12 @@ select.onchange=changeCards();
 
 function changeCards() {
   if (value == "All") {
-  for (var i=0, max=cards.length; i < max; i++) {
+  for (var i=0; i < cards.length; i++) {
     cards[i].style.visibility = "shown";
   }
 }
 if (value == "Favorites") {
-  for (var i=0, max=cards.length; i < max; i++) {
+  for (var i=0; i < cards.length; i++) {
        if (cards.classList.contains('favorite')) {
          favorites[i].style.visibility = "shown";
        }
