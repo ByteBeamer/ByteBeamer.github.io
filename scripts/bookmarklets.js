@@ -9,7 +9,7 @@ setInterval(changeCards, 1000);
 function changeCards() {
   if (value == "All") {
   for (var i=0, max=cards.length; i < max; i++) {
-    cards.style.visibility = "shown";
+    cards[i].style.visibility = "shown";
   }
 }
 if (value == "Favorites") {
