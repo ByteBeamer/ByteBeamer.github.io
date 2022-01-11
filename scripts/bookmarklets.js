@@ -4,7 +4,7 @@ var cards = document.getElementsByClassName("card");
 var select = document.getElementById('card_filter');
 var value = select.options[select.selectedIndex].value;
 
-setInterval(changeCards, 1000);
+select.onchange=changeCards();
 
 function changeCards() {
   if (value == "All") {
