@@ -1,4 +1,4 @@
-var cards = document.body.getElementsByClassName("card");
+var cards = document.body.getElementByClassName("cards")[0].getElementsByClassName("card");
 
 var select = document.body.getElementById('card_filter');
 var value = select.options[select.selectedIndex].value;
