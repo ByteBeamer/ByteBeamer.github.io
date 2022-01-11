@@ -1,6 +1,6 @@
-var cards = document.getElementsByClassName("card");
+var cards = document.body.getElementsByClassName("card");
 
-var select = document.getElementById('card_filter');
+var select = document.body.getElementById('card_filter');
 var value = select.options[select.selectedIndex].value;
 
 select.onchange=update();
