@@ -14,7 +14,7 @@ select.onchange = function () {
           card.style.visibility = 'visible';
         }
         if (!card.classList.contains('favorite')) {
-          card.style.visibility = 'hidden";
+          card.style.visibility = "hidden";
         }
       }
     }
