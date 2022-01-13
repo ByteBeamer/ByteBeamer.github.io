@@ -5,6 +5,7 @@ var value = select.options[select.selectedIndex].value;
 
 select.onchange = function () {
   alert("changed! Value: " + value);
+  value = select.options[select.selectedIndex].value;
   Array.prototype.forEach.call(cards, function(card) {
       if (value == "1") {
         card.style.visibility = "visible";
