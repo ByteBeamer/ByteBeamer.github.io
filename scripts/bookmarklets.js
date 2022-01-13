@@ -8,14 +8,14 @@ select.onchange = function () {
   value = select.options[select.selectedIndex].value;
   Array.prototype.forEach.call(cards, function(card) {
       if (value == "1") {
-        card.style.visibility = "visible";
+        card.style.display = "inherit";
       } 
       if (value == "2") {
         if (card.classList.contains('favorite')) {
-          card.style.visibility = "visible";
+          card.style.display = "inherit";
         }
         else {
-          card.style.visibility = "hidden";
+          card.style.display = "none";
         }
       }
   });
