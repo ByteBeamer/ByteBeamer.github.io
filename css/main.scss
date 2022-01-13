@@ -59,6 +59,9 @@ html {
 section {
 	height: 100vh;
 	scroll-snap-align: start;
+	&:nth-of-type(2) {
+		height: 125vh;
+	}
 }
 .container {
 	width: 100vw;
@@ -126,7 +129,7 @@ section {
 	height: 100vh;
 	scroll-snap-align: start;
 	&:nth-of-type(2) {
-		height: 201vh;
+		height: 226vh;
 	}
    }
 	.app-picture {
@@ -144,7 +147,7 @@ section {
 	height: 100vh;
 	scroll-snap-align: start;
 	&:nth-of-type(2) {
-		height: 325vh;
+		height: 375vh;
 	}
    }
 	.app-picture {
