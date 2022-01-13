@@ -3,7 +3,7 @@ var cards = document.getElementsByClassName("card");
 var select = document.getElementById('card_filter');
 var value = select.options[select.selectedIndex].value;
 
-select.onchange = function () {
+select.onclick = function () {
   Array.from(document.getElementsByClassName(cards)).forEach(
       function (card) {
         if (value == "1") {
