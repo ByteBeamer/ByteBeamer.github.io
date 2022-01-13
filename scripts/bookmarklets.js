@@ -13,24 +13,8 @@ select.onchange = function () {
          card.style.visibility = 'visible';
       }
       if (!card.classList.contains('favorite')) {
-         card.style.visibility = 'hiddem';
+         card.style.visibility = 'hidden";
       }
     }
   });
 };
-
-function updateCards() {
-  Array.prototype.forEach.call(cards, function(card) {
-    if (value == "1") {
-      card.style.visibility = "visible";
-    } 
-    if (value == "2") {
-      if (card.classList.contains('favorite')) {
-         card.style.visibility = "visible";
-      }
-      if (!card.classList.contains('favorite')) {
-         card.style.visibility = "hidden";
-      }
-    }
-  });
-}
