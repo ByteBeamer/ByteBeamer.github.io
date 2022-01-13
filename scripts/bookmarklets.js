@@ -10,7 +10,7 @@ select.onclick = function () {
       } 
       if (value == "2") {
         if (card.classList.contains('favorite')) {
-          card.style.visibility = 'hidden';
+          card.style.visibility = "visible";
         }
         else {
           card.style.visibility = "hidden";
