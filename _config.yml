@@ -1,5 +1,3 @@
 url: "https://bytebeamer.github.io" # the base hostname & protocol for your site
-plugins:
-  - jekyll-sitemap
 sass:
   sass_dir: css
