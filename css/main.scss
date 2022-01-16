@@ -121,7 +121,7 @@ section {
 	display: flex;
 	justify-content: center;
 }
-
+/*Window Sizes*/
 @media only screen and (max-width: 774px) {
   section {
 	height: 100vh;
@@ -156,5 +156,24 @@ section {
 		padding-top: 15vh;
 		padding-left: 100px;
 	}
+    }
 }
+
+/*Small Screen Mobile*/
+@media only screen and (min-width : 320px) {
+	section {
+		height: 100vh;
+		scroll-snap-align: start;
+		&:nth-of-type(2) {
+			height: 400vh;
+		}
+        }
+	.app-picture {
+		width: 80%;
+		float: right;
+		img {
+			width: 75%;
+			padding-left: 100px;
+		}
+	}
 }
