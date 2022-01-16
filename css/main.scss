@@ -160,7 +160,7 @@ section {
 }
 
 /*Small Screen Mobile*/
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 320px) and (max-width : 529px) {
 	section {
 		height: 100vh;
 		scroll-snap-align: start;
