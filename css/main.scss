@@ -48,19 +48,17 @@ html {
 	}
 }
 .app-picture {
-	width: 50%;
+	height: 50%;
 	float: right;
 	img {
 		width: 75%;
-		padding-top: 15vh;
-		padding-left: 100px;
 	}
 }
 section {
 	height: 100vh;
 	scroll-snap-align: start;
 	&:nth-of-type(2) {
-		height: 140vh;
+		height: 100vh;
 	}
 }
 .container {
