@@ -17,8 +17,11 @@ nav {
 	margin: 27px auto 0;
 	z-index: 999999;
 	position: absolute;
-	margin-left:auto;
-	margin-right:auto;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
 	width: 310px;
 	height: 50px;
 	background-color: #34495e;
