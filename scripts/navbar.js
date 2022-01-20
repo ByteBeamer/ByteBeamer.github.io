@@ -1,34 +1,70 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+var nav = document.getElementsByTagName("nav")[0];
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+var nav_overlay = document.getElementsByClassName("start-home")[0];
 
+var nav_items = document.getElementsByClassName("nav-item");
 
-const buttons = document.querySelectorAll("a");
-buttons.forEach(btn => {
-  btn.addEventListener("click", function(e) {
-    /*let x = e.clientX - e.target.offsetLeft;
-    let y = e.clientY - e.target.offsetTop;*/
-    
-    var x, y;
-    
-    if(e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel'){
-        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-        x = touch.pageX;
-        y = touch.pageY;
-    } else if (e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave') {
-        x = e.clientX;
-        y = e.clientY;
-    }
-    
-    let ripples = document.createElement("span");
-    ripples.style.left = x + 'px'
-    ripples.style.top = y + 'px';
-    this.appendChild(ripples);
-    setTimeout(() => {
-      ripples.remove()
-    },1000);
-  })
-})
+var min = document.getElementById("minimize-nav");
+
+var max = document.getElementsByClassName("maximize-nav")[0];
+
+min.onclick = function () {
+
+  nav.classList.remove("slide-out");
+
+  nav.classList.add("slide-in");
+
+  nav_overlay.style.visibility = "hidden";
+
+  min.style.visibility = "hidden";
+
+  for (var i = 0; i < nav_items.length; i++) {
+
+   nav_items[i].style.visibility = "hidden";
+
+  }
+
+  setTimeout(function () {
+
+    nav.style.visibility = "hidden";
+
+  }, 475);
+
+  setTimeout(function () {
+
+    max.style.visibility = "visible";
+
+    max.classList.add("maximize-slide");
+
+  }, 500);
+
+};
+
+max.onclick = function () {
+
+  max.classList.remove("maximize-slide");
+
+  max.style.visibility = "hidden";
+
+  nav.style.visibility = "visible";
+
+  nav_overlay.style.visibility = "visible";
+
+  min.style.visibility = "visible";
+
+  nav.classList.remove("slide-in");
+
+  nav.classList.add("slide-out");
+
+  setTimeout(function () {
+
+    for (var i = 0; i < nav_items.length; i++) {
+
+    nav_items[i].style.visibility = "visible";
+
+  }
+
+  }, 500);//for glitch look 250
+
+};
+
