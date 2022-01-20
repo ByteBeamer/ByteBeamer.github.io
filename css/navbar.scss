@@ -117,9 +117,7 @@ a:nth-child(4) {
 
 }
 
-nav .start-home,
-
-a:nth-child(1):hover ~ .animation {
+nav .start-home, a:nth-child(1):hover ~ .animation {
 
   width: 100px;
 
@@ -129,9 +127,7 @@ a:nth-child(1):hover ~ .animation {
 
 }
 
-nav .start-about,
-
-a:nth-child(2):hover ~ .animation {
+nav .start-about, a:nth-child(2):hover ~ .animation {
 
   width: 110px;
 
@@ -141,9 +137,7 @@ a:nth-child(2):hover ~ .animation {
 
 }
 
-nav .start-blog,
-
-a:nth-child(3):hover ~ .animation {
+nav .start-blog, a:nth-child(3):hover ~ .animation {
 
   width: 100px;
 
@@ -188,18 +182,6 @@ nav a:nth-child(4):hover ~ .animation {
   margin: 27px auto 0;
 
 }
-
-
-body {
-
-  font-size: 12px;
-
-  font-family: sans-serif;
-
-  background: #2c3e50;
-
-}
-
 
 div.arrow {
 
