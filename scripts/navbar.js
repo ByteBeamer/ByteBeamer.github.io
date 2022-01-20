@@ -17,7 +17,9 @@ min.onclick = function () {
   nav_overlay.style.visibility = "hidden";
 
   min.style.visibility = "hidden";
-
+  for (var i = 0; i < nav_items.length; i++) {
+   nav_items[i].style.visibility = "hidden";
+  }
   setTimeout(function () {
 
     nav.style.visibility = "hidden";
@@ -49,6 +51,11 @@ max.onclick = function () {
   nav.classList.remove("slide-in");
 
   nav.classList.add("slide-out");
+  setTimeout(function(){
+    for (var i = 0; i < nav_items.length; i++) {
+   nav_items[i].style.visibility = "visible";
+  }
+  });
   //for glitch look 250
 
 };
