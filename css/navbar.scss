@@ -255,53 +255,6 @@ div.arrow {
 
 
 /*Animations*/
-
-
-.disappear {
-
-  @include keyframes(disappear) {
-
-    0% {
-
-      transform: scale(1);
-
-    }
-
-    100% {
-
-      transform: scale(0);
-
-    }
-
-  }
-
-  @include animate(disappear, 0.5s, ease-in, 1);
-
-}
-
-.maximize {
-
-  @include keyframes(maximize) {
-
-    100% {
-
-      transform: scale(1);
-
-    }
-
-    0% {
-
-      transform: scale(0);
-
-    }
-
-  }
-
-  @include animate(maximize, 0.5s, ease-in, 1);
-
-}
-
-
 .slide-in {
 
   animation-fill-mode: forwards;
