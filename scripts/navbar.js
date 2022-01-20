@@ -55,7 +55,7 @@ max.onclick = function () {
     for (var i = 0; i < nav_items.length; i++) {
    nav_items[i].style.visibility = "visible";
   }
-  });
+  },500);
   //for glitch look 250
 
 };
