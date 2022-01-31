@@ -186,7 +186,7 @@ nav a:nth-child(4):hover ~ .animation {
 
 .arrow {
 
-  z-index: 99;
+  z-index: 100;
 
   width: 10px;
 
@@ -204,7 +204,8 @@ nav a:nth-child(4):hover ~ .animation {
 
 
   &::before {
-
+    z-index: 100;
+    
     content: "";
 
     width: 10px;
