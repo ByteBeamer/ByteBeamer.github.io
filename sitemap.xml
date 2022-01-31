@@ -8,19 +8,9 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://bytebeamer.github.io/about</loc>
-  <lastmod>2022-01-14T03:30:30+00:00</lastmod>
-  <priority>0.70</priority>
-</url>
-<url>
   <loc>https://bytebeamer.github.io/bookmarklets</loc>
   <lastmod>2022-01-14T03:30:30+00:00</lastmod>
   <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://bytebeamer.github.io/game/platformer/index</loc>
-  <lastmod>2022-01-14T03:30:30+00:00</lastmod>
-  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://bytebeamer.github.io/music</loc>
@@ -28,9 +18,19 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://bytebeamer.github.io/about</loc>
+  <lastmod>2022-01-14T03:30:30+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://bytebeamer.github.io/game/platformer/index</loc>
+  <lastmod>2022-01-14T03:30:30+00:00</lastmod>
+  <priority>0.65</priority>
+</url>
+<url>
   <loc>https://bytebeamer.github.io/pizzaclicker</loc>
   <lastmod>2022-01-14T03:30:30+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.60</priority>
 </url>
 
 
