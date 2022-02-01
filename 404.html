@@ -7,5 +7,14 @@
 		<h1>Error 404 page not found</h1>
 		<p>Go <a href="https://bytebeamer.github.io">Home</a></p>
 		<div id="space-count"></div>
+		<script>
+			var clicks = 0;
+			document.addEventListener('keydown', function(event) {
+                            if(event.keyCode == 32) {
+                                clicks++;
+				document.getElementById("space-count").innerHTML = clicks;
+                            }
+                        });
+		</script>
 	</body>
 </html>
