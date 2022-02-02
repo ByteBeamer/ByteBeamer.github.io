@@ -15,6 +15,7 @@ function scrollRotate() {
             image.classList.add("moon-container");
             circle.classList.add("circle-moon");
             cutout.classList.add("cutout");
+            document.body.style.backgroundColor = "#2c302d";
         } else {
             image.classList.remove("moon-container");
             circle.classList.remove("circle-moon");
