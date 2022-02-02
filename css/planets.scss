@@ -5,13 +5,13 @@
         position: absolute;
         left: 75%;
         top:25%;
-        box-shadow: 1px 1px 50px 29px rgba(255,252,201,0.67);
         .circle {
                 height: 120px;
                 width: 120px;
                 border-radius: 100px;
                 background-color: #e8e8cf;
                 z-index: 1;
+                box-shadow: 1px 1px 50px 29px rgba(255,252,201,0.67);
         }
         .cutout {
                 height: 100px;
