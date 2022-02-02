@@ -3,8 +3,6 @@ window.onscroll = function () {
 };
 
 function scrollRotate() {
-    let image = document.getElementById("reload");
+    let image = document.getElementById("planet");
     image.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
-
-
 }
