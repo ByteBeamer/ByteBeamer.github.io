@@ -12,6 +12,7 @@
 }
 
 .moon-container {
+        transform-origin: -250px -250px;
         position: absolute;
         left: 75%;
         top:25%;
@@ -32,6 +33,7 @@
         }
 }
 .sun-container {
+        transform-origin: -250px -250px;
         position: absolute;
         left: 75%;
         top:25%;
