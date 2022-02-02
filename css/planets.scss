@@ -16,6 +16,7 @@
         position: fixed;
         left: 75%;
         top:25%;
+        z-index: -1;
         .circle-moon {
                 height: 120px;
                 width: 120px;
@@ -37,6 +38,7 @@
         position: fixed;
         left: 75%;
         top:25%;
+        z-index: -1;
         .circle-sun {
                 height: 120px;
                 width: 120px;
