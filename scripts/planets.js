@@ -8,9 +8,11 @@ function scrollRotate() {
     } else {
         image.style.transform = "rotate(" + window.pageYOffset * 2 + "deg)";
         if (getCurrentRotation(image) >= 180) {
-            image.classList.append("sun-container");
+            image.classList.add("sun-container");
+            image.classList.remove("moon-container");
         } else {
-            image.classList.append("moon-container");
+            image.classList.add("moon-container");
+            image.classList.remove("sun-container");
         }
     }
 }
