@@ -2,6 +2,8 @@ window.onscroll = function () {
     scrollRotate();
 };
 
+var colors = ["#5ed1ff"];
+
 function scrollRotate() {
     let image = document.getElementById("planet");
     let circle = document.getElementById("circle");
@@ -15,14 +17,15 @@ function scrollRotate() {
             image.classList.add("moon-container");
             circle.classList.add("circle-moon");
             cutout.classList.add("cutout");
-            document.querySelector("html").classList.add("dark-background");
-        } /*else {
-            image.classList.remove("moon-container");
+            document.body.style.cssText = "background-color: " + colors[0];
+        } else {
+            document.body.style.cssText = "background-color: " + colors[1];
+            /*image.classList.remove("moon-container");
             circle.classList.remove("circle-moon");
             image.classList.add("sun-container");
             circle.classList.add("circle-sun");
-            cutout.classList.remove("cutout");
-        } */
+            cutout.classList.remove("cutout");*/
+        } 
     }
 }
 
