@@ -10,17 +10,17 @@ function scrollRotate() {
     } else {
         image.style.transform = "rotate(" + window.pageYOffset * 4 + "deg)";
         if (getCurrentRotation(image) >= 180) {
-            image.classList.add("sun-container");
-            circle.classList.add("circle-sun");
-            image.classList.remove("moon-container");
-            circle.classList.add("circle-moon");
-            cutout.classList.remove("cutout");
-        } else {
-            image.classList.add("moon-container");
-            circle.classList.add("circle-moon");
             image.classList.remove("sun-container");
             circle.classList.remove("circle-sun");
+            image.classList.add("moon-container");
+            circle.classList.add("circle-moon");
             cutout.classList.add("cutout");
+        } else {
+            image.classList.remove("moon-container");
+            circle.classList.remove("circle-moon");
+            image.classList.add("sun-container");
+            circle.classList.add("circle-sun");
+            cutout.classList.remove("cutout");
         }
     }
 }
