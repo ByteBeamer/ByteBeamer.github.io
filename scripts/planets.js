@@ -6,7 +6,6 @@ function scrollRotate() {
     let image = document.getElementById("planet");
     let circle = document.getElementById("circle");
     let cutout = document.getElementById("cutout");
-    let doc = document.body;
     if ((window.pageYOffset * 1.5) >= 360) {
     } else {
         image.style.transform = "rotate(" + window.pageYOffset * 1.5 + "deg)";
@@ -16,14 +15,12 @@ function scrollRotate() {
             image.classList.add("moon-container");
             circle.classList.add("circle-moon");
             cutout.classList.add("cutout");
-            //doc.style.backgroundColor = "#2c302d";
         } else {
             image.classList.remove("moon-container");
             circle.classList.remove("circle-moon");
             image.classList.add("sun-container");
             circle.classList.add("circle-sun");
             cutout.classList.remove("cutout");
-            //doc.style.backgroundColor = "#87ceeb";
         } 
     }
 }
