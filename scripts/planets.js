@@ -6,9 +6,9 @@ function scrollRotate() {
     let image = document.getElementById("planet");
     let circle = document.getElementById("circle");
     let cutout = document.getElementById("cutout");
-    if ((window.pageYOffset * 2) >= 360) {
+    if ((window.pageYOffset * 4) >= 360) {
     } else {
-        image.style.transform = "rotate(" + window.pageYOffset * 2 + "deg)";
+        image.style.transform = "rotate(" + window.pageYOffset * 4 + "deg)";
         if (getCurrentRotation(image) >= 180) {
             image.classList.add("sun-container");
             circle.classList.add("circle-sun");
