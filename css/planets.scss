@@ -7,9 +7,10 @@
         top:20%;
         overflow: hidden;
         .circle {
+                position: absolute;
                 height: 120px;
                 width: 120px;
-                border-radius: 50px;
+                border-radius: 100px;
                 background-color: #e8e8cf;
                 z-index: 1;
         }
@@ -19,5 +20,6 @@
                 border-radius: 50px;
                 left: 65%;
                 z-index: 2;
+                position: absolute;
         }
 }
