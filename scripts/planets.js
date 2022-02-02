@@ -4,15 +4,23 @@ window.onscroll = function () {
 
 function scrollRotate() {
     let image = document.getElementById("planet");
+    let circle = document.getElementById("circle");
+    let cutout = document.getElementById("cutout");
     if ((window.pageYOffset * 2) >= 360) {
     } else {
         image.style.transform = "rotate(" + window.pageYOffset * 2 + "deg)";
         if (getCurrentRotation(image) >= 180) {
             image.classList.add("sun-container");
+            circle.classList.add("circle-sun");
             image.classList.remove("moon-container");
+            circle.classList.add("circle-moon");
+            cutout.classList.remove("cutout");
         } else {
             image.classList.add("moon-container");
+            circle.classList.add("circle-moon");
             image.classList.remove("sun-container");
+            circle.classList.remove("circle-sun");
+            cutout.classList.add("cutout");
         }
     }
 }
