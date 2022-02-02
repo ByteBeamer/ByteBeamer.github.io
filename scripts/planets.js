@@ -22,6 +22,7 @@ function scrollRotate() {
             image.classList.add("sun-container");
             circle.classList.add("circle-sun");
             cutout.classList.remove("cutout");
+            document.body.style.backgroundColor = "#87ceeb";
         } 
     }
 }
