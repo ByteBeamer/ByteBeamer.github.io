@@ -4,7 +4,7 @@ window.onscroll = function () {
 
 function scrollRotate() {
     let image = document.getElementById("planet");
-    image.style.transform = "rotate(" + window.pageYOffset + "deg)";
+    image.style.transform = "rotate(" + window.pageYOffset * 2 + "deg)";
     if (getCurrentRotation(image) >= 180) {
         image.classList.append("sun-container");
     } else {
