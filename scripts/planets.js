@@ -15,13 +15,14 @@ function scrollRotate() {
             image.classList.add("moon-container");
             circle.classList.add("circle-moon");
             cutout.classList.add("cutout");
-        } else {
+            document.querySelector("html").classList.add("dark-background");
+        } /*else {
             image.classList.remove("moon-container");
             circle.classList.remove("circle-moon");
             image.classList.add("sun-container");
             circle.classList.add("circle-sun");
             cutout.classList.remove("cutout");
-        }
+        } */
     }
 }
 
