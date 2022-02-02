@@ -2,7 +2,7 @@ window.onscroll = function () {
     scrollRotate();
 };
 
-var colors = ["#5ed1ff"];
+var colors = ["#5ed1ff", "#e8e8cf"];
 
 function scrollRotate() {
     let image = document.getElementById("planet");
