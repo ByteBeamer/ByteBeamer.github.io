@@ -21,10 +21,11 @@ $win-height: 100vh;
 }
 html {
   background-color: #2c302d;
+  overscroll-behavior-y: none;
 }
 
 body {
-  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
 }
 .banner {
 	width: 80%;
