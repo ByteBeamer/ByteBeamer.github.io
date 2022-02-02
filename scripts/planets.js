@@ -16,11 +16,11 @@ function scrollRotate() {
             circle.classList.add("circle-moon");
             cutout.classList.add("cutout");
         } else {
-            /*image.classList.remove("moon-container");
+            image.classList.remove("moon-container");
             circle.classList.remove("circle-moon");
             image.classList.add("sun-container");
             circle.classList.add("circle-sun");
-            cutout.classList.remove("cutout");*/
+            cutout.classList.remove("cutout");
         } 
     }
 }
