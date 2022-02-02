@@ -4,11 +4,14 @@ window.onscroll = function () {
 
 function scrollRotate() {
     let image = document.getElementById("planet");
-    image.style.transform = "rotate(" + window.pageYOffset * 2 + "deg)";
-    if (getCurrentRotation(image) >= 180) {
-        image.classList.append("sun-container");
+    if ((window.pageYOffset * 2) >= 360) {
     } else {
-        image.classList.append("moon-container");
+        image.style.transform = "rotate(" + window.pageYOffset * 2 + "deg)";
+        if (getCurrentRotation(image) >= 180) {
+            image.classList.append("sun-container");
+        } else {
+            image.classList.append("moon-container");
+        }
     }
 }
 
