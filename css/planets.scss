@@ -5,9 +5,16 @@
         position: absolute;
         left; 20%;
         top:20%;
+        overflow: hidden;
         .circle {
                 height: 120px;
                 width: 120px;
                 border-radius: 50px;
+        }
+        .cutout {
+                height: 120px;
+                width: 120px;
+                border-radius: 50px;
+                left: 65%;
         }
 }
