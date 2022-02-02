@@ -7,7 +7,6 @@
         top:20%;
         overflow: hidden;
         .circle {
-                position: absolute;
                 height: 120px;
                 width: 120px;
                 border-radius: 100px;
@@ -15,9 +14,9 @@
                 z-index: 1;
         }
         .cutout {
-                height: 120px;
-                width: 120px;
-                border-radius: 50px;
+                height: 110px;
+                width: 110px;
+                border-radius: 100px;
                 left: 65%;
                 z-index: 2;
                 position: absolute;
