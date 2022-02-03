@@ -15,6 +15,12 @@ function scrollRotate() {
             image.classList.add("moon-container");
             circle.classList.add("circle-moon");
             cutout.classList.add("cutout");
+        } else if (getCurrentRotation(image) < 0) {
+            image.classList.remove("moon-container");
+            circle.classList.remove("circle-moon");
+            image.classList.add("sun-container");
+            circle.classList.add("circle-sun");
+            cutout.classList.remove("cutout");
         } else {
             image.classList.remove("moon-container");
             circle.classList.remove("circle-moon");
