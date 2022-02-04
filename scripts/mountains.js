@@ -6,6 +6,11 @@ h = ctx.canvas.height = 400;
 window.onresize = function() {
   w = ctx.canvas.width = window.innerWidth;
   h = ctx.canvas.height = 400;
+  clear();
+  newCol();
+  for (k = 0; k < numMount; k++) {
+    draw(k * h / numMount, k);
+  }
 };
 
 heights = 1.5;
