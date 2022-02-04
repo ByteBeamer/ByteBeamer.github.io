@@ -1,11 +1,11 @@
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 w = ctx.canvas.width = window.innerWidth;
-h = ctx.canvas.height = window.innerHeight;
+h = ctx.canvas.height = 400;
 
 window.onresize = function() {
   w = ctx.canvas.width = window.innerWidth;
-  h = ctx.canvas.height = window.innerHeight;
+  h = ctx.canvas.height = 400;
 };
 
 heights = 1.5;
