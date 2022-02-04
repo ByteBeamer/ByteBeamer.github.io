@@ -54,8 +54,8 @@ function draw(ix, ic) {
 
     ctx.beginPath();
     var gr = ctx.createLinearGradient(0, 0, w, h);
-    gr.addColorStop(0,"rgba(0,0,0,1)");
-    gr.addColorStop(1,"rgba(0,0,0,1)");
+    gr.addColorStop(0,"#2c302d");
+    gr.addColorStop(1,"#2c302d");
     ctx.strokeStyle = gr;
     ctx.lineWidth = 0;
     ctx.moveTo(i, h);
