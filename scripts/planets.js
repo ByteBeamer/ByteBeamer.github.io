@@ -4,6 +4,7 @@ window.onscroll = function () {
 
 function scrollRotate() {
     let image = document.getElementById("planet");
+    image.style.transformOrigin = (window.innerWidth / 2) + " " + (window.innerHeight / 2);
     let circle = document.getElementById("circle");
     let cutout = document.getElementById("cutout");
     if ((window.pageYOffset * 1.5) >= 360) {
