@@ -7,9 +7,9 @@ function scrollRotate() {
     image.style.transformOrigin = (window.innerWidth / 2) + " " + (window.innerHeight / 2);
     let circle = document.getElementById("circle");
     let cutout = document.getElementById("cutout");
-    if ((window.pageYOffset * 1.5) >= 360) {
+    if ((window.pageYOffset) >= 360) {
     } else {
-        image.style.transform = "rotate(" + window.pageYOffset * 1.5 + "deg)";
+        image.style.transform = "rotate(" + window.pageYOffset + "deg)";
         if (getCurrentRotation(image) >= 180) {
             image.classList.remove("sun-container");
             circle.classList.remove("circle-sun");
