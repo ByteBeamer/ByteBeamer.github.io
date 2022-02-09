@@ -79,6 +79,13 @@
                     <a href='javascript:var DELAY = 0.00001;var autoClickerStyleElement = document.createElement("style");autoClickerStyleElement.innerHTML="*{cursor: crosshair !important;}";document.body.appendChild(autoClickerStyleElement);function addClicker(e) {if(!e.isTrusted) {return;}if(e.target.classList.contains("auto-clicker-target")) {e.target.classList.remove("auto-clicker-target");} else {e.target.classList.add("auto-clicker-target");}document.body.removeChild(autoClickerStyleElement);document.body.removeEventListener("click", addClicker);e.preventDefault();autoClick(e.target);}function autoClick(element) {if(element.classList.contains("auto-clicker-target")) {element.click();setTimeout(function(){ autoClick(element); }, DELAY);}}document.body.addEventListener("click", addClicker, 0);'><button class="card__button">Autoclicker</button></a>
                 </div>
             </div>
+	    <div class="card">
+                <div class="card__content">
+                    <h3 class="card__header">Embedder</h3>
+                    <p class="card__info">Embed websites into other website!</p>
+                    <a href='javascript:void function(){var a=prompt("Enter URL to embed","https://bytebeamer.github.io/game/platformer/index"),b=prompt("Dimensions width-height","640-480");const c=b.split("-");var d=document.createElement("iframe");d.setAttribute("src",a),d.style.width=c[0]+"px",d.style.height=c[1]+"px",document.body.appendChild(d)}();'><button class="card__button">Embedder</button></a>
+                </div>
+            </div>
         </div>
     </body>
 </html>
