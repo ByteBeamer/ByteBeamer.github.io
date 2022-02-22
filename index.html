@@ -17,6 +17,7 @@
       <script src="/scripts/mountains.js" defer></script>
       <script src="https://www.youtube.com/iframe_api"></script>
       <meta name="google-site-verification" content="zH0M-iNP85uiRgNn-Xc0Qgz-99PXuxxpnqOm7uywrCI" />
+      <script async src="https://api.countapi.xyz/hit/bytebeamer.github.io/visits?callback=count"></script>
       <title>Bytebeamer</title>
     </head>
     <body>
@@ -37,7 +38,7 @@
          </div>
         <div class="description" style="padding-top:30vh;text-align: center; padding-bottom: 30vh;">
            <h1 style="display: flex; justify-content: center; font-size: 46px;">ByteBeamer</h1>
-           <p style="display: flex; justify-content: center;">A creation website</p>
+           <p style="display: flex; justify-content: center;">A creation website<br>Visited <span id="visits"></span> times</p>
         </div>
 	    <div class="sun-container" id="planet">
 		<div class="circle-sun" id="circle">
@@ -91,5 +92,10 @@
       </div>
     </div>
   </div>
+  <script>
+	  function count(response) {
+           document.getElementById('visits').innerText = response.value;
+          }
+  </script>
     </body>
 </html>
