@@ -6,7 +6,7 @@ var nav_items = document.getElementsByClassName("nav-item");
 
 var min = document.getElementById("minimize-nav");
 
-var max = document.getElementById("maximize-nav");
+var max = document.getElementsByClassName("maximize-nav")[0];
 
 min.onclick = function () {
 
