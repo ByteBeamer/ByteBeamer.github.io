@@ -3,306 +3,37 @@
 
 @import "main.css";
 
-@mixin animate($animation, $duration, $method, $times) {
-  animation: $animation $duration $method $times;
-
-}
-
-
-@mixin keyframes($name) {
-
-  @keyframes #{$name} {
-
-    @content;
-
-  }
-
-}
-
-nav {
-  z-index: 99;
-  
-  overflow-x: hidden;
-
-  overflow-y: hidden;
-
-  margin: 27px auto 0;
-
-  position: fixed;
-
-  left: 2vw;
-
-  top: 1vh;
-
-  width: 360px;
-
-  height: 50px;
-
-  background-color: #313336;
-
-  border-radius: 8px;
-
-  font-size: 0;
-
-}
-
-nav a {
-
-  line-height: 50px;
-
-  height: 100%;
-
-  font-size: 15px;
-
-  display: inline-block;
-
-  position: relative;
-
-  z-index: 1;
-
-  text-decoration: none;
-
-  text-transform: uppercase;
-
-  text-align: center;
-
-  color: white;
-
-  cursor: pointer;
-
-}
-
-nav .animation {
-
-  position: absolute;
-
-  height: 100%;
-
-  top: 0;
-
-  z-index: 0;
-
-  transition: all 0.5s ease 0s;
-
-  border-radius: 8px;
-
-}
-
-a:nth-child(1) {
-
-  top: -40%;
-
-  width: 100px;
-
-}
-
-a:nth-child(2) {
-
-  top: -40%;
-
-  width: 110px;
-
-}
-
-a:nth-child(3) {
-
-  top: -40%;
-
-  width: 100px;
-
-}
-
-a:nth-child(4) {
-
-  width: 50px;
-
-}
-
-nav .start-home, a:nth-child(1):hover ~ .animation {
-
-  width: 100px;
-
-  left: 0;
-
-  background-color: #1abc9c;
-
-}
-
-nav .start-about, a:nth-child(2):hover ~ .animation {
-
-  width: 110px;
-
-  left: 100px;
-
-  background-color: #e74c3c;
-
-}
-
-nav .start-blog, a:nth-child(3):hover ~ .animation {
-
-  width: 100px;
-
-  left: 210px;
-
-  background-color: #3498db;
-
-}
-
-
-nav a:nth-child(4):hover ~ .animation {
-
-  width: 50px;
-
-  left: 310px;
-
-  background-color: #cc3333;
-
-}
-
-
-.maximize-nav {
-
-  cursor: pointer;
-
-  visibility: hidden;
-
-  width: 50px;
-
-  height: 50px;
-
-  background-color: #cc3333;
-
-  border-radius: 8px;
-
-  position: fixed;
-
-  top: 1vh;
-
-  left: 2vw;
-
-  margin: 27px auto 0;
-
-}
-
-.arrow {
-
-  z-index: 100;
-
-  width: 10px;
-
-  height: 10px;
-
-  box-sizing: border-box;
-
-  position: absolute;
-
-  left: 0;
-
-  margin: 35% auto;
-
-  transform: rotate(45deg);
-
-
-  &::before {
-    z-index: 100;
-    
-    content: "";
-
-    width: 10px;
-
-    height: 10px;
-
-    border-width: 4px 4px 0 0;
-
-    border-style: solid;
-
-    border-color: #fafafa;
-
-    transition: 0.2s ease;
-
-    display: block;
-
-    transform-origin: 100% 0;
-
-  }
-
-}
-
-
-/*Animations*/
-.slide-in {
-
-  animation-fill-mode: forwards;
-
-  @include keyframes(slide-in) {
-
-    100% {
-
-      width: 50px;
-
     }
-
     50% {
-
       width: 0px;
-
     }
-
     0% {
-
       width: 360px;
-
     }
-
   }
-
   @include animate(slide-in, 0.5s, ease-in, 1);
-
 }
-
 
 .slide-out {
-
   @include keyframes(slide-out) {
-
     0% {
-
       width: 0px;
-
     }
-
     100% {
-
       width: 360px;
-
     }
-
   }
-
   @include animate(slide-out, 0.5s, ease-in, 1);
-
 }
-
 
 .maximize-slide {
-
   @include keyframes(maximize-out) {
-
     0% {
-
       width: 0px;
-
     }
-
     100% {
-
       width: 50px;
-
     }
-
   }
-
   @include animate(maximize-out, 0.05s, ease-in, 1);
-
 }
-
