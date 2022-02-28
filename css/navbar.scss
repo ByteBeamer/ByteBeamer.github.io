@@ -98,3 +98,81 @@ nav a:nth-child(4):hover ~ .animation {
   vertical-align: middle;
   line-height: 55px;
 }
+
+body {
+  font-size: 12px;
+  font-family: sans-serif;
+  background: #2c3e50;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+/*Animations*/
+
+.disappear {
+  @include keyframes(disappear) {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @include animate(disappear, 0.5s, ease-in, 1);
+}
+.maximize {
+  @include keyframes(maximize) {
+    100% {
+      transform: scale(1);
+    }
+    0% {
+      transform: scale(0);
+    }
+  }
+  @include animate(maximize, 0.5s, ease-in, 1);
+}
+
+.slide-in {
+  animation-fill-mode: forwards;
+  @include keyframes(slide-in) {
+    100% {
+      width: 50px;
+    }
+    50% {
+      width: 0px;
+    }
+    0% {
+      width: 360px;
+    }
+  }
+  @include animate(slide-in, 0.5s, ease-in, 1);
+}
+
+.slide-out {
+  @include keyframes(slide-out) {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 360px;
+    }
+  }
+  @include animate(slide-out, 0.5s, ease-in, 1);
+}
+
+.maximize-slide {
+  @include keyframes(maximize-out) {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 50px;
+    }
+  }
+  @include animate(maximize-out, 0.05s, ease-in, 1);
+}
