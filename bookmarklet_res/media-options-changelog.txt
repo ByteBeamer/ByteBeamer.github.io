@@ -1,4 +1,4 @@
-<h3>Media Options v2.8</h3>
+<h3>Media Options v2.9</h3>
 <h4>New Features</h4>
 <li>Record switch</li>
 <li>Better switches</li>
