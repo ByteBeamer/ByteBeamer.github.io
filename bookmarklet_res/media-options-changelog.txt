@@ -2,5 +2,5 @@
 <h4>New Features</h4>
 <li>Record switch</li>
 <li>Better switches</li>
-<h4>Know Issues</h4>
+<h4>Known Issues</h4>
 <li>Record switch doesn't always work</li>
