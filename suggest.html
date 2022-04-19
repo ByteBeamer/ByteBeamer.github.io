@@ -5,11 +5,15 @@
   <body>
     <div id="contact">
         <h2>Make a suggestion</h2>
-        <div id="contact-form" style="display:flex; justify-content: center; align-items: center;">
+        <div id="contact-form">
                 <form action="https://formspree.io/mleznnrb" method="POST">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Type your message" required></textarea>
+                <div style="display:flex; justify-content: center; align-items: center;">
+                    <input type="email" name="_replyto" placeholder="Your email" required>
+                </div>
+                <div style="display:flex; justify-content: center; align-items: center;">
+                    <textarea name="message" placeholder="Type your message" required></textarea>
+                </div>
                 <button type="submit">Send</button>
             </form>
         </div>
