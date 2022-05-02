@@ -1,7 +1,8 @@
-<h3>Media Options v3.3</h3>
+<h3>Media Options v3.5</h3>
+<p>Major Update</p>
 <h4>New Features</h4>
-<li>Adds Panning</li>
-<li>Panning the ability to change<br> audio volume from two sources.</li>
+<li>Audio Filters (more coming soon)</li>
+<li>The ability to export and import settings</li>
 <h4>Known Issues</h4>
-<li>Miniplayer doesn't work consistently</li>
+<li>Miniplayer doesn't work consistently (fix on the way)</li>
 <li>Can't be relaunched after closing</li>
