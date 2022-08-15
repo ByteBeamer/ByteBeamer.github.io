@@ -7,6 +7,7 @@
 <li>Ctrl + Down arrow = volume down</li>
 <li>Ctrl + Shift + Up arrow = bass boost up</li>
 <li>Ctrl + Shift + Down arrow = bass boost down</li>
+<li>Small patch update, fixes launch issues</li>
 <h4>Known Issues</h4>
 <li>Miniplayer doesn't work consistently (fix on the way)</li>
 <li>Can't be relaunched after closing</li>
