@@ -1,3 +1,10 @@
+var win = window.open("","",true);
+
 var title = document.querySelectorAll("span")[11].innerText;
 var artist = document.querySelectorAll("span")[12].innerText;
-alert(title + " by: " + artist);
+
+win.document.write(`<h1>${title}</h1><br><h2>By: ${artist}</h2>`)
+
+function tick() {
+  
+}
