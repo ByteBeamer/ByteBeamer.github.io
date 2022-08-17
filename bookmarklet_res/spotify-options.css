@@ -1,0 +1,104 @@
+.slider {
+      -webkit-appearance: none;
+      background: #ff3700;
+      width: 98%;
+      height: 14px;
+      opacity: 2;
+      border-radius: 20px;
+      --slider-color: #ff5f33;
+      --slider-color-active: #ff7f5c;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 20px;
+      background: var(--slider-color);
+      border-radius: 30px;
+    }
+
+    .slider:active::-webkit-slider-thumb {
+      background-color: var(--slider-color-active);
+      width: 22px;
+      height: 22px;
+    }
+
+    button {
+      border-radius: 10px;
+      background-color: #f44336;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+    }
+
+    input[type=checkbox] {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+
+    label {
+      cursor: pointer;
+      text-indent: 110%;
+      line-height: 25px;
+      width: 45px;
+      height: 25px;
+      background-color: grey;
+      display: block;
+      border-radius: 100px;
+      position: relative;
+      margin-right: 60px;
+      --thumb-color: white;
+    }
+
+    label:after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 23px;
+      height: 23px;
+      background: var(--thumb-color);
+      border-radius: 90px;
+      transition: 0.3s;
+    }
+
+    input:checked+label {
+      background: dodgerblue;
+    }
+
+    input:checked+label:after {
+      left: calc(100% - 1px);
+      transform: translateX(-100%);
+    }
+
+    label:active:after {
+      width: 23px;
+    }
+    
+    select {
+      width: 100%;
+      overflow: hidden;
+      white-space: pre;
+      text-overflow: ellipsis;
+      -webkit-appearance: none;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      overflow: hidden;
+    }
