@@ -9,8 +9,8 @@
 <script>
 var url = document.getElementById("url");
 var select = document.getElementById("videos");
-var songIds = ["jsDGb3if9bw","nujn6wbr-e8"];
-var songNames = ["雨とペトラ","As it was"];
+var songIds = ["jsDGb3if9bw","nujn6wbr-e8", "fJkKvZH6eog"];
+var songNames = ["雨とペトラ","As it was", "Otome Dissection"];
 var currentIndex = 0;
 var player = document.getElementById("player");
 
