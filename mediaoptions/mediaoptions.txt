@@ -24,5 +24,10 @@ for (var i = 0; i < songIds.length; i++) {
 select.onchange = function () {
   player.src = "https://youtube.com/embed/" + select.value + "?&autoplay=1";
 }
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var scriptTag = document.getElementsByTagName('script')[0];
+scriptTag.parentNode.insertBefore(tag, scriptTag);
 </script>
 </body></html>
