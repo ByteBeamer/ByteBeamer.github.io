@@ -243,6 +243,7 @@ function setIntervals(){
   activeIntervals[3] = setInterval(function(){update("volume")}, 500);
   activeIntervals[4] = setInterval(function(){update("title")}, 500);
   activeIntervals[5] = setInterval(function(){update("author")}, 500);
+  activeIntervals[6] = setInterval(function(){updateAll()}, 2000);
 };
 function clearIntervals(){
   // Clears existing intervals to actively update page content
