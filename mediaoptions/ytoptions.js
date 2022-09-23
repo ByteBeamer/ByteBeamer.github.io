@@ -36,12 +36,11 @@ function onApiChange(event){
   // Update currently availbe APIs
   console.log("API Change!");
 };
-function onPlayerReady(){
+function onPlayerReady(event){
   // Update page after player is ready
-  player.playVideo();
-  updateAll();
-  playVideo();
-  //alert(player.getVideoData()["title"]);
+  event.target.playVideo();
+  //updateAll();
+  //playVideo();
 }
 
 function onPlayerStateChange(event){
