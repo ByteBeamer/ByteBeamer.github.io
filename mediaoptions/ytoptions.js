@@ -39,7 +39,7 @@ function onApiChange(event){
 function onPlayerReady(event){
   // Update page after player is ready
   event.target.playVideo();
-  //updateAll();
+  updateAll(event);
   //playVideo();
 }
 
@@ -78,7 +78,7 @@ function onPlayerStateChange(event){
 // Update HTML nodes on the page
 // with most recent values from
 // the YouTube iFrame API
-function update(node){
+function update(event, node){
   switch (node){
     // Update player reported changes
     case "duration":
@@ -165,20 +165,20 @@ function update(node){
       document.getElementById("rate").innerHTML = player.getPlaybackRate()
       break;
     case "title":
-      document.getElementById("title").innerHTML = player.getVideoData()["title"]
+      document.getElementById("title").innerHTML = event.target.getVideoData()["title"]
       break;
     case "author":
-      document.getElementById("author").innerHTML = player.getVideoData()["author"]
+      document.getElementById("author").innerHTML = event.target.getVideoData()["author"]
       break;
     case "video_id":
-      document.getElementById("video_id").innerHTML = player.getVideoData()["video_id"]
+      document.getElementById("video_id").innerHTML = event.target.getVideoData()["video_id"]
       break;
   }
 };
 // Updates all HTML nodes
-function updateAll(){
+function updateAll(event){
   for (var node in nodeList){
-    update(nodeList[node]);
+    update(event, nodeList[node]);
   }
 };
 // Array to track all HTML nodes
