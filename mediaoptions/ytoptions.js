@@ -232,6 +232,8 @@ function setRate(){
   player.setPlaybackRate(document.getElementById("rateOption").value);  
 };
 
+alert(player.getVideoData()["title"]);
+
 // Controls interval handlers to update page contens
 // Array to track intervals
 var activeIntervals = [];
