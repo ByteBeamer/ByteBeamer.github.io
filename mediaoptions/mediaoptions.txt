@@ -9,8 +9,8 @@
 <script>
 var url = document.getElementById("url");
 var select = document.getElementById("videos");
-var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk"];
-var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", "Otome Dissection", "Otome Dissection (TeddyLoid Alllies)"];
+var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk","Efa6BAWPm9o","S85ceVI4mfg","G5xSLbYMr-I","0R5uXlT54hs","jMqJf49DVc8","mBbPHYsPVQc"];
+var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", "Otome Dissection", "Otome Dissection (TeddyLoid Alllies)", "Losing My Religion","Beautiful Day","Sunroof","Outsider","The Vampire","Superstar"];
 var currentIndex = 0;
 var player = document.getElementById("player");
 
