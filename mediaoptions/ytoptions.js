@@ -40,6 +40,7 @@ function onPlayerReady(){
   // Update page after player is ready
   updateAll();
   playVideo();
+  alert(player.getVideoData()["title"]);
 }
 
 function onPlayerStateChange(event){
@@ -232,8 +233,6 @@ function setRate(){
   player.setPlaybackRate(document.getElementById("rateOption").value);  
 };
 
-alert(player.getVideoData()["title"]);
-
 // Controls interval handlers to update page contens
 // Array to track intervals
 var activeIntervals = [];
@@ -245,7 +244,6 @@ function setIntervals(){
   activeIntervals[3] = setInterval(function(){update("volume")}, 500);
   activeIntervals[4] = setInterval(function(){update("title")}, 500);
   activeIntervals[5] = setInterval(function(){update("author")}, 500);
-  activeIntervals[6] = setInterval(function(){updateAll()}, 2000);
 };
 function clearIntervals(){
   // Clears existing intervals to actively update page content
