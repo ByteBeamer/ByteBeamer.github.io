@@ -38,9 +38,10 @@ function onApiChange(event){
 };
 function onPlayerReady(){
   // Update page after player is ready
+  player.playVideo();
   updateAll();
   playVideo();
-  alert(player.getVideoData()["title"]);
+  //alert(player.getVideoData()["title"]);
 }
 
 function onPlayerStateChange(event){
