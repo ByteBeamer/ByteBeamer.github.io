@@ -165,13 +165,13 @@ function update(event, node){
       document.getElementById("rate").innerHTML = player.getPlaybackRate()
       break;
     case "title":
-      document.getElementById("title").innerHTML = event.target.getVideoData()["title"]
+      document.getElementById("title").innerHTML = player.getVideoData()["title"]
       break;
     case "author":
-      document.getElementById("author").innerHTML = event.target.getVideoData()["author"]
+      document.getElementById("author").innerHTML = player.getVideoData()["author"]
       break;
     case "video_id":
-      document.getElementById("video_id").innerHTML = event.target.getVideoData()["video_id"]
+      document.getElementById("video_id").innerHTML = player.getVideoData()["video_id"]
       break;
   }
 };
