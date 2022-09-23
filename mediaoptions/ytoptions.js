@@ -241,6 +241,8 @@ function setIntervals(){
   activeIntervals[1] = setInterval(function(){update("currentTime")}, 500);
   activeIntervals[2] = setInterval(function(){update("mute")}, 500);
   activeIntervals[3] = setInterval(function(){update("volume")}, 500);
+  activeIntervals[4] = setInterval(function(){update("title")}, 500);
+  activeIntervals[5] = setInterval(function(){update("author")}, 500);
 };
 function clearIntervals(){
   // Clears existing intervals to actively update page content
