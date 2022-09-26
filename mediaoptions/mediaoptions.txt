@@ -1,7 +1,6 @@
 <html>
 <head>
 <title>Media Player</title>
-<link rel="stylesheet" href="https://bytebeamer.github.io/bookmarklet_res/spotify-options.css">
 </head>
 <body><label for="videos">Choose a video:</label>
 <select id="videos">
