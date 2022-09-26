@@ -6,6 +6,8 @@
 <body><label for="videos">Choose a video:</label>
 <select id="videos">
 </select>
+<button id="pause">Play/Pause</button><br>
+<button id="rewind">Rewind</button><button id="forward">Forward</button>
 <iframe id="player" width=100% height=100% allow="autoplay; encrypted-media" frameborder="0"></iframe>
 <script>
 var frame = document.getElementById("player");
@@ -25,6 +27,14 @@ for (var i = 0; i < songIds.length; i++) {
 select.onchange = function () {
   player.src = "https://youtube.com/embed/" + select.value + "?autoplay=1&enablejsapi=1";
 }
+
+var pauseBtn = document.getElementById("pause");
+var forwardBtn = document.getElementById("forward");
+var rewindBtn = document.getElementById("paue");
+
+pauseBtn.onclick = pause();
+fowardBtn.onclick = forward();
+rewind.onclick = rewind();
 
 function pause() {
   var e = new Event('keydown');
