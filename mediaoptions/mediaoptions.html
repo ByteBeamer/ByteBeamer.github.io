@@ -37,8 +37,8 @@ function onYouTubeIframeAPIReady() {
   });
 };
 
-function onPlayerReady(){
-  player.playVideo();
+function onPlayerReady(event){
+  event.target.playVideo();
 };
 
 select.onchange = function () {
@@ -48,11 +48,19 @@ select.onchange = function () {
 var pauseBtn = document.getElementById("pause");
 var playBtn = document.getElementById("play");
 var forwardBtn = document.getElementById("forward");
-var rewindBtn = document.getElementById("paue");
+var rewindBtn = document.getElementById("rewind");
 
-playBtn.onclick = player.playVideo();
-pauseBtn.onclick = player.pauseVideo();
-fowardBtn.onclick = player.seekTo(player.getCurrentTime() + 10);
-rewindBtn.onclick = player.seekTo(player.getCurrentTime() - 10);
+playBtn.onclick = function () {
+  player.playVideo();
+}
+pauseBtn.onclick = function () {
+  player.pauseVideo();
+}
+fowardBtn.onclick = function () {
+  player.seekTo(player.getCurrentTime() + 10);
+}
+rewindBtn.onclick = function () {
+  player.seekTo(player.getCurrentTime() - 10);
+}
 </script>
 </body></html>
