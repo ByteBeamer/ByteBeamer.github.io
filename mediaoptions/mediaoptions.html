@@ -52,10 +52,10 @@ function onPlayerReady(event){
     event.target.pauseVideo();
   }
   fowardBtn.onclick = function () {
-    event.target.seekTo(player.getCurrentTime() + 10);
+    player.seekTo(player.getCurrentTime() + 10);
   }
   rewindBtn.onclick = function () {
-    event.target.seekTo(player.getCurrentTime() - 10);
+    player.seekTo(player.getCurrentTime() - 10);
   }
 };
 
