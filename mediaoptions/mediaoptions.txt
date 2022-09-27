@@ -7,14 +7,39 @@
 </select>
 <button id="pause">Play</button><button id="pause">Pause</button><br>
 <button id="rewind">Rewind</button><button id="forward">Forward</button>
-<iframe id="player" width=100% height=100% allow="autoplay; encrypted-media" frameborder="0"></iframe>
+< ! ╌<iframe id="player" width=100% height=100% allow="autoplay; encrypted-media" frameborder="0"></iframe>-- >
+<div id="player"></iframe>
 <script>
-var frame = document.getElementById("player");
+//var frame = document.getElementById("player");
 var select = document.getElementById("videos");
 var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk","Efa6BAWPm9o","S85ceVI4mfg","G5xSLbYMr-I","0R5uXlT54hs","jMqJf49DVc8","mBbPHYsPVQc"];
 var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", "Otome Dissection", "Otome Dissection (TeddyLoid Alllies)", "Losing My Religion","Beautiful Day","Sunroof","Outsider","The Vampire","Superstar"];
 var currentIndex = 0;
-var player = document.getElementById("player");
+
+var player;
+// Callback for when the YouTube iFrame player is ready
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    // Set Player height and width
+    height: '100%',
+    width: '100%',
+    // Set the id of the video to be played
+    videoId: 'jsDGb3if9bw',
+    // Setup event listeners
+    // These are covered in the next section
+    events: {
+      'onReady': onPlayerReady
+    }
+  });
+};
+
+function onPlayerReady(){
+  player.playVideo();
+  setTimeout(pauseVideo, 4000);
+  setTimeout(loadNewVideo, 6000);
+  setTimeout(stopVideo, 8500);
+  setInterval(getContent, 1000);
+};
 
 for (var i = 0; i < songIds.length; i++) {
   var elem = document.createElement("option");
@@ -24,7 +49,7 @@ for (var i = 0; i < songIds.length; i++) {
 }
 
 select.onchange = function () {
-  player.src = "https://youtube.com/embed/" + select.value + "?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer";
+  player.loadVideoById(select.value);
 }
 
 var pauseBtn = document.getElementById("pause");
@@ -38,23 +63,19 @@ fowardBtn.onclick = forward();
 rewind.onclick = rewind();
 
 function play() {
-  frame.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+  player.playVideo();
 }
 
-function play() {
-  frame.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+function pause() {
+  player.pauseVideo();
 }
 
 function rewind() {
-  var e = new Event('keydown');
-  e.which = e.keyCode = 37; // 32 is the keycode for the space bar
-  frame.contentDocument.dispatchEvent(e);
+  player.getCurrentTime() = player.getCurrentTime() - 10;
 }
 
 function forward() {
-  var e = new Event('keydown');
-  e.which = e.keyCode = 39; // 32 is the keycode for the space bar
-  frame.contentDocument.dispatchEvent(e);
+  player.getCurrentTime() = player.getCurrentTime() - 10
 }
 </script>
 </body></html>
