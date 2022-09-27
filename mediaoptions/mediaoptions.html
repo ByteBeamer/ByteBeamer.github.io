@@ -14,15 +14,15 @@ var select = document.getElementById("videos");
 var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk","Efa6BAWPm9o","S85ceVI4mfg","G5xSLbYMr-I","0R5uXlT54hs","jMqJf49DVc8","mBbPHYsPVQc"];
 var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", "Otome Dissection", "Otome Dissection (TeddyLoid Alllies)", "Losing My Religion","Beautiful Day","Sunroof","Outsider","The Vampire","Superstar"];
 
-/*for (var i = 0; i < songIds.length; i++) {
+for (var i = 0; i < songIds.length; i++) {
   var elem = document.createElement("option");
   elem.value = songIds[i];
   elem.innerText = songNames[i];
   select.appendChild(elem);
-}*/
+}
 
 var player;
-function apiReady() {
+function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     // Set Player height and width
     height: "100%",
@@ -70,7 +70,5 @@ function rewind() {
 function forward() {
   player.seekTo(player.getCurrentTime() + 10);
 }
-
-window.onYouTubeIframeAPIReady = apiReady();
 </script>
 </body></html>
