@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Media Player</title>
+<script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body><label for="videos">Choose a video:</label>
 <select id="videos">
