@@ -71,11 +71,11 @@ function pause() {
 }
 
 function rewind() {
-  player.getCurrentTime() = player.getCurrentTime() - 10;
+  player.seekTo(player.getCurrentTime() - 10);
 }
 
 function forward() {
-  player.getCurrentTime() = player.getCurrentTime() - 10
+  player.seekTo(player.getCurrentTime() + 10);
 }
 </script>
 </body></html>
