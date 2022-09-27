@@ -4,10 +4,32 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 <body>
+<style>
+  button {
+      border-radius: 10px;
+      background-color: #f44336;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+  }
+  .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 70px;
+    }
+</style>
 <label for="videos">Choose a video:</label>
 <select id="videos"></select><br>
-<button id="play">Play</button><button id="pause">Pause</button><br>
-<button id="rewind">Rewind</button><button id="forward">Forward</button>
+<div class="center"><button id="play">Play</button><button id="pause">Pause</button></div><br>
+<div class="center"><button id="rewind">Rewind</button><button id="forward">Forward</button></div>
 <div id="player"></div>
 <script>
 var select = document.getElementById("videos");
