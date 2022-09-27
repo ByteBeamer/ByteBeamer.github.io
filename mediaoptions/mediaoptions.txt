@@ -17,7 +17,9 @@ var currentIndex = 0;
 
 var player;
 // Callback for when the YouTube iFrame player is ready
-function onYouTubeIframeAPIReady() {
+window.onYouTubeIframeAPIReady = apiReady();
+
+function apiReady() {
   player = new YT.Player('player', {
     // Set Player height and width
     height: 100%,
