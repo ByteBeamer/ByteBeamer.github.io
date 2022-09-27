@@ -39,7 +39,7 @@ function onApiChange(event){
 function onPlayerReady(event){
   // Update page after player is ready
   event.target.playVideo();
-  updateAll(event);
+  updateAll();
   //playVideo();
 }
 
@@ -78,7 +78,7 @@ function onPlayerStateChange(event){
 // Update HTML nodes on the page
 // with most recent values from
 // the YouTube iFrame API
-function update(event, node){
+function update(node){
   switch (node){
     // Update player reported changes
     case "duration":
@@ -178,7 +178,7 @@ function update(event, node){
 // Updates all HTML nodes
 function updateAll(event){
   for (var node in nodeList){
-    update(event, nodeList[node]);
+    update(nodeList[node]);
   }
 };
 // Array to track all HTML nodes
