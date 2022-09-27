@@ -7,8 +7,8 @@
 </select>
 <button id="pause">Play</button><button id="pause">Pause</button><br>
 <button id="rewind">Rewind</button><button id="forward">Forward</button>
-< ! ╌<iframe id="player" width=100% height=100% allow="autoplay; encrypted-media" frameborder="0"></iframe>-- >
-<div id="player"></iframe>
+<!--<iframe id="player" width=100% height=100% allow="autoplay; encrypted-media" frameborder="0"></iframe>-->
+<div id="player"></div>
 <script>
 //var frame = document.getElementById("player");
 var select = document.getElementById("videos");
