@@ -3,14 +3,13 @@
 <title>Media Player</title>
 <script src="https://www.youtube.com/iframe_api"></script>
 </head>
-<body><label for="videos">Choose a video:</label>
-<select id="videos">
-</select>
+<body>
+<label for="videos">Choose a video:</label>
+<select id="videos"></select><br>
 <button id="play">Play</button><button id="pause">Pause</button><br>
-<button id="rewind">Rewind</button><button id="forward">Forward</button><br>
+<button id="rewind">Rewind</button><button id="forward">Forward</button>
 <div id="player"></div>
 <script>
-var player;
 var select = document.getElementById("videos");
 var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk","Efa6BAWPm9o","S85ceVI4mfg","G5xSLbYMr-I","0R5uXlT54hs","jMqJf49DVc8","mBbPHYsPVQc"];
 var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", "Otome Dissection", "Otome Dissection (TeddyLoid Alllies)", "Losing My Religion","Beautiful Day","Sunroof","Outsider","The Vampire","Superstar"];
@@ -22,6 +21,7 @@ for (var i = 0; i < songIds.length; i++) {
   select.appendChild(elem);
 }
 
+var player;
 function apiReady() {
   player = new YT.Player('player', {
     // Set Player height and width
