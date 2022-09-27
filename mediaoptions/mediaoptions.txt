@@ -5,7 +5,7 @@
 <body><label for="videos">Choose a video:</label>
 <select id="videos">
 </select>
-<button id="pause">Play/Pause</button><br>
+<button id="pause">Play</button><button id="pause">Pause</button><br>
 <button id="rewind">Rewind</button><button id="forward">Forward</button>
 <iframe id="player" width=100% height=100% allow="autoplay; encrypted-media" frameborder="0"></iframe>
 <script>
@@ -28,17 +28,21 @@ select.onchange = function () {
 }
 
 var pauseBtn = document.getElementById("pause");
+var playBtn = document.getElementById("play");
 var forwardBtn = document.getElementById("forward");
 var rewindBtn = document.getElementById("paue");
 
+playBtn.onclick = play();
 pauseBtn.onclick = pause();
 fowardBtn.onclick = forward();
 rewind.onclick = rewind();
 
-function pause() {
-  var e = new Event('keydown');
-  e.which = e.keyCode = 32; // 32 is the keycode for the space bar
-  frame.contentDocument.dispatchEvent(e);
+function play() {
+  frame.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+}
+
+function play() {
+  frame.contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
 }
 
 function rewind() {
