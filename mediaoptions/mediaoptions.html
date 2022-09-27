@@ -50,25 +50,9 @@ var playBtn = document.getElementById("play");
 var forwardBtn = document.getElementById("forward");
 var rewindBtn = document.getElementById("paue");
 
-playBtn.onclick = play();
-pauseBtn.onclick = pause();
-fowardBtn.onclick = forward();
-rewindBtn.onclick = rewind();
-
-function play() {
-  player.playVideo();
-}
-
-function pause() {
-  player.pauseVideo();
-}
-
-function rewind() {
-  player.seekTo(player.getCurrentTime() - 10);
-}
-
-function forward() {
-  player.seekTo(player.getCurrentTime() + 10);
-}
+playBtn.onclick = player.playVideo();
+pauseBtn.onclick = player.pauseVideo();
+fowardBtn.onclick = player.seekTo(player.getCurrentTime() + 10);
+rewindBtn.onclick = player.seekTo(player.getCurrentTime() - 10);
 </script>
 </body></html>
