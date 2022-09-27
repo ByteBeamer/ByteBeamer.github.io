@@ -24,7 +24,7 @@ for (var i = 0; i < songIds.length; i++) {
 }
 
 select.onchange = function () {
-  player.src = "https://youtube.com/embed/" + select.value + "?autoplay=1&enablejsapi=1";
+  player.src = "https://youtube.com/embed/" + select.value + "?autoplay=1&enablejsapi=1&version=3&playerapiid=ytplayer";
 }
 
 var pauseBtn = document.getElementById("pause");
