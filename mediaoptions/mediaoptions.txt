@@ -7,10 +7,8 @@
 </select>
 <button id="pause">Play</button><button id="pause">Pause</button><br>
 <button id="rewind">Rewind</button><button id="forward">Forward</button>
-<!--<iframe id="player" width=100% height=100% allow="autoplay; encrypted-media" frameborder="0"></iframe>-->
 <div id="player"></div>
 <script>
-//var frame = document.getElementById("player");
 var select = document.getElementById("videos");
 var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk","Efa6BAWPm9o","S85ceVI4mfg","G5xSLbYMr-I","0R5uXlT54hs","jMqJf49DVc8","mBbPHYsPVQc"];
 var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", "Otome Dissection", "Otome Dissection (TeddyLoid Alllies)", "Losing My Religion","Beautiful Day","Sunroof","Outsider","The Vampire","Superstar"];
