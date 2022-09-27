@@ -22,14 +22,11 @@ for (var i = 0; i < songIds.length; i++) {
   select.appendChild(elem);
 }
 
-// Callback for when the YouTube iFrame player is ready
-window.onYouTubeIframeAPIReady = apiReady();
-
 function apiReady() {
   player = new YT.Player('player', {
     // Set Player height and width
-    height: 100%,
-    width: 100%,
+    height: "100%",
+    width: "100%",
     // Set the id of the video to be played
     videoId: 'jsDGb3if9bw',
     // Setup event listeners
@@ -42,10 +39,6 @@ function apiReady() {
 
 function onPlayerReady(){
   player.playVideo();
-  //setTimeout(pauseVideo, 4000);
-  //setTimeout(loadNewVideo, 6000);
-  //setTimeout(stopVideo, 8500);
-  //setInterval(getContent, 1000);
 };
 
 select.onchange = function () {
@@ -77,5 +70,7 @@ function rewind() {
 function forward() {
   player.seekTo(player.getCurrentTime() + 10);
 }
+
+window.onYouTubeIframeAPIReady = apiReady();
 </script>
 </body></html>
