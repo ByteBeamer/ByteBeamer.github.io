@@ -51,14 +51,16 @@ function onPlayerReady(event){
   pauseBtn.onclick = function () {
     event.target.pauseVideo();
   }
-  fowardBtn.onclick = function () {
-    player.seekTo(player.getCurrentTime() + 10);
-  }
-  rewindBtn.onclick = function () {
-    player.seekTo(player.getCurrentTime() - 10);
-  }
 };
 
+fowardBtn.onclick = function () {
+  alert(player.getCurrentTime());
+  player.seekTo(player.getCurrentTime() + 10);
+}
+rewindBtn.onclick = function () {
+  player.seekTo(player.getCurrentTime() - 10);
+}
+  
 select.onchange = function () {
   player.loadVideoById(select.value);
 }
