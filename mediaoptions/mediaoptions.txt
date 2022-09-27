@@ -6,8 +6,8 @@
 <select id="videos">
 </select>
 <button id="pause">Play</button><button id="pause">Pause</button><br>
-<button id="rewind">Rewind</button><button id="forward">Forward</button>
-<div id="player">
+<button id="rewind">Rewind</button><button id="forward">Forward</button><br>
+<div id="player"></div>
 <script>
 var select = document.getElementById("videos");
 var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk","Efa6BAWPm9o","S85ceVI4mfg","G5xSLbYMr-I","0R5uXlT54hs","jMqJf49DVc8","mBbPHYsPVQc"];
@@ -33,10 +33,10 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(){
   player.playVideo();
-  setTimeout(pauseVideo, 4000);
-  setTimeout(loadNewVideo, 6000);
-  setTimeout(stopVideo, 8500);
-  setInterval(getContent, 1000);
+  //setTimeout(pauseVideo, 4000);
+  //setTimeout(loadNewVideo, 6000);
+  //setTimeout(stopVideo, 8500);
+  //setInterval(getContent, 1000);
 };
 
 for (var i = 0; i < songIds.length; i++) {
