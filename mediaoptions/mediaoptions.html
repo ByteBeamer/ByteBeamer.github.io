@@ -86,8 +86,10 @@ function onPlayerStateChange(event) {
     playing = false;
     if (select.selectedIndex == select.length) {
       select.selectedIndex = 0;
+      select.onchange();
     } else {
       select.selectedIndex = select.selectedIndex + 1;
+      select.onchange();
     }
   }
 }
