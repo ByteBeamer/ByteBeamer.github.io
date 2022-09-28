@@ -24,9 +24,13 @@
       justify-content: center;
       align-items: center;
       height: 70px;
-    }
+  }
+  .slider {
+    width: 98%;
+  }
 </style>
 <div class="center"><label for="videos">Now Playing: </label><select id="videos"></select></div><br>
+<div class="center"><input type="range" id="currentTime" min="0" max="0"></input></div>
 <div class="center"><button id="play">Play/Pause</button></div>
 <div class="center"><button id="rewind">Rewind</button><button id="forward">Forward</button></div>
 <div id="player"></div>
@@ -38,7 +42,8 @@ var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", 
 
 var playBtn = document.getElementById("play");
 var forwardBtn = document.getElementById("forward");
-var rewindBtn = document.getElementById("rewind");  
+var rewindBtn = document.getElementById("rewind");
+var progress = document.getElementById("currentTime");
 
 for (var i = 0; i < songIds.length; i++) {
   var elem = document.createElement("option");
@@ -126,5 +131,16 @@ rewindBtn.onclick = function () {
 select.onchange = function () {
   player.loadVideoById(select.value);
 }
+
+progress.onchange = function() {
+  player.seekTo(this.value);
+}
+
+function update() {
+  progress.max = player.getDuration();
+  progress.value = player.getCurrentTime();
+}
+  
+var interval = window.setInterval(update,500);
 </script>
 </body></html>
