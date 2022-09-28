@@ -55,6 +55,7 @@
 <div class="center"><button id="play">Play/Pause</button></div>
 <div class="center"><button id="rewind">Rewind</button><button id="forward">Forward</button></div>
 <div class="center" ><label for="volume">Volume: </label><input type="range" class="slider" name="volume" id="volume" value="100" min="0" max="100" step="5"></input></div>
+<div class="center" ><label for="speed">Speed: </label><input type="range" class="slider" name="speed" id="speed" value="1" min="0.1" max="2" step="0.05"></input></div>
 <div id="player"></div>
 <script>
 var playing;
@@ -67,6 +68,7 @@ var forwardBtn = document.getElementById("forward");
 var rewindBtn = document.getElementById("rewind");
 var progress = document.getElementById("currentTime");
 var volume = document.getElementById("volume");
+var speed = document.getElementById("speed");
 
 for (var i = 0; i < songIds.length; i++) {
   var elem = document.createElement("option");
@@ -158,6 +160,10 @@ select.onchange = function () {
 
 progress.onchange = function() {
   player.seekTo(this.value);
+}
+  
+speed.onchange = function () {
+  player.setPlaybackRate(this.value);
 }
   
 volume.onchange = function () {
