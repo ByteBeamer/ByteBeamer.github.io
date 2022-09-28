@@ -28,15 +28,15 @@
 </style>
 <label for="videos">Choose a video:</label>
 <select id="videos"></select><br>
-<div class="center"><button id="play">Play</button><button id="pause">Pause</button></div>
+<div class="center"><button id="play">Play/Pause</button></div>
 <div class="center"><button id="rewind">Rewind</button><button id="forward">Forward</button></div>
 <div id="player"></div>
 <script>
+var playing;
 var select = document.getElementById("videos");
 var songIds = ["jsDGb3if9bw", "nujn6wbr-e8", "fJkKvZH6eog", "Q_e5ZoOGWVk", "EDjYDfRunUk","Efa6BAWPm9o","S85ceVI4mfg","G5xSLbYMr-I","0R5uXlT54hs","jMqJf49DVc8","mBbPHYsPVQc"];
 var songNames = ["雨とペトラ", "As it was", "アンドロイドガール", "Otome Dissection", "Otome Dissection (TeddyLoid Alllies)", "Losing My Religion","Beautiful Day","Sunroof","Outsider","The Vampire","Superstar"];
 
-var pauseBtn = document.getElementById("pause");
 var playBtn = document.getElementById("play");
 var forwardBtn = document.getElementById("forward");
 var rewindBtn = document.getElementById("rewind");  
@@ -59,7 +59,8 @@ function onYouTubeIframeAPIReady() {
     // Setup event listeners
     // These are covered in the next section
     events: {
-      'onReady': onPlayerReady
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange,
     }
   });
 };
@@ -68,12 +69,21 @@ function onPlayerReady(event){
   event.target.playVideo();
 
   playBtn.onclick = function () {
-    event.target.playVideo();
-  }
-  pauseBtn.onclick = function () {
-    event.target.pauseVideo();
+    if (playing) {
+      event.target.pauseVideo();
+    } else {
+      event.target.playVideo();
+    } 
   }
 };
+  
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING) {
+    playing = true;
+  } else if (event.data == YT.PlayerState.PAUSED) {
+    playing = false;
+  }
+}
 
 forwardBtn.onclick = function () {
   player.seekTo(player.getCurrentTime() + 10);
