@@ -133,10 +133,10 @@ function onPlayerStateChange(event) {
 document.addEventListener("keydown", (e) => {
     if (e.keycode == 39) {
       //right arrow
-      player.seekTo(player.getCurrentTime() + 10);
+      forwardBtn.click();
     } else if (event.keycode == 37) {
       //left arrow
-      player.seekTo(player.getCurrentTime() - 10);
+      rewindBtn.click();
     }
 });
 
