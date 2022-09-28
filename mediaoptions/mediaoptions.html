@@ -82,6 +82,13 @@ function onPlayerStateChange(event) {
     playing = true;
   } else if (event.data == YT.PlayerState.PAUSED) {
     playing = false;
+  } else if (event.data == YT.PlayerState.ENDED) {
+    playing = false;
+    if (select.selectedIndex == select.length) {
+      select.selectedIndex = 0;
+    } else {
+      select.selectedIndex = select.selectedIndex + 1;
+    }
   }
 }
 
