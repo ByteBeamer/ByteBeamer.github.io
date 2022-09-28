@@ -99,7 +99,7 @@ function onPlayerStateChange(event) {
     playing = false;
   } else if (event.data == YT.PlayerState.ENDED) {
     playing = false;
-    if (select.selectedIndex == select.length) {
+    if (select.selectedIndex == (select.length + 1)) {
       select.selectedIndex = 0;
       select.onchange();
     } else {
