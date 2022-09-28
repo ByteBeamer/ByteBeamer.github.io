@@ -26,7 +26,7 @@
       height: 70px;
     }
 </style>
-<div class="center"><label for="videos">Now Playing:</label><select id="videos"></select></div><br>
+<div class="center"><label for="videos">Now Playing: </label><select id="videos"></select></div><br>
 <div class="center"><button id="play">Play/Pause</button></div>
 <div class="center"><button id="rewind">Rewind</button><button id="forward">Forward</button></div>
 <div id="player"></div>
@@ -83,14 +83,6 @@ function onPlayerReady(event){
         e.preventDefault();
         event.target.playVideo();
       } 
-    } else if (e.keycode == 39) {
-      //right arrow
-      e.preventDefault();
-      player.seekTo(player.getCurrentTime() + 10);
-    } else if (event.keycode == 37) {
-      //left arrow
-      e.preventDefault();
-      player.seekTo(player.getCurrentTime() - 10);
     }
   });
 };
@@ -111,6 +103,18 @@ function onPlayerStateChange(event) {
     }
   }
 }
+  
+document.addEventListener("keydown", (e) => {
+    if (e.keycode == 39) {
+      //right arrow
+      e.preventDefault();
+      player.seekTo(player.getCurrentTime() + 10);
+    } else if (event.keycode == 37) {
+      //left arrow
+      e.preventDefault();
+      player.seekTo(player.getCurrentTime() - 10);
+    }
+});
 
 forwardBtn.onclick = function () {
   player.seekTo(player.getCurrentTime() + 10);
