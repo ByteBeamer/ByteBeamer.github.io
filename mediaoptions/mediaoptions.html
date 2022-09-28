@@ -112,11 +112,9 @@ function onPlayerStateChange(event) {
 document.addEventListener("keydown", (e) => {
     if (e.keycode == 39) {
       //right arrow
-      e.preventDefault();
       player.seekTo(player.getCurrentTime() + 10);
     } else if (event.keycode == 37) {
       //left arrow
-      e.preventDefault();
       player.seekTo(player.getCurrentTime() - 10);
     }
 });
@@ -139,6 +137,11 @@ progress.onchange = function() {
 function update() {
   progress.max = player.getDuration();
   progress.value = player.getCurrentTime();
+  
+  if (select.selectedIndex == (select.length + 1)) {
+    select.selectedIndex = 0;
+    select.onchange();
+  }
 }
   
 var interval = window.setInterval(update,500);
