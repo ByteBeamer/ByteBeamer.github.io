@@ -109,8 +109,7 @@ function onPlayerReady(event){
         e.preventDefault();
         event.target.playVideo();
       } 
-    }
-    if (e.keycode == 39) {
+    } else if (e.keycode == 39) {
       //right arrow
       e.preventDefault();
       forwardBtn.click();
