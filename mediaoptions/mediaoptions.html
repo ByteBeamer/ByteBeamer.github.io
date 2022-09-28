@@ -109,14 +109,6 @@ function onPlayerReady(event){
         e.preventDefault();
         event.target.playVideo();
       } 
-    } else if (e.keycode == 39) {
-      //right arrow
-      e.preventDefault();
-      forwardBtn.click();
-    } else if (event.keycode == 37) {
-      //left arrow
-      e.preventDefault();
-      rewindBtn.click();
     }
   });
 };
@@ -136,6 +128,17 @@ function onPlayerStateChange(event) {
       select.onchange();
     }
   }
+}
+  
+document.addEventListener("keydown", (e) => {
+    if (e.keycode == 39) {
+      //right arrow
+      forwardBtn.click();
+    } else if (event.keycode == 37) {
+      //left arrow
+      rewindBtn.click();
+    }
+});
 
 forwardBtn.onclick = function () {
   player.seekTo(player.getCurrentTime() + 10);
