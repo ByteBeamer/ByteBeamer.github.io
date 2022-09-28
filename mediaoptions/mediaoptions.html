@@ -74,22 +74,22 @@ function onPlayerReady(event){
       event.target.playVideo();
     } 
   }
-  eventTarget.addEventListener("keydown", (event) => {
-    if (event.keyCode == 32) {
+  document.addEventListener("keydown", (e) => {
+    if (e.keyCode == 32) {
       if (playing) {
-        event.preventDefault();
+        e.preventDefault();
         event.target.pauseVideo();
       } else {
-        event.preventDefault();
+        e.preventDefault();
         event.target.playVideo();
       } 
-    } else if (event.keycode == 39) {
+    } else if (e.keycode == 39) {
       //right arrow
-      event.preventDefault();
+      e.preventDefault();
       player.seekTo(player.getCurrentTime() + 10);
     } else if (event.keycode == 37) {
       //left arrow
-      event.preventDefault();
+      e.preventDefault();
       player.seekTo(player.getCurrentTime() - 10);
     }
   });
