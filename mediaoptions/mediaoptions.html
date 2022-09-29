@@ -166,6 +166,7 @@ progress.onchange = function() {
 }
   
 speed.onchange = function () {
+  alert(player.getAvailablePlaybackRates());
   player.setPlaybackRate(this.value);
 }
   
