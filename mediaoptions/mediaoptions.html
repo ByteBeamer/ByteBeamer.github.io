@@ -121,6 +121,8 @@ function onPlayerReady(event){
       } 
     }
   });
+  navigator.mediaSession.setActionHandler('previoustrack', () => { select.selectedIndex = select.selectedIndex - 1; select.onchange(); });
+  navigator.mediaSession.setActionHandler('nexttrack', () => { select.selectedIndex = select.selectedIndex + 1; select.onchange(); });
 };
   
 function onPlayerStateChange(event) {
