@@ -130,7 +130,7 @@ Spider.prototype.die = function () {
 
 PlayState = {};
 
-const LEVEL_COUNT = 7;
+const LEVEL_COUNT = 8;
 
 PlayState.init = function (data) {
     this.game.renderer.renderSession.roundPixels = true;
