@@ -25,5 +25,13 @@
            <i class="arrow right" style="transform: rotate(-45deg);"></i>
         </div>
     <div id="game"></div>
+    <button id="gameOpener">Open in new window</button>
+    <script>
+    var btn = document.getElementById("gameOpener");
+    btn.onclick = function () {
+        var win = window.open("about:blank");
+        win.document.write("<iframe src='ByteBeamer.github.io/game/platformer/index' width='100%' height='100%'></iframe>");
+    }
+    </script>
     <p>Warning! Loud noises! Headphones NOT recommended.</p>
 </body>
