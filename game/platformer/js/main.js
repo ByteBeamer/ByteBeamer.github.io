@@ -5,6 +5,8 @@
 //
 // hero sprite
 //
+var globalCoins = 0;
+
 function Hero(game, x, y) {
     Phaser.Sprite.call(this, game, x, y, 'hero');
     this.anchor.set(0.5, 0.5);
@@ -146,7 +148,7 @@ PlayState.init = function (data) {
         }
     }, this);
 
-    this.coinPickupCount = 0;
+    this.coinPickupCount = globalCoins;
     this.hasKey = false;
     this.level = (data.level || 0) % LEVEL_COUNT;
 };
@@ -336,7 +338,8 @@ PlayState._spawnKey = function (x, y) {
 PlayState._onHeroVsCoin = function (hero, coin) {
     this.sfx.coin.play();
     coin.kill();
-    this.coinPickupCount++;
+    globalCoins++;
+    this.coinPickupCount = globalCoins;
 };
 
 PlayState._onHeroVsEnemy = function (hero, enemy) {
