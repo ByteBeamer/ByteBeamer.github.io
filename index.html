@@ -1,102 +1,16 @@
-<!DOCTYPE html>
 <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-      <link rel="stylesheet" href="/css/main.css">
-      <link rel="stylesheet" href="/css/navbar.css">
-      <link rel="stylesheet" href="/css/cards.css">
-      <link rel="stylesheet" href="/css/music.css">
-      <link rel="stylesheet" href="/css/dark-cards.css">
-      <link rel="stylesheet" href="/css/planets.css">
-      <link rel="stylesheet" href="/css/mountais.css">
-      <script src="/scripts/navbar.js" defer></script>
-      <script src="/scripts/music.js" defer></script>
-      <script src="/scripts/planets.js" defer></script>
-      <script src="/scripts/main.js" defer></script>
-      <script src="/scripts/mountains.js" defer></script>
-      <script src="https://www.youtube.com/iframe_api"></script>
-      <meta name="google-site-verification" content="zH0M-iNP85uiRgNn-Xc0Qgz-99PXuxxpnqOm7uywrCI" />
-      <script async src="https://api.countapi.xyz/hit/bytebeamer.github.io/visits?callback=count"></script>
-      <title>Bytebeamer</title>
-    </head>
-    <body>
-        <nav>
-           <a href="https://bytebeamer.github.io" class="nav-item">Home</a>
-           <a href="https://github.com/ByteBeamer/ByteBeamer.github.io/issues" class="nav-item">Issues</a>
-           <a href="https://bytebeamer.github.io/about" class="nav-item">About</a>
-           <a id="minimize-nav" class="nav-item"><i class="arrow" style="transform: rotate(135deg);"></i></a>
-           <div class="animation start-home"></div>
-        </nav>
-        <div class="maximize-nav">
-           <i class="arrow right" style="transform: rotate(-45deg);"></i>
-        </div>
-        <div class="transition">
-           <div class="cover cover1"></div>
-           <div class="cover cover2"></div>
-           <div class="cover cover3"></div>
-         </div>
-        <div class="description" style="padding-top:30vh;text-align: center; padding-bottom: 30vh;">
-           <h1 style="display: flex; justify-content: center; font-size: 46px;">ByteBeamer</h1>
-           <p style="display: flex; justify-content: center;">a creation website</p>
-	   <p style="display: flex; justify-content: center;" id="visits"></p>
-        </div>
-	    <div class="sun-container" id="planet">
-		<div class="circle-sun" id="circle">
-			<div id="cutout"></div>
-		</div>
-	    </div>
-	    <div style="height:400px;">
-	        <canvas id="canvas"></canvas>
-	    </div>
-	<div class="card__container" style="padding-top: 26vh;background-color:#1b1c1b;">
-    <div class="card">
-      <div class="card__content">
-        <h3 class="card__header">Bookmarklets</h3>
-        <p class="card__info">Some javascript bookmarklets.</p>
-        <a href='https://bytebeamer.github.io/bookmarklets'><button class="card__button">View now</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card__content">
-        <h3 class="card__header">Platformer</h3>
-        <p class="card__info">A Simple platformer.</p>
-        <button class="card__button" onclick="window.location.href='https://bytebeamer.github.io/game/platformer/index'">Play now</button>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card__content">
-        <h3 class="card__header">Music</h3>
-        <p class="card__info">Some music I enjoy listening to.</p>
-        <a href='https://bytebeamer.github.io/music'><button class="card__button">Listen now</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card__content">
-        <h3 class="card__header">Pizzaclicker</h3>
-        <p class="card__info">Pizzaclicker by Papyrus</p>
-        <a href='https://bytebeamer.github.io/pizzaclicker'><button class="card__button">Play now</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card__content">
-        <h3 class="card__header">ByteBeamBot</h3>
-        <p class="card__info">Discord bot, coming soon!</p>
-        <a><button class="card__button">Get now</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card__content">
-        <h3 class="card__header">Suggestions</h3>
-        <p class="card__info">Discord server for making suggesttions</p>
-        <a href="https://discord.com/invite/XZCB4FCrjv"><button class="card__button">Join now</button></a>
-      </div>
-    </div>
-  </div>
-  <script>
-	  function count(response) {
-           document.getElementById('visits').innerText = "Visited " + response.value + " times";
-          }
-  </script>
-    </body>
+<head>
+  <title>ByteBeamer</title>
+  <link rel="stylesheet" type="text/css" href="./css/navbar.css">
+</head>
+<body>
+  <nav>
+    <navleft>
+      <a href="#home" class="logo">Home</a>
+      <a href="#new" class="small">New</a>
+      <a href="#timeline" class="small">Timeline</a>
+      <a href="#social" class="small">Social</a>
+    </navleft>
+  </nav>
+</body>
 </html>
