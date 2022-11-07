@@ -13,3 +13,14 @@ body {
   left: 0;
   position: absolute;
 }
+
+.banner-text {
+  width: 100vw;
+  left: 0;
+  position: absolute;
+  margin-top: 8%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 100px;
+}
