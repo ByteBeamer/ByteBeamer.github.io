@@ -23,13 +23,12 @@ a.end {
 a.small {
   padding: 16px 10px 10px 10px;
   text-decoration: none;
-  color: black;
 }
 
 a {
   padding: 10px 10px 10px 10px;
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 16px;
 }
 
@@ -40,7 +39,7 @@ nav {
   width: 100vw;
   height: 80px;
   position: absolute;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid white;
   top: 0;
   left: 0;
   margin: 0;
