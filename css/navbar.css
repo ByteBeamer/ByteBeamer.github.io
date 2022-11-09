@@ -6,8 +6,6 @@
 
 body {
   overflow-x: hidden;
-  display: flex;
-  justify-conent: center;
 }
 
 a.logo {
