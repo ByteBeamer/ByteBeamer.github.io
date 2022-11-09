@@ -4,6 +4,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background: black;
+}
+
 .banner {
   width: 100vw;
   left: 0;
