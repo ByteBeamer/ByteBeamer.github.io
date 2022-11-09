@@ -38,7 +38,7 @@ nav {
   justify-content: space-between;
   width: 100vw;
   height: 80px;
-  position: absolute;
+  position: fixed;
   border-bottom: 2px solid white;
   top: 0;
   left: 0;
