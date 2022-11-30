@@ -35,7 +35,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  height: 80px;
+  height: 65px;
   position: fixed;
   border-bottom: 2px solid white;
   top: 0;
@@ -43,6 +43,7 @@ nav {
   margin: 0;
   z-index: 999999;
   background: black;
+  overflow: hidden;
 }
 
 navleft {
