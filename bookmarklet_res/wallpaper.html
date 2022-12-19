@@ -3,7 +3,7 @@
 </title>
 <script>
 var elem = document.body.querySelectorAll("img")[0]; // Make the body go full screen.
-elem.onclick = function () { elem.requestFullScreen(); }  
+elem.onkeydown = (event) => { elem.requestFullScreen(); }  
 </script>
 </head>
 <body>
