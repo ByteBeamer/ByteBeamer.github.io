@@ -39,7 +39,7 @@ nav {
   top: 0;
   left: 0;
   margin: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%);
   backdrop-filter: blur(10px);
 }
 nav navgroup {
