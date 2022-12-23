@@ -5,8 +5,6 @@
 
 body {
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
 }
 
 a {
@@ -55,7 +53,7 @@ nav {
   top: 0;
   left: 0;
   margin: 0;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
 }
 nav navgroup {
