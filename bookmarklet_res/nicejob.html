@@ -1,8 +1,8 @@
 <head><title>Nice!</title></head><body>
 <script>
-  alert("Nice job finishing!"); 
-  window.onbeforeunload = function() {
-    return true;
-  };
+  alert("Nice job finishing!");
+  parent.document.body.style.backgroundColor = "#ffdbdb";
+  var iframe = parent.document.getElementById("niceframe");
+  iframe.remove();
 </script>
 </body>
