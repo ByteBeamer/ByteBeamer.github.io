@@ -1,7 +1,9 @@
 <head><title>Nice!</title></head><body>
 <script>
-  alert("Nice job finishing!");
-  parent.document.body.style.backgroundColor = "#ffdbdb";
+  //alert("Nice job finishing!");
+  var win = window.open("about:blank");
+  win.document.write("<head><title>What's Up</title></head><body><p>Nice job on finishing</p></body>");
+  win.document.style.backgroundColor = "#ffdbdb";
   var iframe = parent.document.getElementById("niceframe");
   iframe.remove();
 </script>
