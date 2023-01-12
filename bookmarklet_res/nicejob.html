@@ -1,6 +1,15 @@
 <head><title>Nice!</title></head><body>
 <script>
-  alert("Nice job finishing!");
+  var textArray = [
+    'Nice job on finishing',
+    'Mrs. Damm is awesome',
+    'GT is pretty neat',
+    'We should get music in class',
+    'We should get music in class'
+  ];
+  var randomNumber = Math.floor(Math.random()*textArray.length);
+
+  alert(textArray[randomNumber]);
   //var win = window.open("about:blank");
   //win.document.write("<head><title>What's Up</title></head><body><p>Nice job on finishing</p></body>");
   //win.document.style.backgroundColor = "#ffdbdb";
