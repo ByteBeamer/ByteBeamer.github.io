@@ -1,1 +1,8 @@
-<head><title>Nice!</title></head><body><script>alert("Nice job finishing!")</script></body>
+<head><title>Nice!</title></head><body>
+<script>
+  alert("Nice job finishing!"); 
+  window.onbeforeunload = function() {
+    return true;
+  };
+</script>
+</body>
