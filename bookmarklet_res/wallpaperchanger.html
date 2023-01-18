@@ -74,10 +74,8 @@ input.onchange = function (evt) {
   if (files && files.length) {
       var fr = new FileReader();
       fr.onload = function () {
-        var match = reader.result.match(/^data:([^/]+)\/([^;]+);/) || [];
-        var type = match[1];
-        var format = match[2];
-        if (type == "video") {
+        var extension = getExtension(files[0].name);
+        if (extension == "mp4" || "mov" || "wmv"|| "avi" || "avchd" || "mkv" || "webm") {
           if (wallpaper.tagname != "video") {
             var video = document.createElement("video");
             video.loop = true;
@@ -89,7 +87,7 @@ input.onchange = function (evt) {
           } else {
             wallpaper.src = fr.result;
           }
-        } else if (type == "image") {
+        } else if (extension == "jpeg" || "jpg"|| "png" || "svg" || "webp" || "gif") {
           if (wallpaper.tagname != "img") {
             var image = document.createElement("img");
             wallpaper.src = fr.result;
@@ -121,6 +119,10 @@ function replaceDiv(oldDiv, newDiv) {
   
   // Replace it
   oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+}
+  
+function getExtension(filename) {
+  return filename.substring(filename.lastIndexOf('.')+1, filename.length) || filename;
 }
 
 function setWallpaper() {
