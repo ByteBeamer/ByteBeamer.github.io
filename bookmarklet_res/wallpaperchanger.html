@@ -79,7 +79,7 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
         var extension = getExtension(files[0].name);
         if (extension == "jpeg" || extension == "jpg" || extension == "png" || extension == "svg" || extension == "webp" || extension == "gif") {
           var image = document.createElement("img");
-          translateWallpaper(wallpaper, image, file);
+          translateWallpaper(wallpaper, image, files[0]);
           
         } else if (extension == "mp4" || extension == "mov" || extension == "wmv" || extension == "avi" || extension == "avchd" || extension == "mkv" || extension == "webm") {
           var video = document.createElement("video");
