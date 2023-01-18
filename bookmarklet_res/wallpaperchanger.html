@@ -5,7 +5,7 @@
 <body>
 <div class="menu">
   <ul class="menu-options">
-    <li class="menu-option" onclick=setWallpaper()>Set Image</li>
+    <li class="menu-option" onclick=setWallpaper()>Set Wallpaper</li>
   </ul>
 </div>
 <img style="position: fixed; top: 0; width: 100%;
@@ -39,9 +39,9 @@ img,html,body {margin: 0; padding: 0;}
 
 </style>
 <script>
-const menu = document.querySelector(".menu");
-const img = document.querySelector("img");
-const input = document.querySelector("input");
+var menu = document.querySelector(".menu");
+var wallpaper = document.querySelector("img");
+var input = document.querySelector("input");
 let menuVisible = false;
   
 const toggleMenu = command => {
@@ -55,11 +55,11 @@ const setPosition = ({ top, left }) => {
   toggleMenu("show");
 };
 
-img.addEventListener("click", e => {
+wallpaper.addEventListener("click", e => {
   if(menuVisible)toggleMenu("hide");
 });
 
-img.addEventListener("contextmenu", e => {
+wallpaper.addEventListener("contextmenu", e => {
   e.preventDefault();
   const origin = {
     left: e.pageX,
@@ -74,13 +74,54 @@ input.onchange = function (evt) {
   if (files && files.length) {
       var fr = new FileReader();
       fr.onload = function () {
-          img.src = fr.result;
+        var match = reader.result.match(/^data:([^/]+)\/([^;]+);/) || [];
+        var type = match[1];
+        var format = match[2];
+        if (type == "video") {
+          if (wallpaper.tagname != "video") {
+            var video = document.createElement("video");
+            video.loop = true;
+            video.muted = true;
+            video.autoplay = true;
+            video.src = fr.result;
+            replaceDiv(wallpaper, video);
+            wallpaper = video;
+          } else {
+            wallpaper.src = fr.result;
+          }
+        } else if (type == "image") {
+          if (wallpaper.tagname != "img") {
+            var image = document.createElement("img");
+            wallpaper.src = fr.result;
+            replaceDiv(wallpaper, image);
+            wallpaper = image;
+          } else {
+            wallpaper.src = fr.result;
+          }
+        }
       }
       fr.readAsDataURL(files[0]);
   } else {
   
   }
 };
+  
+function replaceDiv(oldDiv, newDiv) {
+  var index;
+
+  // Copy the children
+  while (oldDiv.firstChild) {
+    newDiv.appendChild(oldDiv.firstChild); // *Moves* the child
+  }
+
+  // Copy the attributes
+  for (index = oldDiv.attributes.length - 1; index >= 0; --index) {
+      newDiv.attributes.setNamedItem(oldDiv.attributes[index].cloneNode());
+  }
+  
+  // Replace it
+  oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+}
 
 function setWallpaper() {
   setTimeout(function() {input.click()}, 200);
