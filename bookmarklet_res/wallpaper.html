@@ -3,6 +3,7 @@
 </title>
 <script>
 const menu = document.querySelector(".menu");
+const img = document.querySelector("img");
 let menuVisible = false;
 
 const toggleMenu = command => {
@@ -16,11 +17,11 @@ const setPosition = ({ top, left }) => {
   toggleMenu("show");
 };
 
-document.body.addEventListener("click", e => {
+img.addEventListener("click", e => {
   if(menuVisible)toggleMenu("hide");
 });
 
-document.body.addEventListener("contextmenu", e => {
+img.addEventListener("contextmenu", e => {
   e.preventDefault();
   const origin = {
     left: e.pageX,
@@ -31,9 +32,9 @@ document.body.addEventListener("contextmenu", e => {
 });
 </script>
 </head>
-<body style="background-size: cover; background-image: url('https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8') no-repeat center center fixed;">
+<body>
 <style>
-* {margin: 0; padding: 0;}
+img {margin: 0; padding: 0;}
 .menu {
   width: 120px;
   box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
@@ -63,5 +64,7 @@ document.body.addEventListener("contextmenu", e => {
     <li class="menu-option">Set Image</li>
   </ul>
 </div>
+<img style="width: 100%;
+height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8">
 </body>
 </html>
