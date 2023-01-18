@@ -70,11 +70,8 @@ img.addEventListener("contextmenu", e => {
 var input = document.createElement('input');
 input.type = 'file';
 input.onchange = function (evt) {
-  var tgt = evt.target || window.event.srcElement,
-        files = tgt.files;
-    
-    // FileReader support
-    if (FileReader && files && files.length) {
+  var files = evt.target.files;
+    if (files && files.length) {
         var fr = new FileReader();
         fr.onload = function () {
             img.src = fr.result;
@@ -84,11 +81,11 @@ input.onchange = function (evt) {
         // fallback -- perhaps submit the input to an iframe and temporarily store
         // them on the server until the user's session ends.
 }
-document.body.appendChild(input);
+document.appendChild(input);
 
 function setWallpaper() {
-  input.click();
-  if(menuVisible)toggleMenu("hide")
+  setTimeout(function() {input.click()}, 200);
+  if (menuVisible) { toggleMenu("hide"); }
 };
 </script>
 </body>
