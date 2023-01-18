@@ -1,123 +1,152 @@
 <html>
-<head><title>Wallpaper
-</title>
-</head>
-<body>
-<div class="menu">
-  <ul class="menu-options">
-    <li class="menu-option" onclick=setWallpaper()>Set Wallpaper</li>
-  </ul>
-</div>
-<img style="position: fixed; top: 0; width: 100%;
+  <head>
+    <title>Wallpaper</title>
+  </head>
+  <body>
+    <div class="menu">
+      <ul class="menu-options">
+        <li class="menu-option" onclick=setWallpaper()>Set Wallpaper</li>
+      </ul>
+    </div>
+    <img style="position: fixed; top: 0; width: 100%;
 height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1bixK3oDVkFdf4RzKmVz_t_haPzIoJC-x">
-<input type="file" style="display:none"/>
-<style>
-img,html,body {margin: 0; padding: 0;}
-.menu {
-  width: 140px;
-  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
-  position: relative;
-  display: none;
-  z-index: 9999;
-  background: white;
-}
-.menu-options {
-    list-style: none;
-    padding: 10px 0;
-}
-.menu-option {
-     list-style-type: none;
-     font-weight: 500;
-     font-size: 14px;
-     padding: 10px 40px 10px 20px;
-     cursor: pointer;
-}
-
-.menu-option:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-</style>
-<script>
-var menu = document.querySelector(".menu");
-var wallpaper = document.querySelector("img");
-var input = document.querySelector("input");
-let menuVisible = false;
-  
-const toggleMenu = command => {
-  menu.style.display = command === "show" ? "block" : "none";
-  menuVisible = !menuVisible;
-};
-
-const setPosition = ({ top, left }) => {
-  menu.style.left = `${left}px`;
-  menu.style.top = `${top}px`;
-  toggleMenu("show");
-};
-
-wallpaper.addEventListener("click", e => {
-  if(menuVisible)toggleMenu("hide");
-});
-
-wallpaper.addEventListener("contextmenu", e => {
-  e.preventDefault();
-  const origin = {
-    left: e.pageX,
-    top: e.pageY
-  };
-  setPosition(origin);
-  return false;
-});
-
-input.onchange = function (evt) {
-  var files = evt.target.files;
-  if (files && files.length) {
-      var fr = new FileReader();
-      fr.onload = function () {
-        var extension = getExtension(files[0].name);
-        if (extension == "mp4" || "mov" || "wmv"|| "avi" || "avchd" || "mkv" || "webm") {
-            var video = document.createElement("video");
-            video.loop = true;
-            video.muted = true;
-            video.autoplay = true;
-            video.src = fr.result;
-            replaceDiv(wallpaper, video);
-            wallpaper = video;
-        } else if (extension == "jpeg" || "jpg"|| "png" || "svg" || "webp" || "gif") {
-            var image = document.createElement("img");
-            wallpaper.src = fr.result;
-            replaceDiv(wallpaper, image);
-            wallpaper = image;
-        }
+    <input type="file" style="display:none" />
+    <style>
+      img,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
       }
-      fr.readAsDataURL(files[0]);
-  } else {
-  
-  }
-};
-  
-function replaceDiv(oldDiv, newDiv) {
-  var index;
 
-  while (oldDiv.firstChild) {
-    newDiv.appendChild(oldDiv.firstChild); // *Moves* the child
-  }
+      .menu {
+        width: 140px;
+        box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+        position: relative;
+        display: none;
+        z-index: 9999;
+        background: white;
+      }
 
-  for (index = oldDiv.attributes.length - 1; index >= 0; --index) {
-      newDiv.attributes.setNamedItem(oldDiv.attributes[index].cloneNode());
-  }
-  
-  oldDiv.parentNode.replaceChild(newDiv, oldDiv);
-}
-  
-function getExtension(filename) {
-  return filename.substring(filename.lastIndexOf('.')+1, filename.length) || filename;
-}
+      .menu-options {
+        list-style: none;
+        padding: 10px 0;
+      }
 
-function setWallpaper() {
-  setTimeout(function() {input.click()}, 200);
-  if (menuVisible) { toggleMenu("hide"); }
-};
-</script>
-</body>
+      .menu-option {
+        list-style-type: none;
+        font-weight: 500;
+        font-size: 14px;
+        padding: 10px 40px 10px 20px;
+        cursor: pointer;
+      }
+
+      .menu-option:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+    </style>
+    <script>
+      var menu = document.querySelector(".menu");
+      var wallpaper = document.querySelector("img");
+      var input = document.querySelector("input");
+      let menuVisible = false;
+      const toggleMenu = command => {
+        menu.style.display = command === "show" ? "block" : "none";
+        menuVisible = !menuVisible;
+      };
+      const setPosition = ({
+        top,
+        left
+      }) => {
+        menu.style.left = `${left}px`;
+        menu.style.top = `${top}px`;
+        toggleMenu("show");
+      };
+      wallpaper.addEventListener("click", e => {
+        if (menuVisible) toggleMenu("hide");
+      });
+      wallpaper.addEventListener("contextmenu", e => {
+        e.preventDefault();
+        const origin = {
+          left: e.pageX,
+          top: e.pageY
+        };
+        setPosition(origin);
+        return false;
+      });
+      input.onchange = function(evt) {
+        var files = evt.target.files;
+        if (files && files.length) {
+          var fr = new FileReader();
+          fr.onload = function() {
+            var extension = getExtension(files[0].name);
+            alert(extension)
+            if (extension == "jpeg" || extension == "jpg" || extension == "png" || extension == "svg" || extension == "webp" || extension == "gif") {
+              var image = document.createElement("img");
+              wallpaper.src = fr.result;
+              replaceDiv(wallpaper, image);
+              wallpaper = image;
+              wallpaper.addEventListener("click", e => {
+                if (menuVisible) toggleMenu("hide");
+              });
+              wallpaper.addEventListener("contextmenu", e => {
+                e.preventDefault();
+                const origin = {
+                  left: e.pageX,
+                  top: e.pageY
+                };
+                setPosition(origin);
+                return false;
+              });
+            } else if (extension == "mp4" || extension == "mov" || extension == "wmv" || extension == "avi" || extension == "avchd" || extension == "mkv" || extension == "webm") {
+              var video = document.createElement("video");
+              video.loop = true;
+              video.muted = true;
+              video.autoplay = true;
+              video.src = fr.result;
+              replaceDiv(wallpaper, video);
+              wallpaper = video;
+              wallpaper.addEventListener("click", e => {
+                if (menuVisible) toggleMenu("hide");
+              });
+              wallpaper.addEventListener("contextmenu", e => {
+                e.preventDefault();
+                const origin = {
+                  left: e.pageX,
+                  top: e.pageY
+                };
+                setPosition(origin);
+                return false;
+              });
+            }
+          }
+          fr.readAsDataURL(files[0]);
+        } else {}
+      };
+
+      function replaceDiv(oldDiv, newDiv) {
+        var index;
+        while (oldDiv.firstChild) {
+          newDiv.appendChild(oldDiv.firstChild); // *Moves* the child
+        }
+        for (index = oldDiv.attributes.length - 1; index >= 0; --index) {
+          newDiv.attributes.setNamedItem(oldDiv.attributes[index].cloneNode());
+        }
+        oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+      }
+
+      function getExtension(filename) {
+        return filename.substring(filename.lastIndexOf('.') + 1, filename.length) || filename;
+      }
+
+      function setWallpaper() {
+        setTimeout(function() {
+          input.click()
+        }, 200);
+        if (menuVisible) {
+          toggleMenu("hide");
+        }
+      };
+    </script>
+  </body>
 </html>
