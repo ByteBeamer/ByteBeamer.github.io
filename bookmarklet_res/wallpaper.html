@@ -2,13 +2,66 @@
 <head><title>Wallpaper
 </title>
 <script>
-var elem = document.body.querySelectorAll("img")[0]; // Make the body go full screen.
-elem.onclick = (event) => { event.preventDefault(); elem.requestFullScreen(); }
+
+const menu = document.querySelector(".menu");
+let menuVisible = false;
+
+const toggleMenu = command => {
+  menu.style.display = command === "show" ? "block" : "none";
+  menuVisible = !menuVisible;
+};
+
+const setPosition = ({ top, left }) => {
+  menu.style.left = `${left}px`;
+  menu.style.top = `${top}px`;
+  toggleMenu("show");
+};
+
+document.addEventListener("click", e => {
+  if(menuVisible)toggleMenu("hide");
+});
+
+window.addEventListener("contextmenu", e => {
+  e.preventDefault();
+  const origin = {
+    left: e.pageX,
+    top: e.pageY
+  };
+  setPosition(origin);
+  return false;
+});
 </script>
 </head>
 <body>
+<div class="menu">
+  <ul class="menu-options">
+    <li class="menu-option">Set Image</li>
+  </ul>
+</div>
 <style>
 * {margin: 0; padding: 0;}
+.menu {
+  width: 120px;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: none;
+}
+.menu-options {
+    list-style: none;
+    padding: 10px 0;
+}
+.menu-option {
+      list-style-type: none;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 10px 40px 10px 20px;
+      cursor: pointer;
+}
+
+.menu-option:hover {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
 </style>
 <img style="width: 100%;
 height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8">
