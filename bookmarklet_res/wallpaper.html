@@ -10,6 +10,7 @@
 </div>
 <img style="position: fixed; top: 0; width: 100%;
 height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8">
+<input type="file" style="display:none"/>
 <style>
 img,html,body {margin: 0; padding: 0;}
 .menu {
@@ -40,6 +41,7 @@ img,html,body {margin: 0; padding: 0;}
 <script>
 const menu = document.querySelector(".menu");
 const img = document.querySelector("img");
+const input = document.querySelector("input");
 let menuVisible = false;
   
 const toggleMenu = command => {
@@ -66,22 +68,19 @@ img.addEventListener("contextmenu", e => {
   setPosition(origin);
   return false;
 });
-  
-var input = document.createElement('input');
-input.type = 'file';
+
 input.onchange = function (evt) {
   var files = evt.target.files;
-    if (files && files.length) {
-        var fr = new FileReader();
-        fr.onload = function () {
-            img.src = fr.result;
-        }
-        fr.readAsDataURL(files[0]);
-    } else {
-        // fallback -- perhaps submit the input to an iframe and temporarily store
-        // them on the server until the user's session ends.
-}
-document.appendChild(input);
+  if (files && files.length) {
+      var fr = new FileReader();
+      fr.onload = function () {
+          img.src = fr.result;
+      }
+      fr.readAsDataURL(files[0]);
+  } else {
+  
+  }
+};
 
 function setWallpaper() {
   setTimeout(function() {input.click()}, 200);
