@@ -1,6 +1,41 @@
 <html>
 <head><title>Wallpaper
 </title>
+</head>
+<body>
+<div class="menu">
+  <ul class="menu-options">
+    <li class="menu-option">Set Image</li>
+  </ul>
+</div>
+<img style="width: 100%;
+height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8">
+<style>
+img,html,body {margin: 0; padding: 0;}
+.menu {
+  width: 120px;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: none;
+  z-index: 9999;
+}
+.menu-options {
+    list-style: none;
+    padding: 10px 0;
+}
+.menu-option {
+     list-style-type: none;
+     font-weight: 500;
+     font-size: 14px;
+     padding: 10px 40px 10px 20px;
+     cursor: pointer;
+}
+
+.menu-option:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+</style>
 <script>
 const menu = document.querySelector(".menu");
 const img = document.querySelector("img");
@@ -31,40 +66,5 @@ img.addEventListener("contextmenu", e => {
   return false;
 });
 </script>
-</head>
-<body>
-<style>
-img {margin: 0; padding: 0;}
-.menu {
-  width: 120px;
-  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
-  position: relative;
-  display: none;
-  z-index: 9999;
-}
-.menu-options {
-    list-style: none;
-    padding: 10px 0;
-}
-.menu-option {
-     list-style-type: none;
-     font-weight: 500;
-     font-size: 14px;
-     padding: 10px 40px 10px 20px;
-     cursor: pointer;
-}
-
-.menu-option:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-</style>
-<div class="menu">
-  <ul class="menu-options">
-    <li class="menu-option">Set Image</li>
-  </ul>
-</div>
-<img style="width: 100%;
-height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8">
 </body>
 </html>
