@@ -79,46 +79,19 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
         var extension = getExtension(files[0].name);
         if (extension == "jpeg" || extension == "jpg" || extension == "png" || extension == "svg" || extension == "webp" || extension == "gif") {
           var image = document.createElement("img");
-          wallpaper.src = URL.createObjectURL(files[0]);
-          replaceDiv(wallpaper, image);
-          wallpaper = image;
-          wallpaper.addEventListener("click", e => {
-            if (menuVisible) toggleMenu("hide");
-          });
-          wallpaper.addEventListener("contextmenu", e => {
-            e.preventDefault();
-            const origin = {
-              left: e.pageX,
-              top: e.pageY
-            };
-            setPosition(origin);
-            return false;
-          });
+          translateWallpaper(wallpaper, image, file);
+          
         } else if (extension == "mp4" || extension == "mov" || extension == "wmv" || extension == "avi" || extension == "avchd" || extension == "mkv" || extension == "webm") {
           var video = document.createElement("video");
           video.loop = true;
           video.muted = true;
           video.autoplay = true;
           video.controls = false;
-          video.src = URL.createObjectURL(files[0]);
-          replaceDiv(wallpaper, video);
-          wallpaper = video;
-          wallpaper.addEventListener("click", e => {
-            if (menuVisible) toggleMenu("hide");
-          });
-          wallpaper.addEventListener("contextmenu", e => {
-            e.preventDefault();
-            const origin = {
-              left: e.pageX,
-              top: e.pageY
-            };
-            setPosition(origin);
-            return false;
-          });
+          translateWallpaper(wallpaper, video, files[0]);
         }
       };
 
-      function replaceDiv(oldDiv, newDiv) {
+      function translateWallpaper(oldDiv, newDiv, file) {
         var index;
         while (oldDiv.firstChild) {
           newDiv.appendChild(oldDiv.firstChild); // *Moves* the child
@@ -126,7 +99,24 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
         for (index = oldDiv.attributes.length - 1; index >= 0; --index) {
           newDiv.attributes.setNamedItem(oldDiv.attributes[index].cloneNode());
         }
+        
         oldDiv.parentNode.replaceChild(newDiv, oldDiv);
+        
+        wallpaper = newDiv;
+        wallpaper.src = URL.createObjectURL(file);
+        
+        wallpaper.addEventListener("click", e => {
+          if (menuVisible) toggleMenu("hide");
+          });
+        wallpaper.addEventListener("contextmenu", e => {
+          e.preventDefault();
+          const origin = {
+            left: e.pageX,
+            top: e.pageY
+          };
+          setPosition(origin);
+          return false;
+        });
       }
 
       function getExtension(filename) {
