@@ -1,0 +1,91 @@
+<html>
+<head><title>Wallpaper
+</title>
+</head>
+<body>
+<div class="menu">
+  <ul class="menu-options">
+    <li class="menu-option" onclick=setWallpaper()>Set Image</li>
+  </ul>
+</div>
+<img style="position: fixed; top: 0; width: 100%;
+height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1bixK3oDVkFdf4RzKmVz_t_haPzIoJC-x">
+<input type="file" style="display:none"/>
+<style>
+img,html,body {margin: 0; padding: 0;}
+.menu {
+  width: 140px;
+  box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: none;
+  z-index: 9999;
+  background: white;
+}
+.menu-options {
+    list-style: none;
+    padding: 10px 0;
+}
+.menu-option {
+     list-style-type: none;
+     font-weight: 500;
+     font-size: 14px;
+     padding: 10px 40px 10px 20px;
+     cursor: pointer;
+}
+
+.menu-option:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+</style>
+<script>
+const menu = document.querySelector(".menu");
+const img = document.querySelector("img");
+const input = document.querySelector("input");
+let menuVisible = false;
+  
+const toggleMenu = command => {
+  menu.style.display = command === "show" ? "block" : "none";
+  menuVisible = !menuVisible;
+};
+
+const setPosition = ({ top, left }) => {
+  menu.style.left = `${left}px`;
+  menu.style.top = `${top}px`;
+  toggleMenu("show");
+};
+
+img.addEventListener("click", e => {
+  if(menuVisible)toggleMenu("hide");
+});
+
+img.addEventListener("contextmenu", e => {
+  e.preventDefault();
+  const origin = {
+    left: e.pageX,
+    top: e.pageY
+  };
+  setPosition(origin);
+  return false;
+});
+
+input.onchange = function (evt) {
+  var files = evt.target.files;
+  if (files && files.length) {
+      var fr = new FileReader();
+      fr.onload = function () {
+          img.src = fr.result;
+      }
+      fr.readAsDataURL(files[0]);
+  } else {
+  
+  }
+};
+
+function setWallpaper() {
+  setTimeout(function() {input.click()}, 200);
+  if (menuVisible) { toggleMenu("hide"); }
+};
+</script>
+</body>
+</html>
