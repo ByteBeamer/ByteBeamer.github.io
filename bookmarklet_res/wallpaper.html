@@ -5,7 +5,7 @@
 <body>
 <div class="menu">
   <ul class="menu-options">
-    <li class="menu-option">Set Image</li>
+    <li class="menu-option" onclick=setWallpaper()>Set Image</li>
   </ul>
 </div>
 <img style="position: fixed; top: 0; width: 100%;
@@ -67,7 +67,7 @@ img.addEventListener("contextmenu", e => {
   return false;
 });
   
-/*var input = document.createElement('input');
+var input = document.createElement('input');
 input.type = 'file';
 input.onchange = function (evt) {
   var tgt = evt.target || window.event.srcElement,
@@ -84,13 +84,12 @@ input.onchange = function (evt) {
         // fallback -- perhaps submit the input to an iframe and temporarily store
         // them on the server until the user's session ends.
 }
-  
 document.body.appendChild(input);
-  
-menu.children[0].children[0].onclick = function (e) {
+
+function setWallpaper() {
   input.click();
   if(menuVisible)toggleMenu("hide")
-}*/
+};
 </script>
 </body>
 </html>
