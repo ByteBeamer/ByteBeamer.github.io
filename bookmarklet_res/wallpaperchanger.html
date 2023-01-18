@@ -80,7 +80,6 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
           var fr = new FileReader();
           fr.onload = function() {
             var extension = getExtension(files[0].name);
-            alert(extension)
             if (extension == "jpeg" || extension == "jpg" || extension == "png" || extension == "svg" || extension == "webp" || extension == "gif") {
               var image = document.createElement("img");
               wallpaper.src = fr.result;
@@ -103,7 +102,8 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
               video.loop = true;
               video.muted = true;
               video.autoplay = true;
-              video.src = fr.result;
+              video.controls = false;
+              video.src = URL.createObjectURL(files[0]);
               replaceDiv(wallpaper, video);
               wallpaper = video;
               wallpaper.addEventListener("click", e => {
