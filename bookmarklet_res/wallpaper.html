@@ -16,7 +16,7 @@ const setPosition = ({ top, left }) => {
   toggleMenu("show");
 };
 
-document.addEventListener("click", e => {
+document.body.addEventListener("click", e => {
   if(menuVisible)toggleMenu("hide");
 });
 
@@ -31,7 +31,8 @@ window.addEventListener("contextmenu", e => {
 });
 </script>
 </head>
-<body>
+<body style="width: 100%;
+height: 100%; object-fit: cover; background-image: url('https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8');">
 <style>
 * {margin: 0; padding: 0;}
 .menu {
@@ -63,7 +64,5 @@ window.addEventListener("contextmenu", e => {
     <li class="menu-option">Set Image</li>
   </ul>
 </div>
-<img style="width: 100%;
-height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=download&id=1IGNaCWLh_gtEbAvK0Nn0kT2LVfzqtIE8">
 </body>
 </html>
