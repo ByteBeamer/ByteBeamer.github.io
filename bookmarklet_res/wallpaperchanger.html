@@ -76,7 +76,6 @@ input.onchange = function (evt) {
       fr.onload = function () {
         var extension = getExtension(files[0].name);
         if (extension == "mp4" || "mov" || "wmv"|| "avi" || "avchd" || "mkv" || "webm") {
-          if (wallpaper.tagname != "video") {
             var video = document.createElement("video");
             video.loop = true;
             video.muted = true;
@@ -84,18 +83,11 @@ input.onchange = function (evt) {
             video.src = fr.result;
             replaceDiv(wallpaper, video);
             wallpaper = video;
-          } else {
-            wallpaper.src = fr.result;
-          }
         } else if (extension == "jpeg" || "jpg"|| "png" || "svg" || "webp" || "gif") {
-          if (wallpaper.tagname != "img") {
             var image = document.createElement("img");
             wallpaper.src = fr.result;
             replaceDiv(wallpaper, image);
             wallpaper = image;
-          } else {
-            wallpaper.src = fr.result;
-          }
         }
       }
       fr.readAsDataURL(files[0]);
@@ -107,17 +99,14 @@ input.onchange = function (evt) {
 function replaceDiv(oldDiv, newDiv) {
   var index;
 
-  // Copy the children
   while (oldDiv.firstChild) {
     newDiv.appendChild(oldDiv.firstChild); // *Moves* the child
   }
 
-  // Copy the attributes
   for (index = oldDiv.attributes.length - 1; index >= 0; --index) {
       newDiv.attributes.setNamedItem(oldDiv.attributes[index].cloneNode());
   }
   
-  // Replace it
   oldDiv.parentNode.replaceChild(newDiv, oldDiv);
 }
   
