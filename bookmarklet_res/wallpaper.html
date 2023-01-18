@@ -42,26 +42,6 @@ const menu = document.querySelector(".menu");
 const img = document.querySelector("img");
 let menuVisible = false;
   
-var input = document.createElement('input');
-input.type = 'file';
-input.onchange = function (evt) {
-  var tgt = evt.target || window.event.srcElement,
-        files = tgt.files;
-    
-    // FileReader support
-    if (FileReader && files && files.length) {
-        var fr = new FileReader();
-        fr.onload = function () {
-            img.src = fr.result;
-        }
-        fr.readAsDataURL(files[0]);
-    } else {
-        // fallback -- perhaps submit the input to an iframe and temporarily store
-        // them on the server until the user's session ends.
-}
-  
-document.body.appendChild(input);
-
 const toggleMenu = command => {
   menu.style.display = command === "show" ? "block" : "none";
   menuVisible = !menuVisible;
@@ -86,6 +66,26 @@ img.addEventListener("contextmenu", e => {
   setPosition(origin);
   return false;
 });
+  
+var input = document.createElement('input');
+input.type = 'file';
+input.onchange = function (evt) {
+  var tgt = evt.target || window.event.srcElement,
+        files = tgt.files;
+    
+    // FileReader support
+    if (FileReader && files && files.length) {
+        var fr = new FileReader();
+        fr.onload = function () {
+            img.src = fr.result;
+        }
+        fr.readAsDataURL(files[0]);
+    } else {
+        // fallback -- perhaps submit the input to an iframe and temporarily store
+        // them on the server until the user's session ends.
+}
+  
+document.body.appendChild(input);
   
 menu.children[0].children[0].onclick = function (e) {
   input.click();
