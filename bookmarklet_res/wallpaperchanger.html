@@ -46,6 +46,7 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
       }
     </style>
     <script>
+    alert("Press 1 to enter fullscreen");
       var menu = document.querySelector(".menu");
       var wallpaper = document.querySelector("img");
       var input = document.querySelector("input");
@@ -130,6 +131,21 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
           toggleMenu("hide");
         }
       };
+document.addEventListener("keydown", (event) => {
+  if (event.isComposing || event.keyCode === 49) {
+    openFullscreen();
+  }
+  // do something
+});
+function openFullscreen() {
+  if (wallpaper.requestFullscreen) {
+    wallpaper.requestFullscreen();
+  } else if (wallpaper.webkitRequestFullscreen) { /* Safari */
+    wallpaper.webkitRequestFullscreen();
+  } else if (wallpaper.msRequestFullscreen) { /* IE11 */
+    wallpaper.msRequestFullscreen();
+  }
+}
     </script>
   </body>
 </html>
