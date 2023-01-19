@@ -81,13 +81,10 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
           var image = document.createElement("img");
           translateWallpaper(wallpaper, image, files[0]);
           
-        } else if (extension == "mp4" || extension == "mov" || extension == "wmv" || extension == "avi" || extension == "avchd" || extension == "mkv" || extension == "webm") {
-          var video = document.createElement("video");
-          video.loop = true;
-          video.muted = true;
-          video.autoplay = true;
-          video.controls = false;
-          translateWallpaper(wallpaper, video, files[0]);
+        }  else if (extension == "html") {
+          var object = document.createElement("object");
+          object.type = "text/html";
+          translateWallpaper(wallpaper, object, files[0]);
         }
       };
 
@@ -103,9 +100,11 @@ height: 100%; object-fit: cover;" src="https://drive.google.com/uc?export=downlo
         oldDiv.parentNode.replaceChild(newDiv, oldDiv);
         
         wallpaper = newDiv;
-        wallpaper.src = URL.createObjectURL(file);
+        try { wallpaper.src = URL.createObjectURL(file);} catch (e) {}
+        try { wallpaper.data = URL.createObjectURL(file);} catch (e) {}
         
         wallpaper.addEventListener("click", e => {
+          e.preventDefault();
           if (menuVisible) toggleMenu("hide");
           });
         wallpaper.addEventListener("contextmenu", e => {
