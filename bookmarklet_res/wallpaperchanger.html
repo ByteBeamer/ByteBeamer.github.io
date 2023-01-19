@@ -138,12 +138,12 @@ document.addEventListener("keydown", (event) => {
   // do something
 });
 function openFullscreen() {
-  if (wallpaper.requestFullscreen) {
-    wallpaper.requestFullscreen();
-  } else if (wallpaper.webkitRequestFullscreen) { /* Safari */
-    wallpaper.webkitRequestFullscreen();
-  } else if (wallpaper.msRequestFullscreen) { /* IE11 */
-    wallpaper.msRequestFullscreen();
+  if (document.body.requestFullscreen) {
+    document.body.requestFullscreen();
+  } else if (document.body.webkitRequestFullscreen) { /* Safari */
+    document.body.webkitRequestFullscreen();
+  } else if (document.body.msRequestFullscreen) { /* IE11 */
+    document.body.msRequestFullscreen();
   }
 }
     </script>
