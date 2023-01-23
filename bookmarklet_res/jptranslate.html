@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <textarea style="width: 100vw; height: 100vh; position: absolute: top: 0; left: 0;" type="text" id="text"></textarea>
+    <script>
+      var text = document.getElementById("text");
+      text.addEventListener("keydown", (event) => {
+        if (event.isComposing || event.keyCode === 13) {
+          if (text.value != "" && text.value != null) {
+            var win = window.open(`https://translate.google.com/?hl=ja&sl=ja&tl=en&text=${text.value}&op=translate`);
+            history.go(-1);
+          } else {
+            history.go(-1);
+          }
+        }
+        // do something
+      });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        border: 0;
+        outline: 0;
+      }
+
+      body {
+        overflow: hidden;
+      }
+    </style>
+  </body>
+</html>
