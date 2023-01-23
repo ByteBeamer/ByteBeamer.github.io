@@ -8,9 +8,9 @@
         if (event.isComposing || event.keyCode === 13) {
           if (text.value != "" && text.value != null) {
             var win = window.open(`https://translate.google.com/?hl=ja&sl=ja&tl=en&text=${text.value}&op=translate`);
-            //history.go(-1);
+            history.go(-1);
           } else {
-            //history.go(-1);
+            history.go(-1);
           }
         }
         // do something
@@ -18,7 +18,7 @@
     var txt = prompt("Enter Japanese");
     if (txt != "" && txt != null) {
       var win = window.open(`https://translate.google.com/?hl=ja&sl=ja&tl=en&text=${txt.value}&op=translate`);
-      //history.go(-1);
+      history.go(-1);
     } else {
     }
     </script>
