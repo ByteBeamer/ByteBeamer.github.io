@@ -17,7 +17,7 @@
       });
     var txt = prompt("Enter Japanese");
     if (txt != "" && txt != null) {
-      var win = window.open(`https://translate.google.com/?hl=ja&sl=ja&tl=en&text=${txt.value}&op=translate`);
+      var win = window.open(`https://translate.google.com/?hl=ja&sl=ja&tl=en&text=${txt}&op=translate`);
       history.go(-1);
     } else {
     }
