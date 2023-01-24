@@ -8,7 +8,7 @@
         if (event.isComposing || event.keyCode === 13) {
           if (text.value != "" && text.value != null) {
             text = text.value.replace(/(?:\r\n|\r|\n)/g, '%0');
-            var win = window.open(`https://translate.google.com/?hl=ja&sl=ja&tl=en&text=${text.value}&op=translate`);
+            var win = window.open(`https://translate.google.com/?hl=ja&sl=ja&tl=en&text=${text}&op=translate`);
             history.go(-1);
           } else {
             history.go(-1);
