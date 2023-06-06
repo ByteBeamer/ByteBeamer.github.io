@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Go</title>
+<script>
+function search() {
+	var val = document.querySelector("input[type='text']").value;
+	window.location.href = val;
+}
+</script>
+</head>
+<body>
+<input type="text" onchange=search() value="https://"></input><button onclick=search()>Go</button>
+</body>
+</html>
