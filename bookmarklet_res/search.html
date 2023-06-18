@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Go</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script>
+function search() {
+	var val = document.querySelector("input[type='text']").value;
+	window.location.href = "https://google.com/search?q=" + val;
+}
+</script>
+</head>
+<body style="margin: 0; padding: 0;">
+<input type="text" onchange=search() value="" style="width: 80vw; height: 2.5em; border-radius: 4px; padding: 0.3em 1em 0.3em 1em; font-size: 1.5em;"></input><button style="z-index: 12; position: absolute; right: 0; top: 0; height: 2.5em; border-radius: 4px; padding: 0.3em 1em 0.3em 1em; font-size: 1.5em;" onclick=search()>Go</button>
+</body>
+</html>
