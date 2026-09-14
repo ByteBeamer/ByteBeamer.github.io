@@ -17,6 +17,8 @@
       background-color: var(--background);
       color: var(--text-color);
       padding: 0;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     a {
@@ -25,6 +27,8 @@
 
     nav {
       background-color: #24223f;
+      border-radius: 1em;
+      overflow: hidden;
     }
 
     nav>a {
@@ -59,7 +63,7 @@
       z-index: 6;
       pointer-events: none;
       transform: scaleY(200%);
-      background: radial-gradient(closest-side, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, var(--background) 100%);
+      background: radial-gradient(closest-side, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, var(--background) 100%);
     }
 
     h2 {
@@ -67,12 +71,17 @@
     }
 
     .content {
-      padding: 0.5em;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
     .card-container {
       display: grid;
       gap: 0.5em;
+      max-width: 900px;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
     }
 
     a.button {
@@ -108,6 +117,7 @@
 
     .badge-display>img {
       height: 2.5em;
+      position: relative;
     }
 
     img.profile {
@@ -146,6 +156,11 @@
           <img style="z-index: 1; transform: scale(0.6) translateX(-150%);" src="./media/logos/Typescript_logo.svg" />
         </div>
       </div>
+      <nav>
+        <a href="/art" class="nav-link">2D Art</a>
+        <a href="/3D" class="nav-link">3D Projects</a>
+        <a href="/programming" class="nav-link">Programming</a>
+      </nav>
       <div class="card">
         <h2>
           Blender tools
@@ -166,12 +181,6 @@
       </div>
     </div>
   </div>
-  <nav>
-    <a href="/" class="nav-logo">ByteBeamer</a>
-    <a href="/art" class="nav-link">2D Art</a>
-    <a href="/3D" class="nav-link">3D Projects</a>
-    <a href="/programming" class="nav-link">Programming</a>
-  </nav>
 </body>
 
 </html>
