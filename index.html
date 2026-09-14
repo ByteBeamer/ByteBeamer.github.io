@@ -1,31 +1,128 @@
 <html>
+
 <head>
   <title>ByteBeamer</title>
-  <link rel="stylesheet" type="text/css" href="./css/navbar.css">
-  <link rel="stylesheet" type="text/css" href="./css/home.css">
-  <script src="./js/home.js"></script>
+  <style>
+    :root {
+      --background: #121212;
+      --text-color: #f5f5f5;
+      --accent-color: #3399ff;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text-color);
+      padding: 0;
+    }
+
+    a {
+      color: var(--accent-color);
+    }
+
+    nav {
+      background-color: #24223f;
+    }
+
+    nav>a {
+      display: inline-block;
+      padding: 1em;
+      text-decoration: none;
+      position: sticky;
+      top: 0;
+    }
+
+    nav>a:hover {
+      background-color: #1f1d3a;
+      color: #2a86e2;
+      box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .card {
+      background-color: #242424;
+      padding: 1em;
+      border-radius: 1em;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    .content {
+      padding: 0.5em;
+    }
+
+    .card-container {
+      display: grid;
+      gap: 0.5em;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: #3399ff;
+      padding: 0.5em;
+      color: black;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: ease-in-out;
+      transition-duration: 0.2s;
+    }
+
+    a.button:before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: #EA7600;
+      transform: translateX(-100%);
+      transition: ease-in-out;
+      transition-duration: 0.2s;
+      z-index: -1;
+    }
+
+    a.button:hover:before {
+      transform: translateX(0%);
+    }
+
+    a.button:hover {
+      transform: scale(0.95);
+    }
+  </style>
 </head>
+
 <body>
+  <div class="content">
+    <div class="card-container">
+      <div class="card">
+        <h2>
+          Blender tools
+        </h2>
+        <p>
+          Take a look at my selection of free Blender assets! Pre-built geometry nodes, materials, and other goodies all for free!
+        </p>
+        <a class="button">Take a look</a>
+      </div>
+      <div class="card">
+        <h2>
+          Blender tools
+        </h2>
+        <p>
+          Take a look at my selection of free Blender assets! Pre-built geometry nodes, materials, and other goodies all for free!
+        </p>
+        <a class="button">Take a look</a>
+      </div>
+    </div>
+  </div>
   <nav>
-    <navgroup>
-      <a href="#home" class="nav-logo">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#bookmarklets" class="nav-link">Bookmarklets</a>
-      <a href="/wallpaper" class="nav-link">Wallpaper</a>
-    </navgroup>
+    <a href="/" class="nav-logo">ByteBeamer</a>
+    <a href="/art" class="nav-link">2D Art</a>
+    <a href="/3D" class="nav-link">3D Projects</a>
+    <a href="/programming" class="nav-link">Programming</a>
   </nav>
-  <div class="head-container">
-    <div class="banner">
-      <div class="banner-text"><strong>ByteBeamer</strong></div><img class="banner" src="./img/earth.png"></img>
-    </div>
-  </div>
-  <div class="content-container">
-    <div class="content">
-      <a href="/wallpaper" style="font-size: 100px;">Wallpaper</a>
-    </div>
-    <div class="content">
-      <a href="#" style="font-size: 100px;">Bookmarklets</a>
-    </div>
-  </div>
 </body>
+
 </html>
