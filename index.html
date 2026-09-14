@@ -9,6 +9,10 @@
       --accent-color: #3399ff;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: var(--background);
       color: var(--text-color);
@@ -41,6 +45,21 @@
       background-color: #242424;
       padding: 1em;
       border-radius: 1em;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card.about:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 6;
+      pointer-events: none;
+      transform: scaleY(200%);
+      background: radial-gradient(closest-side, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, var(--background) 100%);
     }
 
     h2 {
@@ -70,26 +89,38 @@
       transition-duration: 0.2s;
     }
 
-    a.button:before {
-      content: "";
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      right: 0;
-      top: 0;
-      background-color: #EA7600;
-      transform: translateX(-100%);
-      transition: ease-in-out;
-      transition-duration: 0.2s;
-      z-index: -1;
-    }
-
-    a.button:hover:before {
-      transform: translateX(0%);
-    }
-
     a.button:hover {
       transform: scale(0.95);
+    }
+
+    .badge-display {
+      position: relative;
+      padding: 1em;
+    }
+
+    .badge-display::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, #242424 15%, rgba(0, 0, 0, 0) 50%, #242424 85%);
+      z-index: 5;
+    }
+
+    .badge-display>img {
+      height: 2.5em;
+    }
+
+    img.profile {
+      border-radius: 50%;
+      height: 15em;
+      width: 15em;
+    }
+
+    .centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   </style>
 </head>
@@ -97,6 +128,24 @@
 <body>
   <div class="content">
     <div class="card-container">
+      <div class="card about centered">
+        <img src="https://avatars.githubusercontent.com/u/81110386?v=4" class="profile">
+        <h2>
+          Hi! I'm @ByteBeamer
+        </h2>
+        <p style="max-width: 300px;">
+          I'm an artist and programmer who specializes in web development and technical 3D. I primarily use softwares like Blender, Clip Studio Paint, and Visual Studio Code.
+        </p>
+        <div class="badge-display">
+          <img style="z-index: 1; transform: scale(0.6) translateX(150%);" src="./media/logos/HTML5_logo.svg" />
+          <img style="z-index: 2; transform: scale(0.8) translateX(40%);" src="./media/logos/CSS3_logo.svg" />
+          <img style="z-index: 3; transform: scale(1.5);" src="./media/logos/csp_icon.png" />
+          <img style="z-index: 4; transform: scale(2.2) translateY(0.1em); filter: drop-shadow(0 0 0.75rem #242424); margin-right: 0.2em; margin-left: 0.2em;" src="./media/logos/blender_community_badge_black.svg" />
+          <img style="z-index: 3; transform: scale(1.1); background: #3f3f3f; border-radius: 8px; padding: 2px;" src="./media/logos/Visual_Studio_Code_logo.svg" />
+          <img style="z-index: 2; transform: scale(0.7) translateX(-40%); border-radius: 2px" src="./media/logos/JavaScript_logo.svg" />
+          <img style="z-index: 1; transform: scale(0.6) translateX(-150%);" src="./media/logos/Typescript_logo.svg" />
+        </div>
+      </div>
       <div class="card">
         <h2>
           Blender tools
@@ -108,10 +157,10 @@
       </div>
       <div class="card">
         <h2>
-          Blender tools
+          2D Art
         </h2>
         <p>
-          Take a look at my selection of free Blender assets! Pre-built geometry nodes, materials, and other goodies all for free!
+          Come look at my 2D works, the art gallery slowly but surely grows.
         </p>
         <a class="button">Take a look</a>
       </div>
