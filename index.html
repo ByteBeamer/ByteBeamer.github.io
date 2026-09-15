@@ -1,8 +1,9 @@
-<html>
+<html lang="en">
 
 <head>
   <title>ByteBeamer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <style>
     :root {
       --background: #121212;
@@ -12,6 +13,10 @@
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -29,7 +34,11 @@
     nav {
       background-color: #24223f;
       border-radius: 1em;
+      position: sticky;
+      top: 0.5em;
+      z-index: 12;
       overflow: hidden;
+      filter: drop-shadow(0 0 0.75rem #000000);
     }
 
     nav>a {
@@ -57,10 +66,10 @@
     .card.about:before {
       content: "";
       position: absolute;
-      left: 0;
       top: 0;
       height: 100%;
       width: 100%;
+      min-width: 500px;
       z-index: 6;
       pointer-events: none;
       transform: scaleY(200%);
@@ -69,6 +78,20 @@
 
     h2 {
       margin: 0;
+    }
+
+    h1.section-header {
+      margin: 0;
+      margin-left: 0.5em;
+    }
+
+    h1.section-header>a {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    h1.section-header>a:active {
+      color: #dbdbdb;
     }
 
     .content {
@@ -83,6 +106,7 @@
       max-width: 900px;
       padding-left: 0.5em;
       padding-right: 0.5em;
+      position: relative;
     }
 
     a.button {
@@ -97,15 +121,27 @@
       z-index: 1;
       transition: ease-in-out;
       transition-duration: 0.2s;
+      text-decoration: none;
+      grid-column: span 2;
+      text-align: center;
+      width: 100%;
     }
 
     a.button:hover {
+      background-color: #2688eb;
+    }
+
+    a.button:active {
       transform: scale(0.95);
     }
 
     .badge-display {
       position: relative;
       padding: 1em;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      height: 5em;
     }
 
     .badge-display::after {
@@ -133,13 +169,36 @@
       align-items: center;
       flex-direction: column;
     }
+
+    .card>iframe {
+      border: none;
+      width: 100%;
+      height: 20em;
+      border-radius: 0.5em;
+    }
+
+    /* add margin if img is followed by a h2*/
+    .card>img+h2 {
+      margin-top: 0.65em;
+    }
+
+    .card.two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5em;
+    }
+
+    .card.two-column>img {
+      width: 100%;
+      border-radius: 0.5em;
+    }
   </style>
 </head>
 
 <body>
   <div class="content">
     <div class="card-container">
-      <div class="card about centered">
+      <div class="card about centered" id="about">
         <img src="https://avatars.githubusercontent.com/u/81110386?v=4" class="profile">
         <h2>
           Hi! I'm @ByteBeamer
@@ -158,10 +217,37 @@
         </div>
       </div>
       <nav>
-        <a href="/art" class="nav-link">2D Art</a>
-        <a href="/3D" class="nav-link">3D Projects</a>
-        <a href="/programming" class="nav-link">Programming</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#programming" class="nav-link">Programming</a>
+        <a href="#3d-projects" class="nav-link">3D Projects</a>
+        <a href="#2d-projects" class="nav-link">2D Projects</a>
       </nav>
+      <h1 class="section-header">
+        <a href="#programming" id="programming">Programming</a>
+      </h1>
+      <div class="card">
+        <img style="width: 100%; border-radius: 0.5em; max-height: 30em;" src="./media/programming/ourmemoir.png">
+        <h2>
+          OurMemoir
+        </h2>
+        <p>
+          Created using Next.js, OurMemoir is a collaborative memoir building website, meaning you can bond over shared experiences with anyone you please. I have personally maintained the site since 2023, and it was developed locally by me for 1 year before that.
+        </p>
+        <a class="button" href="https://ourmemoir.net" target="_blank" rel="noopener noreferrer">Visit OurMemoir</a>
+      </div>
+      <div class="card">
+        <img style="width: 100%; border-radius: 0.5em; max-height: 30em;" src="./media/programming/pow.png">
+        <h2>
+          POW Racket Sports
+        </h2>
+        <p>
+          This site was built by me for a client who needed a way to show his tennis business to the world. It has multiple pages and was created using Next.js for high performance.
+        </p>
+        <a class="button" href="https://powracketsports.com" target="_blank" rel="noopener noreferrer">Visit POW Racket Sports</a>
+      </div>
+      <h1 class="section-header">
+        <a href="#3d-projects" id="3d-projects">3D Projects</a>
+      </h1>
       <div class="card">
         <h2>
           Blender tools
@@ -171,14 +257,20 @@
         </p>
         <a class="button">Take a look</a>
       </div>
-      <div class="card">
-        <h2>
-          2D Art
-        </h2>
-        <p>
-          Come look at my 2D works, the art gallery slowly but surely grows.
-        </p>
-        <a class="button">Take a look</a>
+      <div class="card two-column">
+        <iframe src="https://www.youtube.com/embed/f_yq1gKaRcs" title="Cloth vs Taipei 101 🧊🧊🧊" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/cVG06akwq3Q" title="Bad Apple BUT it's a Particle Simulation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <h1 class="section-header">
+        <a href="#2d-projects" id="2d-projects">2D Projects</a>
+      </h1>
+      <div class="card two-column">
+        <img src="./media/art/bus_girl.PNG" />
+        <img src="./media/art/extreme_perspective_girl.PNG" />
+        <img src="./media/art/bubble_girl.PNG" />
+        <img src="./media/art/ubel.png" />
+
+        <a class="button" href="./art-gallery">See more art</a>
       </div>
     </div>
   </div>
