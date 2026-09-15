@@ -1,0 +1,211 @@
+:root {
+  --background: #121212;
+  --text-color: #f5f5f5;
+  --accent-color: #3399ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+a {
+  color: var(--accent-color);
+}
+
+nav {
+  background-color: #24223f;
+  border-radius: 1em;
+  position: sticky;
+  top: 0.5em;
+  z-index: 12;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  filter: drop-shadow(0 0 0.75rem #000000);
+  white-space: nowrap;
+}
+
+nav>a {
+  display: inline-block;
+  padding: 1em;
+  text-decoration: none;
+  position: sticky;
+  top: 0;
+}
+
+nav>a:hover {
+  background-color: #1f1d3a;
+  color: #2a86e2;
+  box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  background-color: #242424;
+  padding: 1em;
+  border-radius: 1em;
+  position: relative;
+  overflow: hidden;
+}
+
+.card.about:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 500px;
+  z-index: 6;
+  pointer-events: none;
+  transform: scaleY(200%);
+  background: radial-gradient(closest-side, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, var(--background) 100%);
+}
+
+h2 {
+  margin: 0;
+}
+
+h1.section-header {
+  margin: 0;
+  margin-left: 0.5em;
+}
+
+h1.section-header>a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+h1.section-header>a:active {
+  color: #dbdbdb;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-container {
+  display: grid;
+  gap: 0.5em;
+  max-width: 900px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  position: relative;
+}
+
+a.button {
+  display: inline-block;
+  background-color: #3399ff;
+  padding: 0.5em;
+  color: black;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: ease-in-out;
+  transition-duration: 0.2s;
+  text-decoration: none;
+  grid-column: span 2;
+  text-align: center;
+  width: 100%;
+}
+
+a.button:hover {
+  background-color: #2688eb;
+}
+
+a.button:active {
+  transform: scale(0.95);
+}
+
+.badge-display {
+  position: relative;
+  padding: 1em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 5em;
+}
+
+.badge-display::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #242424 15%, rgba(0, 0, 0, 0) 50%, #242424 85%);
+  z-index: 5;
+}
+
+.badge-display>img {
+  height: 2.5em;
+  position: relative;
+}
+
+img.profile {
+  border-radius: 50%;
+  height: 15em;
+  width: 15em;
+  filter: drop-shadow(0 0 0.75rem #002050);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card>iframe {
+  border: none;
+  width: 100%;
+  height: 20em;
+  border-radius: 0.5em;
+}
+
+/* add margin if img is followed by a h2*/
+.card>img+h2 {
+  margin-top: 0.65em;
+}
+
+.column-flex {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  height: fit-content;
+}
+
+.one-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5em;
+  height: fit-content;
+}
+
+.two-column>img {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.one-column>img {
+  width: 100%;
+  border-radius: 0.5em;
+}
