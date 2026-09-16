@@ -60,6 +60,19 @@ nav>a:hover {
   overflow: hidden;
 }
 
+.edge-highlight {
+  border: 2px solid transparent;
+
+  background-image:
+    linear-gradient(#242424, #242424),
+    radial-gradient(150px circle at var(--x, 0px) var(--y, 0px),
+      rgba(70, 70, 70, var(--opacity, 0)) 0%,
+      transparent 100%);
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
 .card.about:before {
   content: "";
   position: absolute;
@@ -109,6 +122,7 @@ h1.section-header>a:active {
 a.button {
   display: inline-block;
   background-color: #3399ff;
+
   padding: 0.5em;
   color: black;
   border-radius: 0.5rem;
@@ -122,6 +136,7 @@ a.button {
   grid-column: span 2;
   text-align: center;
   width: 100%;
+  box-shadow: 0 0 15px rgba(0, 122, 255, calc(var(--is-hovered, 0) * 0.3));
 }
 
 a.button:hover {
