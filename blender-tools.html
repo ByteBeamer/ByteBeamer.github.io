@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/edge_highlights.js" defer></script>
+  <script src="./js/nav.js" defer></script>
 </head>
 
 <body>
@@ -19,31 +20,37 @@
         <a href="#geometry-nodes" class="nav-link">Geometry Nodes</a>
         <a href="#materials" class="nav-link">Materials</a>
       </nav>
-      <h1 class="section-header">
-        <a href="#geometry-nodes" id="geometry-nodes">Geometry Nodes</a>
-      </h1>
-      <div class="two-column">
-        <div class="card edge-highlight">
-          <h2>N-body Simulation</h2>
-          <p>The N-body Simulation allows gravitational forces to be calculated and visualized in the scene.</p>
-          <a class="button" href="./media/blender_tools/n_body_simulation.blend" download>Download</a>
+      <section id="geometry-nodes">
+        <h1 class="section-header">
+          <a href="#geometry-nodes">Geometry Nodes</a>
+        </h1>
+        <div class="column-flex">
+          <div class="one-column">
+            <div class="card edge-highlight">
+              <h2>N-body Simulation</h2>
+              <p>The N-body Simulation allows gravitational forces to be calculated and visualized in the scene.</p>
+              <a class="button" href="./media/blender_tools/n_body_simulation.blend" download>Download</a>
+            </div>
+            <div class="card edge-highlight">
+              <h2>Distort</h2>
+              <p>This setup uses sine waves to dynamically distort any 3D model.</p>
+              <a class="button" href="./media/blender_tools/distort.blend" download>Download</a>
+            </div>
+          </div>
+          <div class="one-column">
+            <div class="card edge-highlight">
+              <h2>Blaster System</h2>
+              <p>This setup allows you to create customs guns/blasters and have them shoot projectiles with physics.</p>
+              <a class="button" href="./media/blender_tools/blaster_system.blend" download>Download</a>
+            </div>
+            <div class="card edge-highlight">
+              <h2>Melter</h2>
+              <p>This setup is based off a CGMatter tutorial and allows you to melt a mesh while maintaining UV coordinates. My version also includes effectors such as wind, rotations, and more.</p>
+              <a class="button" href="./media/blender_tools/melter.blend" download>Download</a>
+            </div>
+          </div>
         </div>
-        <div class="card edge-highlight">
-          <h2>Distort</h2>
-          <p>This setup uses sine waves to dynamically distort any 3D model.</p>
-          <a class="button" href="./media/blender_tools/distort.blend" download>Download</a>
-        </div>
-        <div class="card edge-highlight">
-          <h2>Blaster System</h2>
-          <p>This setup allows you to create customs guns/blasters and have them shoot projectiles with physics.</p>
-          <a class="button" href="./media/blender_tools/blaster_system.blend" download>Download</a>
-        </div>
-        <div class="card edge-highlight">
-          <h2>Melter</h2>
-          <p>This setup is based off a CGMatter tutorial and allows you to melt a mesh while maintaining UV coordinates. My version also includes effectors such as wind, rotations, and more.</p>
-          <a class="button" href="./media/blender_tools/melter.blend" download>Download</a>
-        </div>
-      </div>
+      </section>
     </div>
   </div>
 </body>

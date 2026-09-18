@@ -52,6 +52,11 @@ nav>a:hover {
   box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
 }
 
+.nav-link.active {
+  background-color: #2a86e2;
+  color: #24223f;
+}
+
 .card {
   background-color: #242424;
   padding: 1em;
@@ -117,6 +122,11 @@ h1.section-header>a:active {
   padding-left: 0.5em;
   padding-right: 0.5em;
   position: relative;
+}
+
+.card-container>section {
+  display: inherit;
+  gap: inherit;
 }
 
 a.button {
@@ -197,8 +207,13 @@ img.profile {
 
 .column-flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 0.5em;
+}
+
+.column-flex > * {
+  flex-basis: 50%;
 }
 
 .two-column {
@@ -223,4 +238,10 @@ img.profile {
 .one-column>img {
   width: 100%;
   border-radius: 0.5em;
+}
+
+@media (max-width: 480px) {
+  .column-flex {
+    flex-direction: column;
+  }
 }

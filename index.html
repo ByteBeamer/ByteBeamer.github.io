@@ -9,85 +9,94 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/edge_highlights.js" defer></script>
+  <script src="./js/nav.js" defer></script>
 </head>
 
 <body>
   <div class="content">
     <div class="card-container">
-      <div class="card about centered" id="about">
-        <img src="https://avatars.githubusercontent.com/u/81110386?v=4" class="profile">
-        <h2>
-          Hi! I'm @ByteBeamer
-        </h2>
-        <p style="max-width: 300px;">
-          I'm an artist and programmer who specializes in web development and technical 3D. I primarily use softwares like Blender, Clip Studio Paint, and Visual Studio Code.
-        </p>
-        <div class="badge-display">
-          <img style="z-index: 1; transform: scale(0.6) translateX(150%);" src="./media/logos/HTML5_logo.svg" />
-          <img style="z-index: 2; transform: scale(0.8) translateX(40%);" src="./media/logos/CSS3_logo.svg" />
-          <img style="z-index: 3; transform: scale(1.5);" src="./media/logos/csp_icon.png" />
-          <img style="z-index: 4; transform: scale(2.2) translateY(0.1em); filter: drop-shadow(0 0 0.75rem #242424); margin-right: 0.2em; margin-left: 0.2em;" src="./media/logos/blender_community_badge_black.svg" />
-          <img style="z-index: 3; transform: scale(1.1); background: #3f3f3f; border-radius: 8px; padding: 2px;" src="./media/logos/Visual_Studio_Code_logo.svg" />
-          <img style="z-index: 2; transform: scale(0.7) translateX(-40%); border-radius: 2px" src="./media/logos/JavaScript_logo.svg" />
-          <img style="z-index: 1; transform: scale(0.6) translateX(-150%);" src="./media/logos/Typescript_logo.svg" />
+      <section id="about">
+        <div class="card about centered">
+          <img src="https://avatars.githubusercontent.com/u/81110386?v=4" class="profile">
+          <h2>
+            Hi! I'm @ByteBeamer
+          </h2>
+          <p style="max-width: 300px;">
+            I'm an artist and programmer who specializes in web development and technical 3D. I primarily use softwares like Blender, Clip Studio Paint, and Visual Studio Code.
+          </p>
+          <div class="badge-display">
+            <img style="z-index: 1; transform: scale(0.6) translateX(150%);" src="./media/logos/HTML5_logo.svg" />
+            <img style="z-index: 2; transform: scale(0.8) translateX(40%);" src="./media/logos/CSS3_logo.svg" />
+            <img style="z-index: 3; transform: scale(1.5);" src="./media/logos/csp_icon.png" />
+            <img style="z-index: 4; transform: scale(2.2) translateY(0.1em); filter: drop-shadow(0 0 0.75rem #242424); margin-right: 0.2em; margin-left: 0.2em;" src="./media/logos/blender_community_badge_black.svg" />
+            <img style="z-index: 3; transform: scale(1.1); background: #3f3f3f; border-radius: 8px; padding: 2px;" src="./media/logos/Visual_Studio_Code_logo.svg" />
+            <img style="z-index: 2; transform: scale(0.7) translateX(-40%); border-radius: 2px" src="./media/logos/JavaScript_logo.svg" />
+            <img style="z-index: 1; transform: scale(0.6) translateX(-150%);" src="./media/logos/Typescript_logo.svg" />
+          </div>
         </div>
-      </div>
+      </section>
       <nav>
         <a href="#about" class="nav-link">About</a>
         <a href="#programming" class="nav-link">Programming</a>
         <a href="#3d-projects" class="nav-link">3D Projects</a>
         <a href="#2d-projects" class="nav-link">2D Projects</a>
       </nav>
-      <h1 class="section-header">
-        <a href="#programming" id="programming">Programming</a>
-      </h1>
-      <div class="card edge-highlight">
-        <img style="width: 100%; border-radius: 0.5em; max-height: 30em;" src="./media/programming/ourmemoir.png">
-        <h2>
-          OurMemoir
-        </h2>
-        <p>
-          Created using Next.js, OurMemoir is a collaborative memoir building website, meaning you can bond over shared experiences with anyone you please. I have personally maintained the site since 2023, and it was developed locally by me for 1 year before that.
-        </p>
-        <a class="button" href="https://ourmemoir.net" target="_blank" rel="noopener noreferrer">Visit OurMemoir</a>
-      </div>
-      <div class="card edge-highlight">
-        <img style="width: 100%; border-radius: 0.5em; max-height: 30em;" src="./media/programming/pow.png">
-        <h2>
-          POW Racket Sports
-        </h2>
-        <p>
-          This site was built by me for a client who needed a way to show his tennis business to the world. It has multiple pages and was created using Next.js for high performance.
-        </p>
-        <a class="button" href="https://powracketsports.com" target="_blank" rel="noopener noreferrer">Visit POW Racket Sports</a>
-      </div>
-      <h1 class="section-header">
-        <a href="#3d-projects" id="3d-projects">3D Projects</a>
-      </h1>
-      <div class="card edge-highlight">
-        <h2>
-          Blender tools
-        </h2>
-        <p>
-          Take a look at my selection of free Blender assets! Pre-built geometry nodes, materials, and other goodies all for free!
-        </p>
-        <a class="button" href="./blender-tools">Take a look</a>
-      </div>
-      <div class="card two-column">
-        <iframe src="https://www.youtube.com/embed/f_yq1gKaRcs" title="Cloth vs Taipei 101 🧊🧊🧊" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/cVG06akwq3Q" title="Bad Apple BUT it's a Particle Simulation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </div>
-      <h1 class="section-header">
-        <a href="#2d-projects" id="2d-projects">2D Projects</a>
-      </h1>
-      <div class="card two-column edge-highlight">
-        <img src="./media/art/bus_girl.PNG" />
-        <img src="./media/art/extreme_perspective_girl.PNG" />
-        <img src="./media/art/bubble_girl.PNG" />
-        <img src="./media/art/ubel.png" />
+      <section id="programming">
+        <h1 class="section-header">
+          <a href="#programming">Programming</a>
+        </h1>
+        <div class="card edge-highlight">
+          <img style="width: 100%; border-radius: 0.5em; max-height: 30em;" src="./media/programming/ourmemoir.png">
+          <h2>
+            OurMemoir
+          </h2>
+          <p>
+            Created using Next.js, OurMemoir is a collaborative memoir building website, meaning you can bond over shared experiences with anyone you please. I have personally maintained the site since 2023, and it was developed locally by me for 1 year before that.
+          </p>
+          <a class="button" href="https://ourmemoir.net" target="_blank" rel="noopener noreferrer">Visit OurMemoir</a>
+        </div>
+        <div class="card edge-highlight">
+          <img style="width: 100%; border-radius: 0.5em; max-height: 30em;" src="./media/programming/pow.png">
+          <h2>
+            POW Racket Sports
+          </h2>
+          <p>
+            This site was built by me for a client who needed a way to show his tennis business to the world. It has multiple pages and was created using Next.js for high performance.
+          </p>
+          <a class="button" href="https://powracketsports.com" target="_blank" rel="noopener noreferrer">Visit POW Racket Sports</a>
+        </div>
+      </section>
+      <section id="3d-projects">
+        <h1 class="section-header">
+          <a href="#3d-projects">3D Projects</a>
+        </h1>
+        <div class="card edge-highlight">
+          <h2>
+            Blender tools
+          </h2>
+          <p>
+            Take a look at my selection of free Blender assets! Pre-built geometry nodes, materials, and other goodies all for free!
+          </p>
+          <a class="button" href="./blender-tools">Take a look</a>
+        </div>
+        <div class="card two-column">
+          <iframe src="https://www.youtube.com/embed/f_yq1gKaRcs" title="Cloth vs Taipei 101 🧊🧊🧊" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/cVG06akwq3Q" title="Bad Apple BUT it's a Particle Simulation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
+      <section id="2d-projects">
+        <h1 class="section-header">
+          <a href="#2d-projects">2D Projects</a>
+        </h1>
+        <div class="card two-column edge-highlight">
+          <img src="./media/art/bus_girl.PNG" />
+          <img src="./media/art/extreme_perspective_girl.PNG" />
+          <img src="./media/art/bubble_girl.PNG" />
+          <img src="./media/art/ubel.png" />
 
-        <a class="button" href="./art-gallery">See more art</a>
-      </div>
+          <a class="button" href="./art-gallery">See more art</a>
+        </div>
+      </section>
     </div>
   </div>
 </body>
