@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/edge_highlights.js" defer></script>
   <script src="./js/nav.js" defer></script>
+  <script src="./js/play_on_hover.js" defer></script>
 </head>
 
 <body>
@@ -27,11 +28,13 @@
         <div class="column-flex">
           <div class="one-column">
             <div class="card edge-highlight">
+              <div class="play-on-hover" animated="./media/blender_tools/previews/n_body_preview.gif" still="./media/blender_tools/previews/n_body_preview_still.png"></div>
               <h2>N-body Simulation</h2>
               <p>The N-body Simulation allows gravitational forces to be calculated and visualized in the scene.</p>
               <a class="button" href="./media/blender_tools/n_body_simulation.blend" download>Download</a>
             </div>
             <div class="card edge-highlight">
+              <div class="play-on-hover" animated="./media/blender_tools/previews/distort_preview.gif" still="./media/blender_tools/previews/distort_preview_still.png"></div>
               <h2>Distort</h2>
               <p>This setup uses sine waves to dynamically distort any 3D model.</p>
               <a class="button" href="./media/blender_tools/distort.blend" download>Download</a>
@@ -48,6 +51,23 @@
               <p>This setup is based off a CGMatter tutorial and allows you to melt a mesh while maintaining UV coordinates. My version also includes effectors such as wind, rotations, and more.</p>
               <a class="button" href="./media/blender_tools/melter.blend" download>Download</a>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="materials">
+        <h1 class="section-header">
+          <a href="#materials">Materials</a>
+        </h1>
+        <div class="column-flex">
+          <div class="one-column">
+            <div class="card edge-highlight">
+              <img class="preview-image" src="./media/blender_tools/previews/basic_anime_preview.png">
+              <h2>Basic Anime</h2>
+              <p>The node takes a light direction, shadow threshold, rim light threshold, and a specular threshold.</p>
+              <a class="button" href="./media/blender_tools/basic_anime.blend" download>Download</a>
+            </div>
+          </div>
+          <div class="one-column">
           </div>
         </div>
       </section>

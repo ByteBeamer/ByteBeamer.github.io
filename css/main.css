@@ -26,7 +26,7 @@ a {
 }
 
 nav {
-  background-color: #24223f;
+  background-color: hsla(244, 31%, 19%, 100%);
   border-radius: 1em;
   position: sticky;
   top: 0.5em;
@@ -47,7 +47,6 @@ nav>a {
 }
 
 nav>a:hover {
-  background-color: #1f1d3a;
   color: #2a86e2;
   box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
 }
@@ -205,6 +204,10 @@ img.profile {
   margin-top: 0.65em;
 }
 
+.card>.image-container+h2 {
+  margin-top: 0.65em;
+}
+
 .column-flex {
   display: flex;
   justify-content: space-between;
@@ -212,7 +215,7 @@ img.profile {
   gap: 0.5em;
 }
 
-.column-flex > * {
+.column-flex>* {
   flex-basis: 50%;
 }
 
@@ -238,6 +241,31 @@ img.profile {
 .one-column>img {
   width: 100%;
   border-radius: 0.5em;
+}
+
+.preview-image {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.play-on-hover {
+  position: relative;
+}
+
+.preview-image-animated {
+  width: 100%;
+  border-radius: 0.5em;
+}
+
+.preview-image-still {
+  width: 100%;
+  border-radius: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: calc(1 - var(--is-hovered));
+  transition: ease-in-out;
+  transition-duration: 0.2s;
 }
 
 @media (max-width: 480px) {

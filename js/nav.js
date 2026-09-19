@@ -11,11 +11,16 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const id = entry.target.getAttribute('id');
-      
+
       navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${id}`) {
           link.classList.add('active');
+          link.scrollIntoView({
+            behavior: "smooth", // or "auto"
+            block: "nearest",   // Keeps vertical scrolling isolated to closest parent
+            inline: "center"   // Keeps horizontal scrolling isolated to closest parent
+          });
         }
       });
     }

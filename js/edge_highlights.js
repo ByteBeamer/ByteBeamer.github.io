@@ -1,3 +1,5 @@
+const hasMousePrimary = window.matchMedia('(pointer: fine)').matches;
+
 const edgeHighlights = document.querySelectorAll('.edge-highlight');
 const maxDistance = 200;
 
@@ -40,5 +42,19 @@ function updateEdges(clientX, clientY) {
         card.style.setProperty('--y', `${y}px`);
         card.style.setProperty('--opacity', opacity.toFixed(2));
         card.style.setProperty('--is-hovered', (distance <= 0) ? "1" : "0");
+
+        if (!hasMousePrimary) {
+            if (isCentered(card)) {
+                card.style.setProperty('--is-hovered', "1");
+            } else {
+                card.style.setProperty('--is-hovered', "0");
+            }
+        }
     });
+}
+
+function isCentered(element) {
+    const rect = element.getBoundingClientRect();
+    const screenMiddle = window.innerHeight / 2;
+    return rect.top <= screenMiddle && rect.bottom >= screenMiddle;
 }
